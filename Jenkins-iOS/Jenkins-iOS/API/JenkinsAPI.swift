@@ -12,41 +12,39 @@ typealias JSON = [String: AnyObject]
 
 public class JenkinsAPI {
     
-    private(set) var domainName:String!
-    private(set) var port:Int!
-    private(set) var path:String!
-    private(set) var token:String!
-    private(set) var userId:String!
+    static let sharedInstance = JenkinsAPI()
     
+    private(set) var domainName:String
+    private(set) var port:Int
+    private(set) var path:String
+    private(set) var password:String
+    private(set) var userId:String
     private var jenkinsURL:URL?
     
     private var networkClient:NetworkClient?
     
-    private var encodedAuthorizationHeader: String {
-        if let encoded = "\(userId!):\(token!)"
-            .data(using: String.Encoding.utf8)?
-            .base64EncodedString() {
-            return "Basic \(encoded)"
-        }
-        
-        return ""
-    }
-    
-    init(domainName: String!, port: Int!, path:String!, token: String!, userId: String!, networkClient:NetworkClient!)
-    {
+    func jenkinsInit(domainName: String!, port: Int!, path:String!,userId: String!,password: String!, networkClient:NetworkClient!) {
         self.domainName = domainName
         self.path = path
         self.port = port
         self.userId = userId
-        self.token = token
+        self.password = password
         self.networkClient = networkClient
         
-        let urlString = "http://\(self.domainName!):\(self.port!)/"
+        let urlString = "http://\(self.domainName):\(self.port)/"
         guard let url = URL(string: urlString) else {
             return
         }
         
         self.jenkinsURL = url
+
+    }
+    private init() {
+        self.domainName = ""
+        self.port = 0
+        self.path = ""
+        self.userId = ""
+        self.password = ""
     }
     
     func fetchJobs(callback: @escaping ([Job]) -> Void)  {
@@ -96,4 +94,13 @@ public class JenkinsAPI {
         })
     }
     
+    private var encodedAuthorizationHeader: String {
+        if let encoded = "\(userId):\(password)"
+            .data(using: String.Encoding.utf8)?
+            .base64EncodedString() {
+            return "Basic \(encoded)"
+        }
+        
+        return ""
+    }
 }
