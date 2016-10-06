@@ -22,7 +22,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eUi-fu-xF2">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userLogin" id="jXx-xD-jNd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userLogin" id="jXx-xD-jNd" customClass="UserLoginTVC" customModule="Jenkins_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jXx-xD-jNd" id="a0e-8A-vrY">
@@ -48,39 +48,13 @@
                                                 <constraint firstItem="aP2-ZX-rUm" firstAttribute="centerY" secondItem="a0e-8A-vrY" secondAttribute="centerY" id="wEb-XY-3P6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="loginLabel" destination="mne-W2-dnC" id="ZkA-BI-Bax"/>
+                                            <outlet property="loginTextField" destination="aP2-ZX-rUm" id="Hs5-L2-waP"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userPassword" id="1yi-7D-paw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="saveAccount" id="fo4-h6-de8" customClass="SaveAccountTVC" customModule="Jenkins_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="136" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1yi-7D-paw" id="gnJ-Rt-3Ab">
-                                            <frame key="frameInset" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRy-g8-EZ0">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="156" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ins-I2-8XB">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="T9G-1g-Vv0"/>
-                                                    </constraints>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Ins-I2-8XB" firstAttribute="leading" secondItem="gnJ-Rt-3Ab" secondAttribute="leadingMargin" constant="110" id="9oS-yP-dCH"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ins-I2-8XB" secondAttribute="trailing" constant="15" id="UHo-4X-nqI"/>
-                                                <constraint firstItem="Ins-I2-8XB" firstAttribute="centerY" secondItem="gnJ-Rt-3Ab" secondAttribute="centerY" id="Yja-Oh-J6L"/>
-                                                <constraint firstItem="oRy-g8-EZ0" firstAttribute="centerY" secondItem="gnJ-Rt-3Ab" secondAttribute="centerY" id="klf-mN-qHE"/>
-                                                <constraint firstItem="oRy-g8-EZ0" firstAttribute="leading" secondItem="gnJ-Rt-3Ab" secondAttribute="leading" constant="15" id="zQ2-5J-DcC"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="saveAccount" id="fo4-h6-de8">
-                                        <rect key="frame" x="0.0" y="180" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fo4-h6-de8" id="IIE-2J-8aF">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -91,7 +65,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKF-gP-tx3"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKF-gP-tx3">
+                                                    <connections>
+                                                        <action selector="saveChanged:" destination="fo4-h6-de8" eventType="valueChanged" id="fLe-Ly-6AC"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="lKF-gP-tx3" firstAttribute="centerY" secondItem="IIE-2J-8aF" secondAttribute="centerY" id="VVT-hF-n0h"/>
@@ -100,9 +78,12 @@
                                                 <constraint firstItem="gR8-5Q-M7p" firstAttribute="centerY" secondItem="IIE-2J-8aF" secondAttribute="centerY" id="yul-tH-t3y"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="saveSwitch" destination="lKF-gP-tx3" id="gs1-Ad-42V"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="logButton" id="qGQ-SN-wsq">
-                                        <rect key="frame" x="0.0" y="224" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="logButton" id="qGQ-SN-wsq" customClass="LogButtonTVC" customModule="Jenkins_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qGQ-SN-wsq" id="ViJ-qA-xND">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -141,6 +122,9 @@
                                                 <constraint firstItem="feH-g6-tF6" firstAttribute="leading" secondItem="ViJ-qA-xND" secondAttribute="leading" id="wJD-oG-ENv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="logButton" destination="9pj-qT-LcO" id="hik-c8-5Zj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
