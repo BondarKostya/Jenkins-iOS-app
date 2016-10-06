@@ -47,7 +47,7 @@ public class JenkinsAPI {
         self.password = ""
     }
     
-    func fetchJobs(callback: @escaping ([Job]) -> Void)  {
+    func fetchJobs(callback: @escaping ([Job],Error?) -> Void)  {
         guard let url = URL(string: jenkinsURL!.absoluteString)?
             .appendingPathComponent("api")
             .appendingPathComponent("json") else {
@@ -56,9 +56,14 @@ public class JenkinsAPI {
         }
         self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader, { (response, error) in
             print(response)
+            if (error != nil) {
+                callback([],error)
+                return
+            }
+            
             guard let jsonWithJobs = response as? JSON ,
                 let jsonJobs = jsonWithJobs["jobs"] as? [JSON] else {
-                callback([])
+                callback([],nil)
                 return
             }
             
@@ -66,7 +71,7 @@ public class JenkinsAPI {
                 return Job(json:json)
             }
             
-            callback(jobs)
+            callback(jobs,nil)
             
         })
     }

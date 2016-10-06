@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LoginVC-->
+        <!--Log in-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="Jenkins_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="LoginVC" customModule="Jenkins_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,11 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eUi-fu-xF2">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eUi-fu-xF2">
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserLoginTVC" id="jXx-xD-jNd" customClass="UserLoginTVC" customModule="Jenkins_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jXx-xD-jNd" id="a0e-8A-vrY">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -54,7 +54,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SaveAccountTVC" id="fo4-h6-de8" customClass="SaveAccountTVC" customModule="Jenkins_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fo4-h6-de8" id="IIE-2J-8aF">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -83,7 +83,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LogButtonTVC" id="qGQ-SN-wsq" customClass="LogButtonTVC" customModule="Jenkins_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="180" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qGQ-SN-wsq" id="ViJ-qA-xND">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -144,8 +144,15 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eUi-fu-xF2" secondAttribute="bottom" id="q4q-p3-Fh7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="whH-tn-3G1"/>
+                    <navigationItem key="navigationItem" title="Log in" id="whH-tn-3G1">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="zU1-fy-icZ">
+                            <connections>
+                                <action selector="doneAction:" destination="BYZ-38-t0r" id="AJh-aS-NyD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="zU1-fy-icZ" id="h5g-X1-ctE"/>
                         <outlet property="tableView" destination="eUi-fu-xF2" id="L5F-Z8-HD8"/>
                     </connections>
                 </viewController>
