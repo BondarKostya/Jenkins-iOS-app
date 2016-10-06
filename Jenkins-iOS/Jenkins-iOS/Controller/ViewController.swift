@@ -12,19 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        do{
-            let jenkins = try Jenkins(host: "buildserver.mobi",
+        let jenkins = JenkinsAPI(domainName: "buildserver.mobi",
                                        port: 8989,
-                                       user: "konstantin.bondar",
+                                       path: "/",
                                        token: "bb5424a9537adf2c363515c752b2e2f1",
-                                       path: "/")
-            print("ad")
-            jenkins.fetchJobs { jobs in
-                print("Jobs \(jobs)")
-            }
-
-        }catch let error as Error {
-            print(error)
+                                       userId: "konstantin.bondar",
+                                       networkClient: NetworkClient()
+                                       )
+        
+//        jenkins.fetchJobs { (responce) in
+//            print (responce)
+//        }
+        
+        jenkins.fetchJob("DummySimulator") { (job) in
+            print(job)
         }
         
         

@@ -7,24 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D49EEEC1DA62A23000CE6DB /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EEEB1DA62A23000CE6DB /* Job.swift */; };
+		3D49EEF21DA634F5000CE6DB /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EEF11DA634F5000CE6DB /* Build.swift */; };
+		3D49EEF41DA63D03000CE6DB /* HealthReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EEF31DA63D03000CE6DB /* HealthReport.swift */; };
 		3D4F36221DA50DFD00A7925E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36201DA50DFD00A7925E /* Main.storyboard */; };
 		3D4F36241DA50DFD00A7925E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36231DA50DFD00A7925E /* Assets.xcassets */; };
 		3D4F36271DA50DFD00A7925E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36251DA50DFD00A7925E /* LaunchScreen.storyboard */; };
 		3D4F36321DA50DFE00A7925E /* Jenkins_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36311DA50DFE00A7925E /* Jenkins_iOSTests.swift */; };
 		3D4F363D1DA50DFE00A7925E /* Jenkins_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F363C1DA50DFE00A7925E /* Jenkins_iOSUITests.swift */; };
-		3D4F36551DA510E700A7925E /* JenkinsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36531DA510E700A7925E /* JenkinsManager.swift */; };
-		3D4F36561DA510E700A7925E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36541DA510E700A7925E /* NetworkManager.swift */; };
 		3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36571DA510F300A7925E /* AppDelegate.swift */; };
 		3D4F365A1DA510FD00A7925E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36591DA510FD00A7925E /* ViewController.swift */; };
-		3D4F36641DA5137200A7925E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F365B1DA5137200A7925E /* APIClient.swift */; };
-		3D4F36651DA5137200A7925E /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F365C1DA5137200A7925E /* Build.swift */; };
-		3D4F36661DA5137200A7925E /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F365D1DA5137200A7925E /* Errors.swift */; };
-		3D4F36671DA5137200A7925E /* HealthReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F365E1DA5137200A7925E /* HealthReport.swift */; };
-		3D4F36681DA5137200A7925E /* Jenkins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F365F1DA5137200A7925E /* Jenkins.swift */; };
-		3D4F36691DA5137200A7925E /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36601DA5137200A7925E /* Job.swift */; };
-		3D4F366A1DA5137200A7925E /* JobConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36611DA5137200A7925E /* JobConfiguration.swift */; };
-		3D4F366B1DA5137200A7925E /* JobParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36621DA5137200A7925E /* JobParameter.swift */; };
-		3D4F366C1DA5137200A7925E /* JobQueueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36631DA5137200A7925E /* JobQueueItem.swift */; };
+		3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */; };
+		3DD19D391DA51EF2005EC59A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D371DA51EF2005EC59A /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D49EEEB1DA62A23000CE6DB /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Job.swift; path = Model/Job.swift; sourceTree = "<group>"; };
+		3D49EEF11DA634F5000CE6DB /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Build.swift; path = Model/Build.swift; sourceTree = "<group>"; };
+		3D49EEF31DA63D03000CE6DB /* HealthReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthReport.swift; sourceTree = "<group>"; };
 		3D4F36191DA50DFD00A7925E /* Jenkins-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jenkins-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4F36211DA50DFD00A7925E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D4F36231DA50DFD00A7925E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,19 +53,10 @@
 		3D4F36381DA50DFE00A7925E /* Jenkins-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jenkins-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4F363C1DA50DFE00A7925E /* Jenkins_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jenkins_iOSUITests.swift; sourceTree = "<group>"; };
 		3D4F363E1DA50DFE00A7925E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D4F36531DA510E700A7925E /* JenkinsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JenkinsManager.swift; path = Managers/JenkinsManager.swift; sourceTree = "<group>"; };
-		3D4F36541DA510E700A7925E /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Managers/NetworkManager.swift; sourceTree = "<group>"; };
 		3D4F36571DA510F300A7925E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AppDelegate/AppDelegate.swift; sourceTree = "<group>"; };
 		3D4F36591DA510FD00A7925E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
-		3D4F365B1DA5137200A7925E /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = Model/APIClient.swift; sourceTree = "<group>"; };
-		3D4F365C1DA5137200A7925E /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Build.swift; path = Model/Build.swift; sourceTree = "<group>"; };
-		3D4F365D1DA5137200A7925E /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Model/Errors.swift; sourceTree = "<group>"; };
-		3D4F365E1DA5137200A7925E /* HealthReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthReport.swift; path = Model/HealthReport.swift; sourceTree = "<group>"; };
-		3D4F365F1DA5137200A7925E /* Jenkins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Jenkins.swift; path = Model/Jenkins.swift; sourceTree = "<group>"; };
-		3D4F36601DA5137200A7925E /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Job.swift; path = Model/Job.swift; sourceTree = "<group>"; };
-		3D4F36611DA5137200A7925E /* JobConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobConfiguration.swift; path = Model/JobConfiguration.swift; sourceTree = "<group>"; };
-		3D4F36621DA5137200A7925E /* JobParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobParameter.swift; path = Model/JobParameter.swift; sourceTree = "<group>"; };
-		3D4F36631DA5137200A7925E /* JobQueueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobQueueItem.swift; path = Model/JobQueueItem.swift; sourceTree = "<group>"; };
+		3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JenkinsAPI.swift; path = API/JenkinsAPI.swift; sourceTree = "<group>"; };
+		3DD19D371DA51EF2005EC59A /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = API/NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +109,6 @@
 			children = (
 				3D4F366E1DA518F200A7925E /* API */,
 				3D4F364E1DA50FD600A7925E /* AppDelegate */,
-				3D4F364D1DA50FBE00A7925E /* Managers */,
 				3D4F364C1DA50FB700A7925E /* Helpers */,
 				3D4F364B1DA50F6000A7925E /* Controller */,
 				3D4F364A1DA50E7400A7925E /* Model */,
@@ -154,15 +141,9 @@
 		3D4F364A1DA50E7400A7925E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3D4F365B1DA5137200A7925E /* APIClient.swift */,
-				3D4F365C1DA5137200A7925E /* Build.swift */,
-				3D4F365D1DA5137200A7925E /* Errors.swift */,
-				3D4F365E1DA5137200A7925E /* HealthReport.swift */,
-				3D4F365F1DA5137200A7925E /* Jenkins.swift */,
-				3D4F36601DA5137200A7925E /* Job.swift */,
-				3D4F36611DA5137200A7925E /* JobConfiguration.swift */,
-				3D4F36621DA5137200A7925E /* JobParameter.swift */,
-				3D4F36631DA5137200A7925E /* JobQueueItem.swift */,
+				3D49EEEB1DA62A23000CE6DB /* Job.swift */,
+				3D49EEF11DA634F5000CE6DB /* Build.swift */,
+				3D49EEF31DA63D03000CE6DB /* HealthReport.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -182,15 +163,6 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		3D4F364D1DA50FBE00A7925E /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				3D4F36531DA510E700A7925E /* JenkinsManager.swift */,
-				3D4F36541DA510E700A7925E /* NetworkManager.swift */,
-			);
-			name = Managers;
-			sourceTree = "<group>";
-		};
 		3D4F364E1DA50FD600A7925E /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +174,8 @@
 		3D4F366E1DA518F200A7925E /* API */ = {
 			isa = PBXGroup;
 			children = (
+				3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */,
+				3DD19D371DA51EF2005EC59A /* NetworkClient.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -340,19 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D49EEF41DA63D03000CE6DB /* HealthReport.swift in Sources */,
 				3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */,
-				3D4F36561DA510E700A7925E /* NetworkManager.swift in Sources */,
-				3D4F366A1DA5137200A7925E /* JobConfiguration.swift in Sources */,
-				3D4F36651DA5137200A7925E /* Build.swift in Sources */,
 				3D4F365A1DA510FD00A7925E /* ViewController.swift in Sources */,
-				3D4F366B1DA5137200A7925E /* JobParameter.swift in Sources */,
-				3D4F36641DA5137200A7925E /* APIClient.swift in Sources */,
-				3D4F36551DA510E700A7925E /* JenkinsManager.swift in Sources */,
-				3D4F36661DA5137200A7925E /* Errors.swift in Sources */,
-				3D4F36681DA5137200A7925E /* Jenkins.swift in Sources */,
-				3D4F366C1DA5137200A7925E /* JobQueueItem.swift in Sources */,
-				3D4F36671DA5137200A7925E /* HealthReport.swift in Sources */,
-				3D4F36691DA5137200A7925E /* Job.swift in Sources */,
+				3D49EEF21DA634F5000CE6DB /* Build.swift in Sources */,
+				3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */,
+				3DD19D391DA51EF2005EC59A /* NetworkClient.swift in Sources */,
+				3D49EEEC1DA62A23000CE6DB /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +563,7 @@
 				3D4F36431DA50DFE00A7925E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D4F36441DA50DFE00A7925E /* Build configuration list for PBXNativeTarget "Jenkins-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -603,6 +572,7 @@
 				3D4F36461DA50DFE00A7925E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D4F36471DA50DFE00A7925E /* Build configuration list for PBXNativeTarget "Jenkins-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -611,6 +581,7 @@
 				3D4F36491DA50DFE00A7925E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
