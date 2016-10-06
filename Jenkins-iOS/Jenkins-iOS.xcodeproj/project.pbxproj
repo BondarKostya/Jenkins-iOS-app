@@ -16,7 +16,7 @@
 		3D4F36321DA50DFE00A7925E /* Jenkins_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36311DA50DFE00A7925E /* Jenkins_iOSTests.swift */; };
 		3D4F363D1DA50DFE00A7925E /* Jenkins_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F363C1DA50DFE00A7925E /* Jenkins_iOSUITests.swift */; };
 		3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36571DA510F300A7925E /* AppDelegate.swift */; };
-		3D4F365A1DA510FD00A7925E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36591DA510FD00A7925E /* ViewController.swift */; };
+		3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36591DA510FD00A7925E /* LoginVC.swift */; };
 		3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */; };
 		3DD19D391DA51EF2005EC59A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D371DA51EF2005EC59A /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +54,7 @@
 		3D4F363C1DA50DFE00A7925E /* Jenkins_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jenkins_iOSUITests.swift; sourceTree = "<group>"; };
 		3D4F363E1DA50DFE00A7925E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D4F36571DA510F300A7925E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AppDelegate/AppDelegate.swift; sourceTree = "<group>"; };
-		3D4F36591DA510FD00A7925E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
+		3D4F36591DA510FD00A7925E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = Controller/LoginVC.swift; sourceTree = "<group>"; };
 		3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JenkinsAPI.swift; path = API/JenkinsAPI.swift; sourceTree = "<group>"; };
 		3DD19D371DA51EF2005EC59A /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = API/NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,7 +151,7 @@
 		3D4F364B1DA50F6000A7925E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3D4F36591DA510FD00A7925E /* ViewController.swift */,
+				3D4F36591DA510FD00A7925E /* LoginVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			files = (
 				3D49EEF41DA63D03000CE6DB /* HealthReport.swift in Sources */,
 				3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */,
-				3D4F365A1DA510FD00A7925E /* ViewController.swift in Sources */,
+				3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */,
 				3D49EEF21DA634F5000CE6DB /* Build.swift in Sources */,
 				3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */,
 				3DD19D391DA51EF2005EC59A /* NetworkClient.swift in Sources */,
