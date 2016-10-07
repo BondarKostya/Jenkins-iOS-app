@@ -57,7 +57,7 @@ class NetworkClient:NSObject {
             if response.statusCode >= 400 {
                 print(response)
                 //let error = JenkinsError(httpStatusCode: response.statusCode)
-                //handler(nil, error)
+                handler(nil, error)
             }
         }
 

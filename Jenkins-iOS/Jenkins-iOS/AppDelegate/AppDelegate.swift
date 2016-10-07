@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        JenkinsAPI.sharedInstance.jenkinsInit(domainName: "buildserver.mobi", port: 8989, path: "/", userId: "konstantin.bondar", password: "IQssTnAzXR", networkClient: NetworkClient())
+        JenkinsAPI.sharedInstance.jenkinsInit(domainName: "buildserver.mobi", port: 8989, path: "/", networkClient: NetworkClient())
         return true
     }
 

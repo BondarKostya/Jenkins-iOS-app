@@ -25,9 +25,17 @@ class LoginVC: UIViewController {
     var saveState = false
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var userLoginTF:UITextField?
+    var userPasswordTF:UITextField?
+    var logoutButton:UIButton?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
+        self.doneButton.isEnabled = false
         let savedAccount = userDefaults.object(forKey: "savedAccount") as? Bool ?? false
         if savedAccount {
             if let userLogin = userDefaults.object(forKey: "userLogin") as? String ,
@@ -36,8 +44,9 @@ class LoginVC: UIViewController {
                 self.userPassword = userPassword
                 self.saveState = true
                 self.loginState = .UserLogin
+                self.doneButton.isEnabled = true
             }else {
-                self.logoutAction()
+                self.clearSavedAccount()
             }
         }
     }
@@ -46,6 +55,11 @@ class LoginVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.updateUI()
+    }
 
     @IBAction func doneAction(_ sender: AnyObject) {
         
@@ -53,44 +67,73 @@ class LoginVC: UIViewController {
            return
         }
         
+        self.saveAccount()
+        
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        JenkinsAPI.sharedInstance.fetchJobs(callback: { (jobs,error) in
-            print(jobs)
+        //, userId: "konstantin.bondar", password: "IQssTnAzXR"
+        JenkinsAPI.sharedInstance.loginRequest(login: self.userLogin, password: self.userPassword) { (response) in
             DispatchQueue.main.async {
                 MBProgressHUD.hide(for: self.view, animated: true)
-                if error != nil {
-                    return
+                if(response) {
+                    self.loginState = .UserLogin
+                    self.performSegue(withIdentifier: "toProjects", sender: self)
+                }else {
+                    self.loginState = .UserLogout
                 }
-                
+                self.updateUI()
                 
             }
             
-        })
+        }
     }
     
     func checkLoginAndPass() -> Bool {
         if !self.userLogin.isEmpty && !self.userPassword.isEmpty {
-            if self.saveState {
-                userDefaults.set(true, forKey: "savedAccount")
-                userDefaults.set(self.userLogin,forKey: "userLogin")
-                userDefaults.set(self.userPassword,forKey: "userPassword")
-            } else {
-                self.logoutAction()
-            }
             return true
         }
         return false
+    }
+    
+    func saveAccount() {
+        if self.saveState {
+            userDefaults.set(true, forKey: "savedAccount")
+            userDefaults.set(self.userLogin,forKey: "userLogin")
+            userDefaults.set(self.userPassword,forKey: "userPassword")
+        } else {
+            self.clearSavedAccount()
+        }
     }
     
     func switchSaveState(state: Bool) {
         self.saveState = state
     }
     
-    func logoutAction() {
+    func updateUI() {
+        guard let userLoginTF = self.userLoginTF ,
+            let userPasswordTF = self.userPasswordTF,
+            let logoutButton = self.logoutButton else {
+                return
+        }
+        switch(self.loginState) {
+        case .UserLogin :
+            logoutButton.setTitleColor(UIColor.red, for: .normal)
+            userLoginTF.textColor = UIColor.lightGray
+            userPasswordTF.textColor = UIColor.lightGray
+        case .UserLogout :
+            logoutButton.setTitleColor(UIColor.lightGray, for: .normal)
+            userLoginTF.textColor = UIColor.black
+            userPasswordTF.textColor = UIColor.black
+        }
+    }
+    
+    func clearSavedAccount() {
         if self.loginState == .UserLogin {
             userDefaults.set(false, forKey: "savedAccount")
             userDefaults.removeObject(forKey: "userLogin")
             userDefaults.removeObject(forKey: "userPassword")
+            self.userLogin = ""
+            self.userPassword = ""
+            self.doneButton.isEnabled = false
             self.loginState = .UserLogout
         }
     }
@@ -124,7 +167,9 @@ extension LoginVC : UITableViewDelegate, UITableViewDataSource {
             cell.loginTextField.isSecureTextEntry = false
             cell.loginTextField.text = self.userLogin
             cell.loginTextField.delegate = self
-            cell.loginTextField.tag = 1
+            cell.loginTextField.returnKeyType = .next
+            self.userLoginTF = cell.loginTextField
+            
             return cell
         case (0, 1) :
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserLoginTVC", for: indexPath) as! UserLoginTVC
@@ -132,7 +177,8 @@ extension LoginVC : UITableViewDelegate, UITableViewDataSource {
             cell.loginTextField.isSecureTextEntry = true
             cell.loginTextField.text = self.userPassword
             cell.loginTextField.delegate = self
-            cell.loginTextField.tag = 2
+            cell.loginTextField.returnKeyType = .done
+            self.userPasswordTF = cell.loginTextField
             return cell
         case (1, 0) :
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveAccountTVC", for: indexPath) as! SaveAccountTVC
@@ -145,29 +191,55 @@ extension LoginVC : UITableViewDelegate, UITableViewDataSource {
         case (2, 0) :
             let cell = tableView.dequeueReusableCell(withIdentifier: "LogButtonTVC", for: indexPath) as! LogButtonTVC
             cell.logButton.setTitle("Log out", for: .normal)
-            cell.logButton.setTitleColor(UIColor.red, for: .normal)
+            cell.logButton.setTitleColor((self.loginState == .UserLogin ? UIColor.red : UIColor.lightGray), for: .normal)
             cell.buttonAction = {
-                self.logoutAction()
+                self.clearSavedAccount()
+                
                 self.tableView.reloadData()
             }
+            self.logoutButton = cell.logButton
             return cell
         default:
             return UITableViewCell()
         }
     }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
 extension LoginVC : UITextFieldDelegate {
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.doneButton.isEnabled = false
+        self.userLoginTF?.textColor = UIColor.black
+        self.userPasswordTF?.textColor = UIColor.black
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        switch(textField.tag) {
-        case 1 :
+        switch(textField) {
+        case self.userLoginTF! :
             self.userLogin = textField.text ?? ""
-        case 2 :
+        case self.userPasswordTF!:
             self.userPassword = textField.text ?? ""
         default :
             return
         }
+
+        self.doneButton.isEnabled = self.checkLoginAndPass() ? true : false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(textField == self.userLoginTF) {
+            textField.resignFirstResponder()
+            self.userPasswordTF?.becomeFirstResponder()
+        }else {
+           textField.resignFirstResponder() 
+        }
+        
+        return true
     }
 }
+
 

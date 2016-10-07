@@ -23,12 +23,10 @@ public class JenkinsAPI {
     
     private var networkClient:NetworkClient?
     
-    func jenkinsInit(domainName: String!, port: Int!, path:String!,userId: String!,password: String!, networkClient:NetworkClient!) {
+    func jenkinsInit(domainName: String!, port: Int!, path:String!, networkClient:NetworkClient!) {
         self.domainName = domainName
         self.path = path
         self.port = port
-        self.userId = userId
-        self.password = password
         self.networkClient = networkClient
         
         let urlString = "http://\(self.domainName):\(self.port)/"
@@ -73,6 +71,26 @@ public class JenkinsAPI {
             
             callback(jobs,nil)
             
+        })
+    }
+    
+    func loginRequest(login userLogin: String,password userPassword:String, handler:@escaping (Bool) -> Void) {
+        self.userId = userLogin
+        self.password = userPassword
+        
+        guard let url = URL(string: jenkinsURL!.absoluteString)?
+            .appendingPathComponent("user")
+            .appendingPathComponent(userLogin)
+            .appendingPathComponent("api")
+            .appendingPathComponent("json") else {
+                return
+        }
+        self.networkClient?.get(path: url, encodeAuth: encodedAuthorizationHeader, { (responce, error) in
+            if (error != nil) {
+                handler(false)
+            } else {
+                handler(true)
+            }
         })
     }
     

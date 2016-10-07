@@ -154,11 +154,41 @@
                     <connections>
                         <outlet property="doneButton" destination="zU1-fy-icZ" id="h5g-X1-ctE"/>
                         <outlet property="tableView" destination="eUi-fu-xF2" id="L5F-Z8-HD8"/>
+                        <segue destination="daB-Q1-TbL" kind="show" identifier="toProjects" id="ZNt-Ig-uc9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-55.200000000000003" y="432.23388305847078"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dch-lP-rFu">
+            <objects>
+                <viewController id="daB-Q1-TbL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sqq-k1-jMP"/>
+                        <viewControllerLayoutGuide type="bottom" id="G56-MY-ljY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fZA-2R-bd1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JP4-kS-xWH">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G56-MY-ljY" firstAttribute="top" secondItem="JP4-kS-xWH" secondAttribute="bottom" id="2qJ-Kx-fui"/>
+                            <constraint firstAttribute="trailing" secondItem="JP4-kS-xWH" secondAttribute="trailing" id="CKj-jZ-SRR"/>
+                            <constraint firstItem="JP4-kS-xWH" firstAttribute="top" secondItem="Sqq-k1-jMP" secondAttribute="bottom" id="fzb-yk-6ma"/>
+                            <constraint firstItem="JP4-kS-xWH" firstAttribute="leading" secondItem="fZA-2R-bd1" secondAttribute="leading" id="g1b-wP-s69"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psQ-fj-OV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="433"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MZ1-R3-G6h">
