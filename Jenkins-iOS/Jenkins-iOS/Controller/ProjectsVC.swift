@@ -56,9 +56,17 @@ extension ProjectsVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let projectCell = tableView.dequeueReusableCell(withIdentifier: "ProjectTVC", for: indexPath) as! ProjectTVC
         let job = self.jobs[indexPath.row]
-        projectCell.setupCell(withName: job.name , projectWeather: job.projectWeather , lastBuildStatus: job.buildStatus)
+        projectCell.setupCell(withJob: job)
         return projectCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let job = self.jobs[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let jobDetailVC = storyboard.instantiateViewController(withIdentifier: "JobDetailsVC") as! JobDetailsVC
+        jobDetailVC.job = job
         
+        self.navigationController?.show(jobDetailVC, sender: self)
     }
 }
 

@@ -16,6 +16,7 @@ class ProjectTVC: UITableViewCell {
     @IBOutlet weak var buildStatusImage: UIView!
     
     var buildState = BuildStatus.success
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -29,10 +30,10 @@ class ProjectTVC: UITableViewCell {
         buildStatusImage.backgroundColor = UIColor.clear
     }
     
-    func setupCell(withName projectName: String, projectWeather: ProjectWeather, lastBuildStatus: BuildStatus) {
-        self.projectName.text = projectName
-        self.weatherImage.image = projectWeather.image()
-        self.buildStatusImage.backgroundColor = lastBuildStatus.color()
+    func setupCell(withJob job: Job) {
+        self.projectName.text = job.projectName
+        self.weatherImage.image = job.projectWeather.image()
+        self.buildStatusImage.backgroundColor = job.lastBuildStatus.color()
         
         
         self.weatherImage.layer.cornerRadius = 5

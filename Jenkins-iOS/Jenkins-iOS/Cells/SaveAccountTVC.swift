@@ -11,6 +11,7 @@ import UIKit
 class SaveAccountTVC: UITableViewCell {
 
     var switchStateAction: ((Bool) -> Void)?
+    
     @IBAction func saveChanged(_ sender: UISwitch) {
         if let handler = switchStateAction {
             handler(sender.isOn)

@@ -52,7 +52,6 @@ public class JenkinsAPI {
                 return
         }
         
-        
 
         self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader, { (response, error) in
             print(response)

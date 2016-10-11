@@ -242,6 +242,102 @@
             </objects>
             <point key="canvasLocation" x="725.60000000000002" y="432.23388305847078"/>
         </scene>
+        <!--Job DetailsVC-->
+        <scene sceneID="Pjb-Ty-LOt">
+            <objects>
+                <viewController storyboardIdentifier="JobDetailVC" automaticallyAdjustsScrollViewInsets="NO" id="xlz-RT-Qqc" customClass="JobDetailsVC" customModule="Jenkins_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0wp-6H-eO9"/>
+                        <viewControllerLayoutGuide type="bottom" id="19U-u3-BEV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gvi-4h-ucd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eTI-ON-lxG">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="QNk-MC-h4W" style="IBUITableViewCellStyleDefault" id="B6E-ep-jTT">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B6E-ep-jTT" id="eJp-3f-m9I">
+                                            <frame key="frameInset" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QNk-MC-h4W">
+                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BuildDetailTVC" selectionStyle="default" indentationWidth="10" rowHeight="70" id="7OQ-cX-3ot" customClass="BuildDetailTVC" customModule="Jenkins_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7OQ-cX-3ot" id="Ntn-lZ-AuO">
+                                            <frame key="frameInset" width="375" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="re3-f9-iGr">
+                                                    <color key="backgroundColor" red="0.59400111609999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="ZhG-yj-YD6"/>
+                                                        <constraint firstAttribute="height" constant="16" id="rTe-v0-nCb"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build #5439 - node4/master/adhoc_universal_freeajshdlkfjhasdlfasldfhasldkjfhalksdjfaskldf" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5K-WU-QYb">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 11, 2016 3:56:56 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBW-p0-ptW">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="GBW-p0-ptW" secondAttribute="bottom" constant="5" id="6JG-78-FXB"/>
+                                                <constraint firstItem="re3-f9-iGr" firstAttribute="top" secondItem="Ntn-lZ-AuO" secondAttribute="top" constant="10" id="Bg8-G3-jmm"/>
+                                                <constraint firstAttribute="trailing" secondItem="K5K-WU-QYb" secondAttribute="trailing" constant="15" id="NhJ-sr-wTb"/>
+                                                <constraint firstItem="GBW-p0-ptW" firstAttribute="top" secondItem="K5K-WU-QYb" secondAttribute="bottom" id="Pe2-ZU-C8F"/>
+                                                <constraint firstAttribute="bottom" secondItem="K5K-WU-QYb" secondAttribute="bottom" constant="25" id="RgC-Zd-6Wv"/>
+                                                <constraint firstItem="GBW-p0-ptW" firstAttribute="leading" secondItem="K5K-WU-QYb" secondAttribute="leading" id="TDF-p8-nwY"/>
+                                                <constraint firstItem="K5K-WU-QYb" firstAttribute="top" secondItem="Ntn-lZ-AuO" secondAttribute="top" constant="5" id="fpe-mn-hHB"/>
+                                                <constraint firstItem="re3-f9-iGr" firstAttribute="leading" secondItem="Ntn-lZ-AuO" secondAttribute="leading" constant="10" id="uwj-1f-qCm"/>
+                                                <constraint firstItem="K5K-WU-QYb" firstAttribute="leading" secondItem="re3-f9-iGr" secondAttribute="trailing" constant="10" id="xC6-m4-iIX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="buildDate" destination="GBW-p0-ptW" id="ONS-dU-MHa"/>
+                                            <outlet property="buildName" destination="K5K-WU-QYb" id="x2G-gX-UFi"/>
+                                            <outlet property="buildStatusImage" destination="re3-f9-iGr" id="8tb-q1-3QX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eTI-ON-lxG" secondAttribute="trailing" id="P93-Oh-ZFO"/>
+                            <constraint firstItem="eTI-ON-lxG" firstAttribute="top" secondItem="0wp-6H-eO9" secondAttribute="bottom" id="XxC-r9-roO"/>
+                            <constraint firstItem="19U-u3-BEV" firstAttribute="top" secondItem="eTI-ON-lxG" secondAttribute="bottom" id="Ylb-F7-6Ye"/>
+                            <constraint firstItem="eTI-ON-lxG" firstAttribute="leading" secondItem="gvi-4h-ucd" secondAttribute="leading" id="ty4-wH-Hmc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="eTI-ON-lxG" id="sLk-Td-e5i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPg-6Z-rJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1476" y="433.13343328335833"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="MZ1-R3-G6h">
             <objects>
