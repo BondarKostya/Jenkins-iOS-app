@@ -154,17 +154,16 @@
                     <connections>
                         <outlet property="doneButton" destination="zU1-fy-icZ" id="h5g-X1-ctE"/>
                         <outlet property="tableView" destination="eUi-fu-xF2" id="L5F-Z8-HD8"/>
-                        <segue destination="daB-Q1-TbL" kind="show" identifier="toProjects" id="ZNt-Ig-uc9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-55.200000000000003" y="432.23388305847078"/>
         </scene>
-        <!--View Controller-->
+        <!--ProjectsVC-->
         <scene sceneID="Dch-lP-rFu">
             <objects>
-                <viewController id="daB-Q1-TbL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectsVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="daB-Q1-TbL" customClass="ProjectsVC" customModule="Jenkins_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sqq-k1-jMP"/>
                         <viewControllerLayoutGuide type="bottom" id="G56-MY-ljY"/>
@@ -173,8 +172,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JP4-kS-xWH">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JP4-kS-xWH">
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProjectTVC" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProjectTVC" id="fSX-bQ-t7M" customClass="ProjectTVC" customModule="Jenkins_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fSX-bQ-t7M" id="zzv-af-7MZ">
+                                            <frame key="frameInset" width="342" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sEh-23-c8t">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="TrZ-TG-04r"/>
+                                                        <constraint firstAttribute="height" constant="30" id="pBC-gz-xDq"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHz-Ie-u1r">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="co2-OI-omH">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="IZp-IS-7C9"/>
+                                                        <constraint firstAttribute="height" constant="16" id="pGq-h9-DYC"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sEh-23-c8t" firstAttribute="centerY" secondItem="zzv-af-7MZ" secondAttribute="centerY" id="Ozc-sV-Oc9"/>
+                                                <constraint firstItem="cHz-Ie-u1r" firstAttribute="leading" secondItem="sEh-23-c8t" secondAttribute="trailing" constant="15" id="SC7-Yc-2PX"/>
+                                                <constraint firstItem="co2-OI-omH" firstAttribute="centerY" secondItem="zzv-af-7MZ" secondAttribute="centerY" id="aZr-8h-iGZ"/>
+                                                <constraint firstItem="cHz-Ie-u1r" firstAttribute="centerY" secondItem="zzv-af-7MZ" secondAttribute="centerY" id="azi-4B-wEI"/>
+                                                <constraint firstItem="sEh-23-c8t" firstAttribute="leading" secondItem="zzv-af-7MZ" secondAttribute="leading" constant="15" id="bXj-RQ-cv4"/>
+                                                <constraint firstItem="co2-OI-omH" firstAttribute="leading" secondItem="cHz-Ie-u1r" secondAttribute="trailing" priority="250" constant="220" id="nyO-OC-dqN"/>
+                                                <constraint firstAttribute="trailing" secondItem="co2-OI-omH" secondAttribute="trailing" id="q9H-LY-BVf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="buildStatusImage" destination="co2-OI-omH" id="fce-2V-46Y"/>
+                                            <outlet property="projectName" destination="cHz-Ie-u1r" id="777-EN-wbV"/>
+                                            <outlet property="weatherImage" destination="sEh-23-c8t" id="T90-KS-qhZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="daB-Q1-TbL" id="bf6-HR-0s7"/>
+                                    <outlet property="delegate" destination="daB-Q1-TbL" id="VZx-If-F9C"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -185,10 +234,13 @@
                             <constraint firstItem="JP4-kS-xWH" firstAttribute="leading" secondItem="fZA-2R-bd1" secondAttribute="leading" id="g1b-wP-s69"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="JP4-kS-xWH" id="WBC-hb-sTe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psQ-fj-OV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="433"/>
+            <point key="canvasLocation" x="725.60000000000002" y="432.23388305847078"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MZ1-R3-G6h">

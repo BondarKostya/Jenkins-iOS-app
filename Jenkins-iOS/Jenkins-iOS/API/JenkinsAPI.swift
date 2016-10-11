@@ -46,12 +46,14 @@ public class JenkinsAPI {
     }
     
     func fetchJobs(callback: @escaping ([Job],Error?) -> Void)  {
-        guard let url = URL(string: jenkinsURL!.absoluteString)?
-            .appendingPathComponent("api")
-            .appendingPathComponent("json") else {
+        let escapedString = "\(jenkinsURL!.absoluteString)/api/json?tree=jobs[name,url,color,healthReport[score]]"
+        guard let url = URL(string: escapedString) else {
                 //handler(JenkinsError.InvalidJenkinsURL)
                 return
         }
+        
+        
+
         self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader, { (response, error) in
             print(response)
             if (error != nil) {
@@ -74,7 +76,7 @@ public class JenkinsAPI {
         })
     }
     
-    func loginRequest(login userLogin: String,password userPassword:String, handler:@escaping (Bool) -> Void) {
+    func loginRequest(login userLogin: String,password userPassword:String, handler:@escaping (Bool , Error?) -> Void) {
         self.userId = userLogin
         self.password = userPassword
         
@@ -87,9 +89,9 @@ public class JenkinsAPI {
         }
         self.networkClient?.get(path: url, encodeAuth: encodedAuthorizationHeader, { (responce, error) in
             if (error != nil) {
-                handler(false)
+                handler(false,error)
             } else {
-                handler(true)
+                handler(true, nil)
             }
         })
     }

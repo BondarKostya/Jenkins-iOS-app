@@ -41,7 +41,6 @@ class NetworkClient:NSObject {
         request.addValue(encodeAuth, forHTTPHeaderField: "Authorization")
         return request
     }
-    
     private func decodeResponse(_ response: URLResponse?, rawOutput: Bool, data: Data?, error: Error?, handler: @escaping (AnyObject?, Error?) -> Void) {
         guard let data = data else {
             handler(nil, error)
@@ -56,7 +55,11 @@ class NetworkClient:NSObject {
         if let response = response as? HTTPURLResponse {
             if response.statusCode >= 400 {
                 print(response)
-                //let error = JenkinsError(httpStatusCode: response.statusCode)
+                let userInfo: [NSObject : String] =
+                [
+                        NSLocalizedDescriptionKey as NSObject : JenkinsError.description(httpStatusCode: response.statusCode)
+                ]
+                let error = NSError(domain: "", code: response.statusCode, userInfo: userInfo)
                 handler(nil, error)
             }
         }

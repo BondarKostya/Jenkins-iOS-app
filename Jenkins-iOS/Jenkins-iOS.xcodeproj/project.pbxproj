@@ -12,13 +12,18 @@
 		3D49EF071DA6503E000CE6DB /* LogButtonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF041DA6503E000CE6DB /* LogButtonTVC.swift */; };
 		3D49EF081DA6503E000CE6DB /* SaveAccountTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF051DA6503E000CE6DB /* SaveAccountTVC.swift */; };
 		3D49EF091DA6503E000CE6DB /* UserLoginTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF061DA6503E000CE6DB /* UserLoginTVC.swift */; };
-		3D49EF0B1DA65074000CE6DB /* HealthReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF0A1DA65074000CE6DB /* HealthReport.swift */; };
+		3D49EF0B1DA65074000CE6DB /* ProjectWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF0A1DA65074000CE6DB /* ProjectWeather.swift */; };
 		3D49EF0D1DA66EA2000CE6DB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3D49EF0C1DA66EA1000CE6DB /* Podfile */; };
+		3D4B6F5C1DAB8B1300019990 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F5B1DAB8B1300019990 /* Errors.swift */; };
+		3D4B6F5E1DAB8DD300019990 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F5D1DAB8DD300019990 /* AlertManager.swift */; };
+		3D4B6F601DAB99B500019990 /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F5F1DAB99B500019990 /* ProjectsVC.swift */; };
+		3D4B6F691DABBEB100019990 /* ProjectTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F681DABBEB100019990 /* ProjectTVC.swift */; };
 		3D4F36221DA50DFD00A7925E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36201DA50DFD00A7925E /* Main.storyboard */; };
 		3D4F36241DA50DFD00A7925E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36231DA50DFD00A7925E /* Assets.xcassets */; };
 		3D4F36271DA50DFD00A7925E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36251DA50DFD00A7925E /* LaunchScreen.storyboard */; };
 		3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36571DA510F300A7925E /* AppDelegate.swift */; };
 		3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36591DA510FD00A7925E /* LoginVC.swift */; };
+		3DC71F9D1DAD061B00190FD5 /* BuildStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71F9C1DAD061B00190FD5 /* BuildStatus.swift */; };
 		3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */; };
 		3DD19D391DA51EF2005EC59A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D371DA51EF2005EC59A /* NetworkClient.swift */; };
 		6432C35F7CBED6EBEF5EC8E9 /* Pods_Jenkins_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DD53FC077E92426AA6C9DA /* Pods_Jenkins_iOS.framework */; };
@@ -30,8 +35,12 @@
 		3D49EF041DA6503E000CE6DB /* LogButtonTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogButtonTVC.swift; path = Cells/LogButtonTVC.swift; sourceTree = "<group>"; };
 		3D49EF051DA6503E000CE6DB /* SaveAccountTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveAccountTVC.swift; path = Cells/SaveAccountTVC.swift; sourceTree = "<group>"; };
 		3D49EF061DA6503E000CE6DB /* UserLoginTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserLoginTVC.swift; path = Cells/UserLoginTVC.swift; sourceTree = "<group>"; };
-		3D49EF0A1DA65074000CE6DB /* HealthReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthReport.swift; path = Model/HealthReport.swift; sourceTree = "<group>"; };
+		3D49EF0A1DA65074000CE6DB /* ProjectWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectWeather.swift; path = Model/ProjectWeather.swift; sourceTree = "<group>"; };
 		3D49EF0C1DA66EA1000CE6DB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		3D4B6F5B1DAB8B1300019990 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Model/Errors.swift; sourceTree = "<group>"; };
+		3D4B6F5D1DAB8DD300019990 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		3D4B6F5F1DAB99B500019990 /* ProjectsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsVC.swift; path = Controller/ProjectsVC.swift; sourceTree = "<group>"; };
+		3D4B6F681DABBEB100019990 /* ProjectTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTVC.swift; path = Cells/ProjectTVC.swift; sourceTree = "<group>"; };
 		3D4F36191DA50DFD00A7925E /* Jenkins-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jenkins-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4F36211DA50DFD00A7925E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D4F36231DA50DFD00A7925E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +48,7 @@
 		3D4F36281DA50DFD00A7925E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D4F36571DA510F300A7925E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AppDelegate/AppDelegate.swift; sourceTree = "<group>"; };
 		3D4F36591DA510FD00A7925E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = Controller/LoginVC.swift; sourceTree = "<group>"; };
+		3DC71F9C1DAD061B00190FD5 /* BuildStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildStatus.swift; path = Model/BuildStatus.swift; sourceTree = "<group>"; };
 		3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JenkinsAPI.swift; path = API/JenkinsAPI.swift; sourceTree = "<group>"; };
 		3DD19D371DA51EF2005EC59A /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = API/NetworkClient.swift; sourceTree = "<group>"; };
 		9456A5CAA964FC0BD6C2FD11 /* Pods-Jenkins-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jenkins-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jenkins-iOS/Pods-Jenkins-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +74,7 @@
 				3D49EF041DA6503E000CE6DB /* LogButtonTVC.swift */,
 				3D49EF051DA6503E000CE6DB /* SaveAccountTVC.swift */,
 				3D49EF061DA6503E000CE6DB /* UserLoginTVC.swift */,
+				3D4B6F681DABBEB100019990 /* ProjectTVC.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -107,9 +118,11 @@
 		3D4F364A1DA50E7400A7925E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3D4B6F5B1DAB8B1300019990 /* Errors.swift */,
 				3D49EEEB1DA62A23000CE6DB /* Job.swift */,
 				3D49EEF11DA634F5000CE6DB /* Build.swift */,
-				3D49EF0A1DA65074000CE6DB /* HealthReport.swift */,
+				3D49EF0A1DA65074000CE6DB /* ProjectWeather.swift */,
+				3DC71F9C1DAD061B00190FD5 /* BuildStatus.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -118,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				3D4F36591DA510FD00A7925E /* LoginVC.swift */,
+				3D4B6F5F1DAB99B500019990 /* ProjectsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -125,6 +139,7 @@
 		3D4F364C1DA50FB700A7925E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3D4B6F5D1DAB8DD300019990 /* AlertManager.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -291,11 +306,16 @@
 				3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */,
 				3D49EF091DA6503E000CE6DB /* UserLoginTVC.swift in Sources */,
 				3D49EF081DA6503E000CE6DB /* SaveAccountTVC.swift in Sources */,
+				3D4B6F5C1DAB8B1300019990 /* Errors.swift in Sources */,
 				3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */,
 				3D49EEF21DA634F5000CE6DB /* Build.swift in Sources */,
 				3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */,
-				3D49EF0B1DA65074000CE6DB /* HealthReport.swift in Sources */,
+				3D49EF0B1DA65074000CE6DB /* ProjectWeather.swift in Sources */,
+				3D4B6F691DABBEB100019990 /* ProjectTVC.swift in Sources */,
+				3D4B6F601DAB99B500019990 /* ProjectsVC.swift in Sources */,
 				3DD19D391DA51EF2005EC59A /* NetworkClient.swift in Sources */,
+				3D4B6F5E1DAB8DD300019990 /* AlertManager.swift in Sources */,
+				3DC71F9D1DAD061B00190FD5 /* BuildStatus.swift in Sources */,
 				3D49EEEC1DA62A23000CE6DB /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

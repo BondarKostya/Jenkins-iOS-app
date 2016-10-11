@@ -19,7 +19,9 @@ class LoginVC: UIViewController {
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
     var loginState = LoginState.UserLogout
+    
     let userDefaults = UserDefaults.standard
+    
     var userLogin = ""
     var userPassword = ""
     var saveState = false
@@ -32,6 +34,7 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -58,7 +61,6 @@ class LoginVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.updateUI()
     }
 
     @IBAction func doneAction(_ sender: AnyObject) {
@@ -68,20 +70,25 @@ class LoginVC: UIViewController {
         }
         
         self.saveAccount()
-        
+        self.doneButton.isEnabled = false
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        //, userId: "konstantin.bondar", password: "IQssTnAzXR"
-        JenkinsAPI.sharedInstance.loginRequest(login: self.userLogin, password: self.userPassword) { (response) in
+        JenkinsAPI.sharedInstance.loginRequest(login: self.userLogin, password: self.userPassword) { (response,error) in
             DispatchQueue.main.async {
+                self.doneButton.isEnabled = true
                 MBProgressHUD.hide(for: self.view, animated: true)
                 if(response) {
                     self.loginState = .UserLogin
-                    self.performSegue(withIdentifier: "toProjects", sender: self)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let projectsVC = storyboard.instantiateViewController(withIdentifier: "ProjectsVC") as! ProjectsVC
+                    self.navigationController?.pushViewController(projectsVC, animated: true)
+                    
                 }else {
+                    if let error = error {
+                      AlertManager.showError(inVC: self, error.localizedDescription)
+                    }
+                    
                     self.loginState = .UserLogout
                 }
-                self.updateUI()
-                
             }
             
         }
@@ -106,24 +113,6 @@ class LoginVC: UIViewController {
     
     func switchSaveState(state: Bool) {
         self.saveState = state
-    }
-    
-    func updateUI() {
-        guard let userLoginTF = self.userLoginTF ,
-            let userPasswordTF = self.userPasswordTF,
-            let logoutButton = self.logoutButton else {
-                return
-        }
-        switch(self.loginState) {
-        case .UserLogin :
-            logoutButton.setTitleColor(UIColor.red, for: .normal)
-            userLoginTF.textColor = UIColor.lightGray
-            userPasswordTF.textColor = UIColor.lightGray
-        case .UserLogout :
-            logoutButton.setTitleColor(UIColor.lightGray, for: .normal)
-            userLoginTF.textColor = UIColor.black
-            userPasswordTF.textColor = UIColor.black
-        }
     }
     
     func clearSavedAccount() {
@@ -168,6 +157,7 @@ extension LoginVC : UITableViewDelegate, UITableViewDataSource {
             cell.loginTextField.text = self.userLogin
             cell.loginTextField.delegate = self
             cell.loginTextField.returnKeyType = .next
+            cell.loginTextField.textColor = self.saveState ? UIColor.lightGray : UIColor.black
             self.userLoginTF = cell.loginTextField
             
             return cell
@@ -178,6 +168,7 @@ extension LoginVC : UITableViewDelegate, UITableViewDataSource {
             cell.loginTextField.text = self.userPassword
             cell.loginTextField.delegate = self
             cell.loginTextField.returnKeyType = .done
+            cell.loginTextField.textColor = self.saveState ? UIColor.lightGray : UIColor.black
             self.userPasswordTF = cell.loginTextField
             return cell
         case (1, 0) :

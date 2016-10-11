@@ -8,41 +8,13 @@
 
 import Foundation
 
-public enum JobColor: String {
-    case Green
-    case Red
-    case DisabledGrey
-    case UnbuiltGrey
-    case Unknown
-    
-    init(color: String) {
-        switch color {
-        case "notbuilt":
-            self = .UnbuiltGrey
-        case "disabled":
-            self = .DisabledGrey
-        case "red":
-            self = .Red
-        case "green":
-            self = .Green
-        default:
-            self = .Unknown
-        }
-    }
-    
-    public var description: String {
-        return self.rawValue
-    }
-}
-
 
 class Job {
     
     private(set) var builds: [Build] = []
     private(set) var buildable: Bool?
-    private(set) var color: JobColor = .Unknown
-    private(set) var displayName: String?
-    private(set) var healthReports: [HealthReport] = []
+    private(set) var buildStatus: BuildStatus = .disable
+    private(set) var projectWeather: ProjectWeather = .none
     private(set) var name: String
     private(set) var url: String?
 
@@ -69,18 +41,14 @@ class Job {
         }
 //        
         if let color = json["color"] as? String {
-            self.color = JobColor(color: color)
-        }
-
-        
-        if let displayName = json["displayName"] as? String {
-            self.displayName = displayName
+            self.buildStatus = BuildStatus(withColor: color)
         }
         
         if let healthReports = json["healthReport"] as? [JSON] {
             for healthReportJSON in healthReports {
-                let report = HealthReport(json: healthReportJSON)
-                self.healthReports.append(report)
+                let report = ProjectWeather(withJSON: healthReportJSON)
+                self.projectWeather = report
+                break
             }
         }
         
