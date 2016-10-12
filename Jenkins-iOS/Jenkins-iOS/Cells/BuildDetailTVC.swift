@@ -19,12 +19,27 @@ class BuildDetailTVC: UITableViewCell {
         // Initialization code
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.buildStatusImage.backgroundColor = UIColor.clear
+        self.buildName.text = ""
+        self.buildDate.text = ""
+    }
     
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setupCell(withBuild build: Build) {
+        self.buildStatusImage.backgroundColor = build.buildStatus.color()
+        self.buildStatusImage.layer.cornerRadius = 6
+        
+        self.buildName.text = "Build \(build.name)"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyy hh:mm a"
+        dateFormatter.amSymbol = "AM"
+        dateFormatter.pmSymbol = "PM"
+        
+        let buildDate = NSDate(timeIntervalSince1970: TimeInterval(build.timestamp / 1000))
+        
+        self.buildDate.text = dateFormatter.string(from: buildDate as Date)
     }
 
 }

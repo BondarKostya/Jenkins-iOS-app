@@ -31,7 +31,7 @@ class ProjectTVC: UITableViewCell {
     }
     
     func setupCell(withJob job: Job) {
-        self.projectName.text = job.projectName
+        self.projectName.text = job.name
         self.weatherImage.image = job.projectWeather.image()
         self.buildStatusImage.backgroundColor = job.lastBuildStatus.color()
         

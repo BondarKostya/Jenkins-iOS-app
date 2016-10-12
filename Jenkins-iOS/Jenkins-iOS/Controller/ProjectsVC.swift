@@ -19,8 +19,14 @@ class ProjectsVC: UIViewController {
         
         self.title = "Projects"
         self.tableView.contentInset = UIEdgeInsetsMake(40, 0, 40, 0)
-        
+        self.tableView.tableFooterView = UIView()
+
         self.loadProjects()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
     
     func loadProjects() {
@@ -37,18 +43,12 @@ class ProjectsVC: UIViewController {
                 self.jobs = jobs
                 self.tableView.reloadData()
             }
-            
-            
         }
     }
-    
-
-
 }
 
 extension ProjectsVC : UITableViewDelegate, UITableViewDataSource {
-    
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.jobs.count
     }

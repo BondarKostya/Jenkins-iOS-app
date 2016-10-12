@@ -46,7 +46,7 @@ public class JenkinsAPI {
     }
     
     func fetchJobs(callback: @escaping ([Job],Error?) -> Void)  {
-        let escapedString = "\(jenkinsURL!.absoluteString)/api/json?tree=jobs[name,url,color,healthReport[score]]"
+        let escapedString = "\(jenkinsURL!.absoluteString)api/json?tree=jobs[name,url,color,healthReport[score]]"
         guard let url = URL(string: escapedString) else {
                 //handler(JenkinsError.InvalidJenkinsURL)
                 return
@@ -95,27 +95,91 @@ public class JenkinsAPI {
         })
     }
     
-    func fetchJob(_ jobName: String ,callback: @escaping (_ job:Job?) -> Void)  {
-        guard let url = URL(string: jenkinsURL!.absoluteString)?
-            .appendingPathComponent("job")
-            .appendingPathComponent(jobName)
-            .appendingPathComponent("api")
-            .appendingPathComponent("json") else {
-                //handler(JenkinsError.InvalidJenkinsURL)
-                return
+    func fetchBuilds(withJob jobName: String ,callback: @escaping (_ builds:[Build],_ error : Error?) -> Void)  {
+        let encodedJob = jobName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+
+        let escapedString = "\(jenkinsURL!.absoluteString)job/\(encodedJob!)/api/json?tree=builds[displayName,result,timestamp,url]"
+        guard let url = URL(string: escapedString) else {
+            //handler(JenkinsError.InvalidJenkinsURL)
+            return
         }
         self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader, { (response, error) in
-            print(response)
-            guard let json = response as? JSON else {
-                    callback(nil)
+            if (error != nil) {
+                callback([],error)
+                return
+            }
+            
+            guard let jsonWithJobs = response as? JSON ,
+                let jsonJobs = jsonWithJobs["builds"] as? [JSON] else {
+                    callback([],nil)
                     return
             }
             
-            let job = Job(json:json)
-            
-            callback(job)
+            let builds = jsonJobs.map{ json in
+                return Build(json:json)
+            }
+            callback(builds,nil)
             
         })
+    }
+    
+    func fetchConsoleOutput(withBuildURL buildURL: String ,callback: @escaping (_ consoleOutput:String,_ error : Error?) -> Void)  {
+        
+        let escapedString = "\(buildURL)consoleText"
+        guard let url = URL(string: escapedString) else {
+            //handler(JenkinsError.InvalidJenkinsURL)
+            return
+        }
+        self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader, { (response, error) in
+            if (error != nil) {
+                callback("",error)
+                return
+            }
+            
+            guard let consoleOutput = response as? String else {
+                     callback("",nil)
+                    return
+            }
+            
+            callback(consoleOutput,nil)
+        })
+    }
+    
+    func fetchBuildParameters(withJobURL jobURL: String ,callback: @escaping (_ consoleOutput:String,_ error : Error?) -> Void)  {
+        let escapedString = "\(jobURL)config.xml"
+        guard let url = URL(string: escapedString) else {
+            //handler(JenkinsError.InvalidJenkinsURL)
+            return
+        }
+        self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader, { (response, error) in
+            if (error != nil) {
+                callback("",error)
+                return
+            }
+            
+            guard let consoleOutput = response as? String else {
+                callback("",nil)
+                return
+            }
+            
+            callback(consoleOutput,nil)
+        })
+        
+    }
+    
+    
+    
+    func build(_ name: String, parameters: [String : String], _ handler: @escaping (_ error: Error?) -> Void) {
+        guard let url = URL(string: jenkinsURL!.absoluteString)?
+            .appendingPathComponent(name)
+            .appendingPathComponent("buildWithParameters") else {
+//                handler(JenkinsError.InvalidJenkinsURL)
+                return
+        }
+        
+        self.networkClient?.post(path: url,encodeAuth:encodedAuthorizationHeader, params: parameters as [String : AnyObject]) { response, error in
+            handler(error)
+        }
     }
     
     private var encodedAuthorizationHeader: String {

@@ -20,6 +20,7 @@
 		3D4B6F5E1DAB8DD300019990 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F5D1DAB8DD300019990 /* AlertManager.swift */; };
 		3D4B6F601DAB99B500019990 /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F5F1DAB99B500019990 /* ProjectsVC.swift */; };
 		3D4B6F691DABBEB100019990 /* ProjectTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F681DABBEB100019990 /* ProjectTVC.swift */; };
+		3D4BA81D1DAE5140000423A1 /* BuildConsoleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4BA81C1DAE5140000423A1 /* BuildConsoleVC.swift */; };
 		3D4F36221DA50DFD00A7925E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36201DA50DFD00A7925E /* Main.storyboard */; };
 		3D4F36241DA50DFD00A7925E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36231DA50DFD00A7925E /* Assets.xcassets */; };
 		3D4F36271DA50DFD00A7925E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36251DA50DFD00A7925E /* LaunchScreen.storyboard */; };
@@ -45,6 +46,7 @@
 		3D4B6F5D1DAB8DD300019990 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		3D4B6F5F1DAB99B500019990 /* ProjectsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsVC.swift; path = Controller/ProjectsVC.swift; sourceTree = "<group>"; };
 		3D4B6F681DABBEB100019990 /* ProjectTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTVC.swift; path = Cells/ProjectTVC.swift; sourceTree = "<group>"; };
+		3D4BA81C1DAE5140000423A1 /* BuildConsoleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildConsoleVC.swift; path = Controller/BuildConsoleVC.swift; sourceTree = "<group>"; };
 		3D4F36191DA50DFD00A7925E /* Jenkins-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jenkins-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4F36211DA50DFD00A7925E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D4F36231DA50DFD00A7925E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				3D4F36591DA510FD00A7925E /* LoginVC.swift */,
 				3D4B6F5F1DAB99B500019990 /* ProjectsVC.swift */,
 				3D4606A51DAD276D00DBE9B9 /* JobDetailsVC.swift */,
+				3D4BA81C1DAE5140000423A1 /* BuildConsoleVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				3D4B6F5C1DAB8B1300019990 /* Errors.swift in Sources */,
 				3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */,
 				3D49EEF21DA634F5000CE6DB /* Build.swift in Sources */,
+				3D4BA81D1DAE5140000423A1 /* BuildConsoleVC.swift in Sources */,
 				3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */,
 				3D49EF0B1DA65074000CE6DB /* ProjectWeather.swift in Sources */,
 				3D4B6F691DABBEB100019990 /* ProjectTVC.swift in Sources */,

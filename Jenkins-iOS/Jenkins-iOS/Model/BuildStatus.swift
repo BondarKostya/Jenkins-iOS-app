@@ -32,6 +32,20 @@ public enum BuildStatus {
         }
     }
     
+    init(withStatus status: String) {
+        switch(status) {
+        case "SUCCESS":
+            self = .success
+        case "FAILURE":
+            self = .failed
+        case "ABORTED":
+            self = .aborted
+        default:
+            self = .disable
+            
+        }
+    }
+    
     func color() -> UIColor {
         switch self {
         case .failed:

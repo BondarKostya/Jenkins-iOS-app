@@ -13,7 +13,7 @@ class Job {
     
     private(set) var builds: [Build] = []
     private(set) var buildable: Bool?
-    private(set) var buildStatus: BuildStatus = .disable
+    private(set) var lastBuildStatus: BuildStatus = .disable
     private(set) var projectWeather: ProjectWeather = .none
     private(set) var name: String
     private(set) var url: String?
@@ -41,7 +41,7 @@ class Job {
         }
 //        
         if let color = json["color"] as? String {
-            self.buildStatus = BuildStatus(withColor: color)
+            self.lastBuildStatus = BuildStatus(withColor: color)
         }
         
         if let healthReports = json["healthReport"] as? [JSON] {
@@ -52,5 +52,17 @@ class Job {
             }
         }
         
+    }
+    
+    func setJobStatus(status: BuildStatus) {
+        self.lastBuildStatus = status
+    }
+    
+    func addBuilds(_ builds:[Build]) {
+        self.builds.append(contentsOf: builds)
+    }
+    
+    func clearBuilds() {
+        self.builds.removeAll()
     }
 }

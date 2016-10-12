@@ -34,6 +34,18 @@ class NetworkClient:NSObject {
         task.resume()
     }
     
+    func post(path: URL, encodeAuth:String!, rawResponse: Bool = false, params: [String : AnyObject] = [:],_ handler: @escaping (AnyObject?, Error?) -> Void) {
+        let request: URLRequest = requestFor(path,encodeAuth:encodeAuth, method: .POST, params: params)
+
+        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
+        
+        let task = session.dataTask(with: request) { data, response, error in
+            self.decodeResponse(response, rawOutput: rawResponse, data: data, error: error, handler: handler)
+        }
+        
+        task.resume()
+    }
+    
     private func requestFor(_ url: URL,encodeAuth:String!, method: RequestMethod, params: [String : AnyObject] = [:]) -> URLRequest {
         
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: ApiClientTimeout)
