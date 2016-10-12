@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SWXMLHash
 
 private let ApiClientTimeout: TimeInterval = 30
 

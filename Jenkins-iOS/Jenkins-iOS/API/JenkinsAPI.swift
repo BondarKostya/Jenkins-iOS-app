@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SWXMLHash
 typealias JSON = [String: AnyObject]
 
 public class JenkinsAPI {
@@ -130,7 +130,7 @@ public class JenkinsAPI {
             //handler(JenkinsError.InvalidJenkinsURL)
             return
         }
-        self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader, { (response, error) in
+        self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader,rawResponse: true, { (response, error) in
             if (error != nil) {
                 callback("",error)
                 return
@@ -151,18 +151,24 @@ public class JenkinsAPI {
             //handler(JenkinsError.InvalidJenkinsURL)
             return
         }
-        self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader, { (response, error) in
+        self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, rawResponse: true, { (response, error) in
             if (error != nil) {
                 callback("",error)
                 return
             }
             
-            guard let consoleOutput = response as? String else {
+            guard let xmlConfig = response as? String else {
                 callback("",nil)
                 return
             }
+            let xml = SWXMLHash.parse(xmlConfig)
+            let parameters = xml["project"]["properties"]["hudson.model.ParametersDefinitionProperty"]["parameterDefinitions"].children
+            for parameter in parameters {
+                
+            }
+            print(xml)
             
-            callback(consoleOutput,nil)
+            callback(xmlConfig,nil)
         })
         
     }

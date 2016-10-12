@@ -68,9 +68,7 @@ extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (section == 0) {
-            JenkinsAPI.sharedInstance.fetchBuildParameters(withJobURL: (self.job?.url)!, callback: { (response, error) in
-                print(response)
-            })
+
             return 1
         }
         return job?.builds.count ?? 0
@@ -78,6 +76,9 @@ extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.section == 0) {
+            JenkinsAPI.sharedInstance.fetchBuildParameters(withJobURL: (self.job?.url)!, callback: { (response, error) in
+                print(response)
+            })
             return
         }
         let build = self.job?.builds[indexPath.row]
