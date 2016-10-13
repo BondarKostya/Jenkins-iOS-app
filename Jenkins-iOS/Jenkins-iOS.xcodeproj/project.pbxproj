@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D4606A41DAD252100DBE9B9 /* BuildDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4606A31DAD252100DBE9B9 /* BuildDetailTVC.swift */; };
+		3D4606A61DAD276D00DBE9B9 /* JobDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4606A51DAD276D00DBE9B9 /* JobDetailsVC.swift */; };
+		3D49EEEC1DA62A23000CE6DB /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EEEB1DA62A23000CE6DB /* Job.swift */; };
+		3D49EEF21DA634F5000CE6DB /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EEF11DA634F5000CE6DB /* Build.swift */; };
+		3D49EF071DA6503E000CE6DB /* LogButtonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF041DA6503E000CE6DB /* LogButtonTVC.swift */; };
+		3D49EF081DA6503E000CE6DB /* SaveAccountTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF051DA6503E000CE6DB /* SaveAccountTVC.swift */; };
+		3D49EF091DA6503E000CE6DB /* UserLoginTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF061DA6503E000CE6DB /* UserLoginTVC.swift */; };
+		3D49EF0B1DA65074000CE6DB /* ProjectWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF0A1DA65074000CE6DB /* ProjectWeather.swift */; };
+		3D49EF0D1DA66EA2000CE6DB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3D49EF0C1DA66EA1000CE6DB /* Podfile */; };
+		3D4B6F5C1DAB8B1300019990 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F5B1DAB8B1300019990 /* Errors.swift */; };
+		3D4B6F5E1DAB8DD300019990 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F5D1DAB8DD300019990 /* AlertManager.swift */; };
+		3D4B6F601DAB99B500019990 /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F5F1DAB99B500019990 /* ProjectsVC.swift */; };
+		3D4B6F691DABBEB100019990 /* ProjectTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F681DABBEB100019990 /* ProjectTVC.swift */; };
+		3D4BA81D1DAE5140000423A1 /* BuildConsoleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4BA81C1DAE5140000423A1 /* BuildConsoleVC.swift */; };
+		3D4F36221DA50DFD00A7925E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36201DA50DFD00A7925E /* Main.storyboard */; };
+		3D4F36241DA50DFD00A7925E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36231DA50DFD00A7925E /* Assets.xcassets */; };
+		3D4F36271DA50DFD00A7925E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36251DA50DFD00A7925E /* LaunchScreen.storyboard */; };
+		3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36571DA510F300A7925E /* AppDelegate.swift */; };
+		3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36591DA510FD00A7925E /* LoginVC.swift */; };
+		3D5E5A141DAF7B73006CA241 /* JenkinsXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E5A131DAF7B73006CA241 /* JenkinsXMLParser.swift */; };
+		3D5E5A161DAF9149006CA241 /* BuildWithParametersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E5A151DAF9149006CA241 /* BuildWithParametersVC.swift */; };
+		3D5E685E1DAE766000FBB6D5 /* BuildParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E685D1DAE766000FBB6D5 /* BuildParameter.swift */; };
+		3D5E68611DAE82F800FBB6D5 /* BooleanParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68601DAE82F800FBB6D5 /* BooleanParameterTVC.swift */; };
+		3D5E68631DAE831200FBB6D5 /* StringParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68621DAE831200FBB6D5 /* StringParameterTVC.swift */; };
+		3D5E68651DAE832600FBB6D5 /* TextParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68641DAE832600FBB6D5 /* TextParameterTVC.swift */; };
+		3D5E68671DAE834200FBB6D5 /* ChoiceParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68661DAE834200FBB6D5 /* ChoiceParameterTVC.swift */; };
+		3DC71F9D1DAD061B00190FD5 /* BuildStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71F9C1DAD061B00190FD5 /* BuildStatus.swift */; };
+		3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */; };
+		3DD19D391DA51EF2005EC59A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D371DA51EF2005EC59A /* NetworkClient.swift */; };
+		3DE92A751DAFAC7F00703DA4 /* CellWithSelectedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE92A741DAFAC7F00703DA4 /* CellWithSelectedValue.swift */; };
+		6432C35F7CBED6EBEF5EC8E9 /* Pods_Jenkins_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DD53FC077E92426AA6C9DA /* Pods_Jenkins_iOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D4606A31DAD252100DBE9B9 /* BuildDetailTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildDetailTVC.swift; path = Cells/BuildDetailTVC.swift; sourceTree = "<group>"; };
+		3D4606A51DAD276D00DBE9B9 /* JobDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobDetailsVC.swift; path = Controller/JobDetailsVC.swift; sourceTree = "<group>"; };
+		3D49EEEB1DA62A23000CE6DB /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Job.swift; path = Model/Job.swift; sourceTree = "<group>"; };
+		3D49EEF11DA634F5000CE6DB /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Build.swift; path = Model/Build.swift; sourceTree = "<group>"; };
+		3D49EF041DA6503E000CE6DB /* LogButtonTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogButtonTVC.swift; path = Cells/LogButtonTVC.swift; sourceTree = "<group>"; };
+		3D49EF051DA6503E000CE6DB /* SaveAccountTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveAccountTVC.swift; path = Cells/SaveAccountTVC.swift; sourceTree = "<group>"; };
+		3D49EF061DA6503E000CE6DB /* UserLoginTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserLoginTVC.swift; path = Cells/UserLoginTVC.swift; sourceTree = "<group>"; };
+		3D49EF0A1DA65074000CE6DB /* ProjectWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectWeather.swift; path = Model/ProjectWeather.swift; sourceTree = "<group>"; };
+		3D49EF0C1DA66EA1000CE6DB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3D4B6F5B1DAB8B1300019990 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Model/Errors.swift; sourceTree = "<group>"; };
+		3D4B6F5D1DAB8DD300019990 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		3D4B6F5F1DAB99B500019990 /* ProjectsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsVC.swift; path = Controller/ProjectsVC.swift; sourceTree = "<group>"; };
+		3D4B6F681DABBEB100019990 /* ProjectTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTVC.swift; path = Cells/ProjectTVC.swift; sourceTree = "<group>"; };
+		3D4BA81C1DAE5140000423A1 /* BuildConsoleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildConsoleVC.swift; path = Controller/BuildConsoleVC.swift; sourceTree = "<group>"; };
+		3D4F36191DA50DFD00A7925E /* Jenkins-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jenkins-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4F36211DA50DFD00A7925E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D4F36231DA50DFD00A7925E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D4F36261DA50DFD00A7925E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D4F36281DA50DFD00A7925E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D4F36571DA510F300A7925E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AppDelegate/AppDelegate.swift; sourceTree = "<group>"; };
+		3D4F36591DA510FD00A7925E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = Controller/LoginVC.swift; sourceTree = "<group>"; };
+		3D5E5A131DAF7B73006CA241 /* JenkinsXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JenkinsXMLParser.swift; sourceTree = "<group>"; };
+		3D5E5A151DAF9149006CA241 /* BuildWithParametersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildWithParametersVC.swift; path = Controller/BuildWithParametersVC.swift; sourceTree = "<group>"; };
+		3D5E685D1DAE766000FBB6D5 /* BuildParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildParameter.swift; path = Model/BuildParameter.swift; sourceTree = "<group>"; };
+		3D5E68601DAE82F800FBB6D5 /* BooleanParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooleanParameterTVC.swift; path = Cells/BuildParametersTVC/BooleanParameterTVC.swift; sourceTree = "<group>"; };
+		3D5E68621DAE831200FBB6D5 /* StringParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringParameterTVC.swift; path = Cells/BuildParametersTVC/StringParameterTVC.swift; sourceTree = "<group>"; };
+		3D5E68641DAE832600FBB6D5 /* TextParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextParameterTVC.swift; path = Cells/BuildParametersTVC/TextParameterTVC.swift; sourceTree = "<group>"; };
+		3D5E68661DAE834200FBB6D5 /* ChoiceParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoiceParameterTVC.swift; path = Cells/BuildParametersTVC/ChoiceParameterTVC.swift; sourceTree = "<group>"; };
+		3DC71F9C1DAD061B00190FD5 /* BuildStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildStatus.swift; path = Model/BuildStatus.swift; sourceTree = "<group>"; };
+		3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JenkinsAPI.swift; path = API/JenkinsAPI.swift; sourceTree = "<group>"; };
+		3DD19D371DA51EF2005EC59A /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = API/NetworkClient.swift; sourceTree = "<group>"; };
+		3DE92A741DAFAC7F00703DA4 /* CellWithSelectedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellWithSelectedValue.swift; path = Cells/BuildParametersTVC/CellWithSelectedValue.swift; sourceTree = "<group>"; };
+		9456A5CAA964FC0BD6C2FD11 /* Pods-Jenkins-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jenkins-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jenkins-iOS/Pods-Jenkins-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		BF92DE940C5D3A63CC0D15C9 /* Pods-Jenkins-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jenkins-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jenkins-iOS/Pods-Jenkins-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C3DD53FC077E92426AA6C9DA /* Pods_Jenkins_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jenkins_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D4F36161DA50DFD00A7925E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6432C35F7CBED6EBEF5EC8E9 /* Pods_Jenkins_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D49EEF51DA64E2F000CE6DB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3D5E685F1DAE82BE00FBB6D5 /* BuildParametersTVC */,
+				3D49EF041DA6503E000CE6DB /* LogButtonTVC.swift */,
+				3D49EF051DA6503E000CE6DB /* SaveAccountTVC.swift */,
+				3D49EF061DA6503E000CE6DB /* UserLoginTVC.swift */,
+				3D4B6F681DABBEB100019990 /* ProjectTVC.swift */,
+				3D4606A31DAD252100DBE9B9 /* BuildDetailTVC.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		3D4F36101DA50DFD00A7925E = {
+			isa = PBXGroup;
+			children = (
+				3D4F361B1DA50DFD00A7925E /* Jenkins-iOS */,
+				3D4F361A1DA50DFD00A7925E /* Products */,
+				C78CE286A30771EBDC7C6A4E /* Pods */,
+				CAB90907BAE3B4776DCD0CB2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3D4F361A1DA50DFD00A7925E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D4F36191DA50DFD00A7925E /* Jenkins-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D4F361B1DA50DFD00A7925E /* Jenkins-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3D49EEF51DA64E2F000CE6DB /* Cells */,
+				3D4F366E1DA518F200A7925E /* API */,
+				3D4F364E1DA50FD600A7925E /* AppDelegate */,
+				3D4F364C1DA50FB700A7925E /* Helpers */,
+				3D4F364B1DA50F6000A7925E /* Controller */,
+				3D4F364A1DA50E7400A7925E /* Model */,
+				3D4F36201DA50DFD00A7925E /* Main.storyboard */,
+				3D4F36231DA50DFD00A7925E /* Assets.xcassets */,
+				3D4F36251DA50DFD00A7925E /* LaunchScreen.storyboard */,
+				3D4F36281DA50DFD00A7925E /* Info.plist */,
+				3D49EF0C1DA66EA1000CE6DB /* Podfile */,
+			);
+			path = "Jenkins-iOS";
+			sourceTree = "<group>";
+		};
+		3D4F364A1DA50E7400A7925E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D4B6F5B1DAB8B1300019990 /* Errors.swift */,
+				3D49EEEB1DA62A23000CE6DB /* Job.swift */,
+				3D49EEF11DA634F5000CE6DB /* Build.swift */,
+				3D49EF0A1DA65074000CE6DB /* ProjectWeather.swift */,
+				3DC71F9C1DAD061B00190FD5 /* BuildStatus.swift */,
+				3D5E685D1DAE766000FBB6D5 /* BuildParameter.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3D4F364B1DA50F6000A7925E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3D4F36591DA510FD00A7925E /* LoginVC.swift */,
+				3D4B6F5F1DAB99B500019990 /* ProjectsVC.swift */,
+				3D4606A51DAD276D00DBE9B9 /* JobDetailsVC.swift */,
+				3D4BA81C1DAE5140000423A1 /* BuildConsoleVC.swift */,
+				3D5E5A151DAF9149006CA241 /* BuildWithParametersVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3D4F364C1DA50FB700A7925E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3D4B6F5D1DAB8DD300019990 /* AlertManager.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		3D4F364E1DA50FD600A7925E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3D4F36571DA510F300A7925E /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3D4F366E1DA518F200A7925E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */,
+				3DD19D371DA51EF2005EC59A /* NetworkClient.swift */,
+				3D5E5A131DAF7B73006CA241 /* JenkinsXMLParser.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		3D5E685F1DAE82BE00FBB6D5 /* BuildParametersTVC */ = {
+			isa = PBXGroup;
+			children = (
+				3D5E68601DAE82F800FBB6D5 /* BooleanParameterTVC.swift */,
+				3D5E68621DAE831200FBB6D5 /* StringParameterTVC.swift */,
+				3D5E68641DAE832600FBB6D5 /* TextParameterTVC.swift */,
+				3D5E68661DAE834200FBB6D5 /* ChoiceParameterTVC.swift */,
+				3DE92A741DAFAC7F00703DA4 /* CellWithSelectedValue.swift */,
+			);
+			name = BuildParametersTVC;
+			sourceTree = "<group>";
+		};
+		C78CE286A30771EBDC7C6A4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF92DE940C5D3A63CC0D15C9 /* Pods-Jenkins-iOS.debug.xcconfig */,
+				9456A5CAA964FC0BD6C2FD11 /* Pods-Jenkins-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CAB90907BAE3B4776DCD0CB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3DD53FC077E92426AA6C9DA /* Pods_Jenkins_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D4F36181DA50DFD00A7925E /* Jenkins-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4F36411DA50DFE00A7925E /* Build configuration list for PBXNativeTarget "Jenkins-iOS" */;
+			buildPhases = (
+				4A602F7A356741E08CC5B49A /* [CP] Check Pods Manifest.lock */,
+				3D4F36151DA50DFD00A7925E /* Sources */,
+				3D4F36161DA50DFD00A7925E /* Frameworks */,
+				3D4F36171DA50DFD00A7925E /* Resources */,
+				37332AD54760949061FA52FB /* [CP] Embed Pods Frameworks */,
+				098507C688B31F62C826637A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jenkins-iOS";
+			productName = "Jenkins-iOS";
+			productReference = 3D4F36191DA50DFD00A7925E /* Jenkins-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D4F36111DA50DFD00A7925E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = bondar.k.dev;
+				TargetAttributes = {
+					3D4F36181DA50DFD00A7925E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3D4F36141DA50DFD00A7925E /* Build configuration list for PBXProject "Jenkins-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D4F36101DA50DFD00A7925E;
+			productRefGroup = 3D4F361A1DA50DFD00A7925E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D4F36181DA50DFD00A7925E /* Jenkins-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D4F36171DA50DFD00A7925E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4F36271DA50DFD00A7925E /* LaunchScreen.storyboard in Resources */,
+				3D4F36241DA50DFD00A7925E /* Assets.xcassets in Resources */,
+				3D49EF0D1DA66EA2000CE6DB /* Podfile in Resources */,
+				3D4F36221DA50DFD00A7925E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		098507C688B31F62C826637A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jenkins-iOS/Pods-Jenkins-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37332AD54760949061FA52FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jenkins-iOS/Pods-Jenkins-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A602F7A356741E08CC5B49A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D4F36151DA50DFD00A7925E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D49EF071DA6503E000CE6DB /* LogButtonTVC.swift in Sources */,
+				3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */,
+				3D49EF091DA6503E000CE6DB /* UserLoginTVC.swift in Sources */,
+				3D5E5A161DAF9149006CA241 /* BuildWithParametersVC.swift in Sources */,
+				3D49EF081DA6503E000CE6DB /* SaveAccountTVC.swift in Sources */,
+				3D4B6F5C1DAB8B1300019990 /* Errors.swift in Sources */,
+				3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */,
+				3D5E68651DAE832600FBB6D5 /* TextParameterTVC.swift in Sources */,
+				3D5E68631DAE831200FBB6D5 /* StringParameterTVC.swift in Sources */,
+				3D5E5A141DAF7B73006CA241 /* JenkinsXMLParser.swift in Sources */,
+				3D49EEF21DA634F5000CE6DB /* Build.swift in Sources */,
+				3D4BA81D1DAE5140000423A1 /* BuildConsoleVC.swift in Sources */,
+				3D5E68671DAE834200FBB6D5 /* ChoiceParameterTVC.swift in Sources */,
+				3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */,
+				3D49EF0B1DA65074000CE6DB /* ProjectWeather.swift in Sources */,
+				3D5E68611DAE82F800FBB6D5 /* BooleanParameterTVC.swift in Sources */,
+				3D4B6F691DABBEB100019990 /* ProjectTVC.swift in Sources */,
+				3D4B6F601DAB99B500019990 /* ProjectsVC.swift in Sources */,
+				3D4606A61DAD276D00DBE9B9 /* JobDetailsVC.swift in Sources */,
+				3DD19D391DA51EF2005EC59A /* NetworkClient.swift in Sources */,
+				3D4B6F5E1DAB8DD300019990 /* AlertManager.swift in Sources */,
+				3DC71F9D1DAD061B00190FD5 /* BuildStatus.swift in Sources */,
+				3D49EEEC1DA62A23000CE6DB /* Job.swift in Sources */,
+				3DE92A751DAFAC7F00703DA4 /* CellWithSelectedValue.swift in Sources */,
+				3D4606A41DAD252100DBE9B9 /* BuildDetailTVC.swift in Sources */,
+				3D5E685E1DAE766000FBB6D5 /* BuildParameter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D4F36201DA50DFD00A7925E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D4F36211DA50DFD00A7925E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D4F36251DA50DFD00A7925E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D4F36261DA50DFD00A7925E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D4F363F1DA50DFE00A7925E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D4F36401DA50DFE00A7925E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D4F36421DA50DFE00A7925E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF92DE940C5D3A63CC0D15C9 /* Pods-Jenkins-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Jenkins-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bondar.k.dev.Jenkins-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3D4F36431DA50DFE00A7925E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9456A5CAA964FC0BD6C2FD11 /* Pods-Jenkins-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Jenkins-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bondar.k.dev.Jenkins-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D4F36141DA50DFD00A7925E /* Build configuration list for PBXProject "Jenkins-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4F363F1DA50DFE00A7925E /* Debug */,
+				3D4F36401DA50DFE00A7925E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4F36411DA50DFE00A7925E /* Build configuration list for PBXNativeTarget "Jenkins-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4F36421DA50DFE00A7925E /* Debug */,
+				3D4F36431DA50DFE00A7925E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D4F36111DA50DFD00A7925E /* Project object */;
+}
