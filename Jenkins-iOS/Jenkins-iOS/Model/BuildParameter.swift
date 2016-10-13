@@ -56,4 +56,10 @@ struct BuildParameter {
     let name: String
     let description: String
     let type: BuildParameterType
+    
+    init(name: String, description: String, type:BuildParameterType) {
+        self.name = name
+        self.description = description
+        self.type = type
+    }
 }

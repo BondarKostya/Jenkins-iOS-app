@@ -26,6 +26,7 @@
 		3D4F36271DA50DFD00A7925E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F36251DA50DFD00A7925E /* LaunchScreen.storyboard */; };
 		3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36571DA510F300A7925E /* AppDelegate.swift */; };
 		3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36591DA510FD00A7925E /* LoginVC.swift */; };
+		3D5E5A141DAF7B73006CA241 /* JenkinsXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E5A131DAF7B73006CA241 /* JenkinsXMLParser.swift */; };
 		3D5E685E1DAE766000FBB6D5 /* BuildParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E685D1DAE766000FBB6D5 /* BuildParameter.swift */; };
 		3D5E68611DAE82F800FBB6D5 /* BooleanParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68601DAE82F800FBB6D5 /* BooleanParameterTVC.swift */; };
 		3D5E68631DAE831200FBB6D5 /* StringParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68621DAE831200FBB6D5 /* StringParameterTVC.swift */; };
@@ -59,6 +60,7 @@
 		3D4F36281DA50DFD00A7925E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D4F36571DA510F300A7925E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AppDelegate/AppDelegate.swift; sourceTree = "<group>"; };
 		3D4F36591DA510FD00A7925E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = Controller/LoginVC.swift; sourceTree = "<group>"; };
+		3D5E5A131DAF7B73006CA241 /* JenkinsXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JenkinsXMLParser.swift; sourceTree = "<group>"; };
 		3D5E685D1DAE766000FBB6D5 /* BuildParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildParameter.swift; path = Model/BuildParameter.swift; sourceTree = "<group>"; };
 		3D5E68601DAE82F800FBB6D5 /* BooleanParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooleanParameterTVC.swift; path = Cells/BuildParametersTVC/BooleanParameterTVC.swift; sourceTree = "<group>"; };
 		3D5E68621DAE831200FBB6D5 /* StringParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringParameterTVC.swift; path = Cells/BuildParametersTVC/StringParameterTVC.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */,
 				3DD19D371DA51EF2005EC59A /* NetworkClient.swift */,
+				3D5E5A131DAF7B73006CA241 /* JenkinsXMLParser.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */,
 				3D5E68651DAE832600FBB6D5 /* TextParameterTVC.swift in Sources */,
 				3D5E68631DAE831200FBB6D5 /* StringParameterTVC.swift in Sources */,
+				3D5E5A141DAF7B73006CA241 /* JenkinsXMLParser.swift in Sources */,
 				3D49EEF21DA634F5000CE6DB /* Build.swift in Sources */,
 				3D4BA81D1DAE5140000423A1 /* BuildConsoleVC.swift in Sources */,
 				3D5E68671DAE834200FBB6D5 /* ChoiseParameterTVC.swift in Sources */,

@@ -11,6 +11,7 @@ import UIKit
 class BooleanParameterTVC: UITableViewCell {
 
     @IBOutlet weak var boolSwither: UISwitch!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

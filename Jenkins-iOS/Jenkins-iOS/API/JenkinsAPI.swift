@@ -145,7 +145,7 @@ public class JenkinsAPI {
         })
     }
     
-    func fetchBuildParameters(withJobURL jobURL: String ,callback: @escaping (_ consoleOutput:String,_ error : Error?) -> Void)  {
+    func fetchBuildParameters(withJobURL jobURL: String, callback: @escaping (_ buildParameters: [BuildParameter?], _ error : Error?) -> Void)  {
         let escapedString = "\(jobURL)config.xml"
         guard let url = URL(string: escapedString) else {
             //handler(JenkinsError.InvalidJenkinsURL)
@@ -153,22 +153,18 @@ public class JenkinsAPI {
         }
         self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, rawResponse: true, { (response, error) in
             if (error != nil) {
-                callback("",error)
+                callback([],error)
                 return
             }
             
             guard let xmlConfig = response as? String else {
-                callback("",nil)
+                callback([],nil)
                 return
             }
-            let xml = SWXMLHash.parse(xmlConfig)
-            let parameters = xml["project"]["properties"]["hudson.model.ParametersDefinitionProperty"]["parameterDefinitions"].children
-            for parameter in parameters {
-                
-            }
-            print(xml)
             
-            callback(xmlConfig,nil)
+            let buildParameters = JenkinsXMLParser().convertXMLToBuildParatemers(withXMLString: xmlConfig)
+            
+            callback(buildParameters,nil)
         })
         
     }

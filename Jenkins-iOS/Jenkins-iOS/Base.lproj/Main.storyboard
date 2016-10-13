@@ -23,10 +23,10 @@
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserLoginTVC" id="jXx-xD-jNd" customClass="UserLoginTVC" customModule="Jenkins_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jXx-xD-jNd" id="a0e-8A-vrY">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mne-W2-dnC">
@@ -54,10 +54,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SaveAccountTVC" id="fo4-h6-de8" customClass="SaveAccountTVC" customModule="Jenkins_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="72" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fo4-h6-de8" id="IIE-2J-8aF">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR8-5Q-M7p">
@@ -83,10 +83,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LogButtonTVC" id="qGQ-SN-wsq" customClass="LogButtonTVC" customModule="Jenkins_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="116" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qGQ-SN-wsq" id="ViJ-qA-xND">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpv-bE-ym7" userLabel="Line">
@@ -421,6 +421,7 @@
                                         <connections>
                                             <outlet property="boolSwither" destination="PVn-In-DIO" id="uVn-Xo-pJZ"/>
                                             <outlet property="description" destination="fJ0-WA-E1I" id="OH3-cZ-q6c"/>
+                                            <outlet property="descriptionLabel" destination="fJ0-WA-E1I" id="Zf1-KW-Qm6"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StringParameterTVC" rowHeight="88" id="9WK-Wq-0Oa" customClass="StringParameterTVC" customModule="Jenkins_iOS" customModuleProvider="target">
@@ -453,6 +454,7 @@
                                         <color key="backgroundColor" red="0.59400111609999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="description" destination="5qF-TD-O6R" id="rvg-3I-Ger"/>
+                                            <outlet property="descriptionLabel" destination="5qF-TD-O6R" id="sfE-4N-Px5"/>
                                             <outlet property="parameterTextField" destination="suw-LX-Thn" id="TTl-jN-LGZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -490,6 +492,7 @@
                                         <color key="backgroundColor" red="0.59400111609999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="description" destination="LXc-Xy-PB3" id="QlU-Tg-1jO"/>
+                                            <outlet property="descriptionLabel" destination="LXc-Xy-PB3" id="DAz-04-jrZ"/>
                                             <outlet property="parameterTextView" destination="H1L-2t-bLr" id="xe2-Zo-kc3"/>
                                         </connections>
                                     </tableViewCell>

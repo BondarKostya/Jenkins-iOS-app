@@ -11,6 +11,7 @@ import UIKit
 class TextParameterTVC: UITableViewCell {
 
 
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var parameterTextView: UITextView!
     
     override func awakeFromNib() {
