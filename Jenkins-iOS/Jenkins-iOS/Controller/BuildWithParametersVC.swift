@@ -113,7 +113,7 @@ extension BuildWithParametersVC: UITableViewDelegate, UITableViewDataSource {
             return booleanCell
         case .string:
             let stringCell = tableView.dequeueReusableCell(withIdentifier: "StringParameterTVC", for: indexPath) as! StringParameterTVC
-            
+            stringCell.parameterTextField.delegate = self
             stringCell.setupCell(withBooleanParametr: buildParameter)
             return stringCell
         case .text:
@@ -130,4 +130,21 @@ extension BuildWithParametersVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension BuildWithParametersVC : UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        let pointInTable:CGPoint = textField.superview!.convert(textField.frame.origin, to:self.tableView)
+        var contentOffset:CGPoint = self.tableView.contentOffset
+        contentOffset.y  = pointInTable.y
+        if let accessoryView = textField.inputAccessoryView {
+            contentOffset.y -= accessoryView.frame.size.height
+        }
+        self.tableView.contentOffset = contentOffset
+        return true;
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.tableView.contentOffset = CGPoint(x: 0, y: 0)
+        return true
+    }
+}
 

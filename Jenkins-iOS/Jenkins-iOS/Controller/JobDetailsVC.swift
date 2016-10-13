@@ -20,6 +20,7 @@ class JobDetailsVC: UIViewController {
         super.viewDidLoad()
         self.title = job?.name
         
+        
         self.tableView.tableFooterView = UIView()
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -72,7 +73,13 @@ extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let build = self.job?.builds[indexPath.row]
+        if (self.job?.lastBuildStatus == .disable) {
+            AlertManager.showAlert(withTitle: "Wrong", message: "The job was disabled", inVC: self)
+            return
+        }
+        guard let build = self.job?.builds[indexPath.row] else {
+            return
+        }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         if (indexPath.section == 0) {
