@@ -35,6 +35,7 @@ public class JenkinsXMLParser {
             
             let buildParameter = BuildParameter(name: name, description: description, type: .boolean(defaultValue: boolValue))
             return buildParameter
+            
         case "hudson.model.StringParameterDefinition":
             let name = indexer["name"].element!.text!
             let description = indexer["description"].element!.text!
@@ -42,6 +43,7 @@ public class JenkinsXMLParser {
             
             let buildParameter = BuildParameter(name: name, description: description, type: .string(defaultValue: defaultValue))
             return buildParameter
+            
         case "hudson.model.TextParameterDefinition":
             let name = indexer["name"].element!.text!
             let description = indexer["description"].element!.text!
@@ -49,6 +51,7 @@ public class JenkinsXMLParser {
             
             let buildParameter = BuildParameter(name: name, description: description, type: .text(defaultValue: defaultValue))
             return buildParameter
+            
         case "hudson.model.ChoiceParameterDefinition":
             let name = indexer["name"].element!.text!
             let description = indexer["description"].element!.text!
@@ -61,6 +64,7 @@ public class JenkinsXMLParser {
             
             let buildParameter = BuildParameter(name: name, description: description, type: .choice(choices: choices))
             return buildParameter
+            
         default:
             return nil
         }

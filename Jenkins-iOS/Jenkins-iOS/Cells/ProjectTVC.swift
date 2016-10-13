@@ -15,7 +15,7 @@ class ProjectTVC: UITableViewCell {
     @IBOutlet weak var projectName: UILabel!
     @IBOutlet weak var buildStatusImage: UIView!
     
-    var buildState = BuildStatus.success
+    var buildState:BuildStatus?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,11 +41,6 @@ class ProjectTVC: UITableViewCell {
 
         self.buildStatusImage.layer.cornerRadius = 8
     }
-    
-    func setupBuildStatusImage() {
-        
-    }
-
 }
 
 

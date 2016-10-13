@@ -22,12 +22,12 @@ class ChoiceParameterTVC: UITableViewCell {
     }
 
     @IBAction func choiceAction(_ sender: AnyObject) {
-        ActionSheetStringPicker.show(withTitle: "", rows: self.choices, initialSelection: self.selectedIndex, doneBlock: { (picker, selectedIndex, selectedValue) in
+        ActionSheetStringPicker.show(withTitle: "", rows: self.choices, initialSelection: self.selectedIndex, doneBlock: {[weak weakSelf = self] (picker, selectedIndex, selectedValue) in
             guard let selectedValue = selectedValue as? String else {
                 return
             }
-            self.selectedIndex = selectedIndex
-            self.choiceBtn.setTitle(selectedValue, for: .normal)
+            weakSelf?.selectedIndex = selectedIndex
+            weakSelf?.choiceBtn.setTitle(selectedValue, for: .normal)
             
             }, cancel: { (picker) in
                 

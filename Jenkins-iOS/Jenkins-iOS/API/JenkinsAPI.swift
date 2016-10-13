@@ -8,6 +8,7 @@
 
 import Foundation
 import SWXMLHash
+
 typealias JSON = [String: AnyObject]
 
 public class JenkinsAPI {
@@ -19,6 +20,7 @@ public class JenkinsAPI {
     private(set) var path:String
     private(set) var password:String
     private(set) var userId:String
+    
     private var jenkinsURL:URL?
     
     private var networkClient:NetworkClient?
@@ -45,16 +47,13 @@ public class JenkinsAPI {
         self.password = ""
     }
     
-    func fetchJobs(callback: @escaping ([Job],Error?) -> Void)  {
+    func fetchJobs(callback: @escaping ([Job], Error?) -> Void)  {
         let escapedString = "\(jenkinsURL!.absoluteString)api/json?tree=jobs[name,url,color,healthReport[score]]"
         guard let url = URL(string: escapedString) else {
-                //handler(JenkinsError.InvalidJenkinsURL)
                 return
         }
         
-
-        self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader, { (response, error) in
-            print(response)
+        self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, { (response, error) in
             if (error != nil) {
                 callback([],error)
                 return
@@ -71,11 +70,10 @@ public class JenkinsAPI {
             }
             
             callback(jobs,nil)
-            
         })
     }
     
-    func loginRequest(login userLogin: String,password userPassword:String, handler:@escaping (Bool , Error?) -> Void) {
+    func loginRequest(login userLogin: String, password userPassword:String, handler:@escaping (Bool, Error?) -> Void) {
         self.userId = userLogin
         self.password = userPassword
         
@@ -88,22 +86,22 @@ public class JenkinsAPI {
         }
         self.networkClient?.get(path: url, encodeAuth: encodedAuthorizationHeader, { (responce, error) in
             if (error != nil) {
-                handler(false,error)
+                handler(false, error)
             } else {
                 handler(true, nil)
             }
         })
     }
     
-    func fetchBuilds(withJob jobName: String ,callback: @escaping (_ builds:[Build],_ error : Error?) -> Void)  {
+    func fetchBuilds(withJob jobName: String, callback: @escaping (_ builds:[Build], _ error : Error?) -> Void)  {
         let encodedJob = jobName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
 
         let escapedString = "\(jenkinsURL!.absoluteString)job/\(encodedJob!)/api/json?tree=builds[displayName,result,timestamp,url]"
+        
         guard let url = URL(string: escapedString) else {
-            //handler(JenkinsError.InvalidJenkinsURL)
             return
         }
-        self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader, { (response, error) in
+        self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, { (response, error) in
             if (error != nil) {
                 callback([],error)
                 return
@@ -116,28 +114,28 @@ public class JenkinsAPI {
             }
             
             let builds = jsonJobs.map{ json in
-                return Build(json:json)
+                return Build(json: json)
             }
             callback(builds,nil)
             
         })
     }
     
-    func fetchConsoleOutput(withBuildURL buildURL: String ,callback: @escaping (_ consoleOutput:String,_ error : Error?) -> Void)  {
+    func fetchConsoleOutput(withBuildURL buildURL: String , callback: @escaping (_ consoleOutput:String, _ error : Error?) -> Void)  {
         
         let escapedString = "\(buildURL)consoleText"
         guard let url = URL(string: escapedString) else {
-            //handler(JenkinsError.InvalidJenkinsURL)
             return
         }
-        self.networkClient?.get(path: url,encodeAuth:encodedAuthorizationHeader,rawResponse: true, { (response, error) in
+        
+        self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, rawResponse: true, { (response, error) in
             if (error != nil) {
                 callback("",error)
                 return
             }
             
             guard let consoleOutput = response as? String else {
-                     callback("",nil)
+                     callback("", nil)
                     return
             }
             
@@ -147,10 +145,11 @@ public class JenkinsAPI {
     
     func fetchBuildParameters(withJobURL jobURL: String, callback: @escaping (_ buildParameters: [BuildParameter?], _ error : Error?) -> Void)  {
         let escapedString = "\(jobURL)config.xml"
+        
         guard let url = URL(string: escapedString) else {
-            //handler(JenkinsError.InvalidJenkinsURL)
             return
         }
+        
         self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, rawResponse: true, { (response, error) in
             if (error != nil) {
                 callback([],error)
@@ -176,11 +175,10 @@ public class JenkinsAPI {
             .appendingPathComponent("job")
             .appendingPathComponent(name)
             .appendingPathComponent("buildWithParameters") else {
-//                handler(JenkinsError.InvalidJenkinsURL)
                 return
         }
         
-        self.networkClient?.post(path: url,encodeAuth:encodedAuthorizationHeader, params: parameters as [String : AnyObject]) { response, error in
+        self.networkClient?.post(path: url, encodeAuth:encodedAuthorizationHeader, params: parameters as [String : AnyObject]) { response, error in
             handler(error)
         }
     }

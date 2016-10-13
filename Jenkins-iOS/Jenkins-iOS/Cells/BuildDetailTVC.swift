@@ -21,6 +21,7 @@ class BuildDetailTVC: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        
         self.buildStatusImage.backgroundColor = UIColor.clear
         self.buildName.text = ""
         self.buildDate.text = ""

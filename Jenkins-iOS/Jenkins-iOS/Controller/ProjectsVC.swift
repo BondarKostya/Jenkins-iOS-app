@@ -24,24 +24,21 @@ class ProjectsVC: UIViewController {
         self.loadProjects()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tableView.reloadData()
-    }
-    
     func loadProjects() {
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        JenkinsAPI.sharedInstance.fetchJobs { (jobs, error) in
-            
+        JenkinsAPI.sharedInstance.fetchJobs {[weak weakSelf = self] (jobs, error) in
             DispatchQueue.main.async{
-                MBProgressHUD.hide(for: self.view, animated: true)
+                guard let strongSelf = weakSelf else {
+                    return
+                }
+                MBProgressHUD.hide(for: strongSelf.view, animated: true)
                 if let error = error {
-                    AlertManager.showError(inVC: self, error.localizedDescription)
+                    AlertManager.showError(inVC: strongSelf, error.localizedDescription)
                     return
                 }
                 print(jobs)
-                self.jobs = jobs
-                self.tableView.reloadData()
+                strongSelf.jobs = jobs
+                strongSelf.tableView.reloadData()
             }
         }
     }
@@ -67,19 +64,5 @@ extension ProjectsVC : UITableViewDelegate, UITableViewDataSource {
         jobDetailVC.job = job
         
         self.navigationController?.show(jobDetailVC, sender: self)
-    }
-}
-
-public extension UIImage {
-    public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
-        let rect = CGRect(origin: .zero, size: size)
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
-        color.setFill()
-        UIRectFill(rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        guard let cgImage = image?.cgImage else { return nil }
-        self.init(cgImage: cgImage)
     }
 }

@@ -54,15 +54,6 @@ class LoginVC: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-
     @IBAction func doneAction(_ sender: AnyObject) {
         
         if !self.checkLoginAndPass() {
@@ -71,23 +62,28 @@ class LoginVC: UIViewController {
         
         self.saveAccount()
         self.doneButton.isEnabled = false
+        
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        JenkinsAPI.sharedInstance.loginRequest(login: self.userLogin, password: self.userPassword) { (response,error) in
+        JenkinsAPI.sharedInstance.loginRequest(login: self.userLogin, password: self.userPassword) {[weak weakSelf = self] (response, error) in
             DispatchQueue.main.async {
-                self.doneButton.isEnabled = true
-                MBProgressHUD.hide(for: self.view, animated: true)
+                guard let strongSelf = weakSelf else {
+                    return
+                }
+                strongSelf.doneButton.isEnabled = true
+                
+                MBProgressHUD.hide(for: strongSelf.view, animated: true)
                 if(response) {
-                    self.loginState = .UserLogin
+                    strongSelf.loginState = .UserLogin
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let projectsVC = storyboard.instantiateViewController(withIdentifier: "ProjectsVC") as! ProjectsVC
-                    self.navigationController?.pushViewController(projectsVC, animated: true)
+                    strongSelf.navigationController?.pushViewController(projectsVC, animated: true)
+                    strongSelf.tableView.reloadData()
                     
                 }else {
                     if let error = error {
-                      AlertManager.showError(inVC: self, error.localizedDescription)
+                      AlertManager.showError(inVC: strongSelf, error.localizedDescription)
                     }
-                    
-                    self.loginState = .UserLogout
+                    strongSelf.loginState = .UserLogout
                 }
             }
             
@@ -120,10 +116,6 @@ class LoginVC: UIViewController {
             userDefaults.set(false, forKey: "savedAccount")
             userDefaults.removeObject(forKey: "userLogin")
             userDefaults.removeObject(forKey: "userPassword")
-            self.userLogin = ""
-            self.userPassword = ""
-            self.doneButton.isEnabled = false
-            self.loginState = .UserLogout
         }
     }
 
@@ -170,6 +162,7 @@ extension LoginVC : UITableViewDelegate, UITableViewDataSource {
             cell.loginTextField.returnKeyType = .done
             cell.loginTextField.textColor = self.saveState ? UIColor.lightGray : UIColor.black
             self.userPasswordTF = cell.loginTextField
+            
             return cell
         case (1, 0) :
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveAccountTVC", for: indexPath) as! SaveAccountTVC
@@ -185,10 +178,14 @@ extension LoginVC : UITableViewDelegate, UITableViewDataSource {
             cell.logButton.setTitleColor((self.loginState == .UserLogin ? UIColor.red : UIColor.lightGray), for: .normal)
             cell.buttonAction = {
                 self.clearSavedAccount()
-                
+                self.userLogin = ""
+                self.userPassword = ""
+                self.doneButton.isEnabled = false
+                self.loginState = .UserLogout
                 self.tableView.reloadData()
             }
             self.logoutButton = cell.logButton
+            
             return cell
         default:
             return UITableViewCell()

@@ -12,7 +12,6 @@ import Foundation
 class Job {
     
     private(set) var builds: [Build] = []
-    private(set) var buildable: Bool?
     private(set) var lastBuildStatus: BuildStatus = .disable
     private(set) var projectWeather: ProjectWeather = .none
     private(set) var name: String
@@ -35,11 +34,7 @@ class Job {
                 self.builds.append(newBuild)
             }
         }
-        
-        if let buildable = json["buildable"] as? Bool {
-            self.buildable = buildable
-        }
-//        
+   
         if let color = json["color"] as? String {
             self.lastBuildStatus = BuildStatus(withColor: color)
         }

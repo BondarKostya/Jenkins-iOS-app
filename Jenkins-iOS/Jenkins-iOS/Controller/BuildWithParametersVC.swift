@@ -16,13 +16,16 @@ class BuildWithParametersVC: UIViewController {
     var job: Job?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = "Build with Parameters"
+        
         self.tableView.tableFooterView = UIView()
         self.tableView.estimatedRowHeight = 140.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
         let buildButton = UIBarButtonItem(title: "Build", style: UIBarButtonItemStyle.plain, target: self, action: #selector(BuildWithParametersVC.doneAction))
         self.navigationItem.rightBarButtonItem = buildButton
+        
         self.loadBuildParameters()
         
     }
@@ -39,11 +42,14 @@ class BuildWithParametersVC: UIViewController {
             parameters[name] = value
         }
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        JenkinsAPI.sharedInstance.build((self.job?.name)!, parameters: parameters) { (error) in
+        JenkinsAPI.sharedInstance.build((self.job?.name)!, parameters: parameters) {[weak weakSelf = self]  (error) in
             DispatchQueue.main.async {
-                MBProgressHUD.hide(for: self.view, animated: true)
+                guard let strongSelf = weakSelf else {
+                    return
+                }
+                MBProgressHUD.hide(for: strongSelf.view, animated: true)
                 if let error = error {
-                    AlertManager.showError(inVC: self, error.localizedDescription)
+                    AlertManager.showError(inVC: strongSelf, error.localizedDescription)
                     return
                 }
                 AlertManager.showAlert(withTitle: "Success", message: "Build started", inVC: self)
@@ -53,15 +59,18 @@ class BuildWithParametersVC: UIViewController {
     
     func loadBuildParameters() {
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        JenkinsAPI.sharedInstance.fetchBuildParameters(withJobURL: (self.job?.url)!, callback: { (buildParameters, error) in
+        JenkinsAPI.sharedInstance.fetchBuildParameters(withJobURL: (self.job?.url)!, callback: {[weak weakSelf = self] (buildParameters, error) in
             DispatchQueue.main.async {
-                MBProgressHUD.hide(for: self.view, animated: true)
-                if let error = error {
-                    AlertManager.showError(inVC: self, error.localizedDescription)
+                guard let strongSelf = weakSelf else {
                     return
                 }
-                self.buildParameters = buildParameters
-                self.tableView.reloadData()
+                MBProgressHUD.hide(for: strongSelf.view, animated: true)
+                if let error = error {
+                    AlertManager.showError(inVC: strongSelf, error.localizedDescription)
+                    return
+                }
+                strongSelf.buildParameters = buildParameters
+                strongSelf.tableView.reloadData()
             }
             
         })

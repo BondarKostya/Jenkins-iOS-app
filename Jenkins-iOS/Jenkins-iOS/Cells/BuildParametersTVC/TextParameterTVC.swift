@@ -11,7 +11,9 @@ import UIKit
 class TextParameterTVC: UITableViewCell {
 
     @IBOutlet weak var parameterTextView: UITextView!
+    
     var name : String?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

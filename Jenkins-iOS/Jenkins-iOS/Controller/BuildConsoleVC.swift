@@ -22,14 +22,17 @@ class BuildConsoleVC: UIViewController {
     
     func loadConsoleText() {
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        JenkinsAPI.sharedInstance.fetchConsoleOutput(withBuildURL: (build?.url)!) { (consoleOutput, error) in
+        JenkinsAPI.sharedInstance.fetchConsoleOutput(withBuildURL: (build?.url)!) {[weak weakSelf = self] (consoleOutput, error) in
             DispatchQueue.main.async {
-                MBProgressHUD.hide(for: self.view, animated: true)
-                if let error = error {
-                    AlertManager.showError(inVC: self, error.localizedDescription)
+                guard let strongSelf = weakSelf else {
                     return
                 }
-                self.consoleTextView.text = consoleOutput
+                MBProgressHUD.hide(for: strongSelf.view, animated: true)
+                if let error = error {
+                    AlertManager.showError(inVC: strongSelf, error.localizedDescription)
+                    return
+                }
+                strongSelf.consoleTextView.text = consoleOutput
             }
         }
     }

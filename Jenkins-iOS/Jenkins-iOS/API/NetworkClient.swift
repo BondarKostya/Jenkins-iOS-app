@@ -25,9 +25,11 @@ internal enum RequestMethod {
 
 class NetworkClient:NSObject {
     
-    func get(path: URL, encodeAuth:String!, rawResponse: Bool = false, params: [String : AnyObject] = [:],_ handler: @escaping (AnyObject?, Error?) -> Void) {
-        let request: URLRequest = requestFor(path,encodeAuth:encodeAuth, method: .GET, params: params)
+    func get(path: URL, encodeAuth:String!, rawResponse: Bool = false, params: [String : AnyObject] = [:], _ handler: @escaping (AnyObject?, Error?) -> Void) {
+        let request: URLRequest = requestFor(path, encodeAuth:encodeAuth, method: .GET, params: params)
+        
         let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
+        
         let task = session.dataTask(with: request) { data, response, error in
             self.decodeResponse(response, rawOutput: rawResponse, data: data, error: error, handler: handler)
         }
@@ -35,8 +37,8 @@ class NetworkClient:NSObject {
         task.resume()
     }
     
-    func post(path: URL, encodeAuth:String!, rawResponse: Bool = false, params: [String : AnyObject] = [:],_ handler: @escaping (AnyObject?, Error?) -> Void) {
-        let request: URLRequest = requestFor(path,encodeAuth:encodeAuth, method: .POST, params: params)
+    func post(path: URL, encodeAuth:String!, rawResponse: Bool = false, params: [String : AnyObject] = [:], _ handler: @escaping (AnyObject?, Error?) -> Void) {
+        let request: URLRequest = requestFor(path, encodeAuth:encodeAuth, method: .POST, params: params)
 
         let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
         
@@ -80,7 +82,6 @@ class NetworkClient:NSObject {
         
         if let response = response as? HTTPURLResponse {
             if response.statusCode >= 400 {
-                print(response)
                 let userInfo: [NSObject : String] =
                 [
                         NSLocalizedDescriptionKey as NSObject : JenkinsError.description(httpStatusCode: response.statusCode)

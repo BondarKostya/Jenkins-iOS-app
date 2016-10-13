@@ -19,9 +19,11 @@ class JobDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = job?.name
+        
         self.tableView.tableFooterView = UIView()
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        
         if(self.job?.builds.count != 0) {
             self.job?.clearBuilds()
         }
@@ -34,26 +36,21 @@ class JobDetailsVC: UIViewController {
             return
         }
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        JenkinsAPI.sharedInstance.fetchBuilds(withJob: job.name) { (builds, error) in
+        JenkinsAPI.sharedInstance.fetchBuilds(withJob: job.name) {[weak weakSelf = self] (builds, error) in
             DispatchQueue.main.async {
-                MBProgressHUD.hide(for: self.view, animated: true)
-                if let error = error {
-                    AlertManager.showError(inVC: self, error.localizedDescription)
+                guard let strongSelf = weakSelf else {
                     return
                 }
-                self.job?.addBuilds(builds)
-                self.tableView.reloadData()
+                MBProgressHUD.hide(for: strongSelf.view, animated: true)
+                if let error = error {
+                    AlertManager.showError(inVC: strongSelf, error.localizedDescription)
+                    return
+                }
+                strongSelf.job?.addBuilds(builds)
+                strongSelf.tableView.reloadData()
             }
         }
     }
-
-    func rectForText(text: String, font: UIFont, maxSize: CGSize) -> CGSize {
-        let attrString = NSAttributedString.init(string: text, attributes: [NSFontAttributeName:font])
-        let rect = attrString.boundingRect(with: maxSize, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
-        let size = CGSize.init(width: rect.size.width, height: rect.size.height)
-        return size
-    }
-
 }
 
 extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
@@ -77,6 +74,7 @@ extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let build = self.job?.builds[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         if (indexPath.section == 0) {
             let buildWithParametersVC = storyboard.instantiateViewController(withIdentifier: "BuildWithParametersVC") as! BuildWithParametersVC
             buildWithParametersVC.job = self.job
@@ -84,6 +82,7 @@ extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.show(buildWithParametersVC, sender: self)
             return
         }
+        
         let buildConsoleVC = storyboard.instantiateViewController(withIdentifier: "BuildConsoleVC") as! BuildConsoleVC
         buildConsoleVC.build = build
         
@@ -98,6 +97,7 @@ extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
             buildWithParams.selectionStyle = .none
             return buildWithParams
         }
+        
         let buildCell = tableView.dequeueReusableCell(withIdentifier: "BuildDetailTVC", for: indexPath) as! BuildDetailTVC
         let build = self.job?.builds[indexPath.row]
         buildCell.setupCell(withBuild: build!)
