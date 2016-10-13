@@ -95,6 +95,7 @@ extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
             let buildWithParams = UITableViewCell(style: .default, reuseIdentifier: nil)
             buildWithParams.accessoryType = .disclosureIndicator
             buildWithParams.textLabel?.text = "Build with parameters"
+            buildWithParams.selectionStyle = .none
             return buildWithParams
         }
         let buildCell = tableView.dequeueReusableCell(withIdentifier: "BuildDetailTVC", for: indexPath) as! BuildDetailTVC

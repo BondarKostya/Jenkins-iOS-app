@@ -18,8 +18,6 @@ class BooleanParameterTVC: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-
     
     func setupCell(withBooleanParametr parameter: BuildParameter) {
         self.boolSwither.isOn = parameter.type.booleanValue() ?? false
