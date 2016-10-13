@@ -75,14 +75,15 @@ extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (indexPath.section == 0) {
-            JenkinsAPI.sharedInstance.fetchBuildParameters(withJobURL: (self.job?.url)!, callback: { (response, error) in
-                print(response)
-            })
-            return
-        }
         let build = self.job?.builds[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if (indexPath.section == 0) {
+            let buildWithParametersVC = storyboard.instantiateViewController(withIdentifier: "BuildWithParametersVC") as! BuildWithParametersVC
+            buildWithParametersVC.job = self.job
+            
+            self.navigationController?.show(buildWithParametersVC, sender: self)
+            return
+        }
         let buildConsoleVC = storyboard.instantiateViewController(withIdentifier: "BuildConsoleVC") as! BuildConsoleVC
         buildConsoleVC.build = build
         

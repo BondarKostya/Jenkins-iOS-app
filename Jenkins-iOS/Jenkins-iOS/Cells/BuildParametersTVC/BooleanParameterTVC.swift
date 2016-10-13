@@ -11,21 +11,29 @@ import UIKit
 class BooleanParameterTVC: UITableViewCell {
 
     @IBOutlet weak var boolSwither: UISwitch!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var name:String?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+
+    
     func setupCell(withBooleanParametr parameter: BuildParameter) {
-        
+        self.boolSwither.isOn = parameter.type.booleanValue() ?? false
+        self.name = parameter.name
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+}
 
-        // Configure the view for the selected state
+extension BooleanParameterTVC: CellWithSelectedValue {
+    func getSelectedValue() -> (name: String, value: String) {
+        if self.boolSwither.isOn {
+            return (self.name!,"true")
+        }else {
+            return (self.name!,"false")
+        }
     }
-
 }

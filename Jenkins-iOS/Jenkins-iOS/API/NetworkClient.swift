@@ -52,6 +52,19 @@ class NetworkClient:NSObject {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: ApiClientTimeout)
         request.httpMethod = method.stringValue()
         request.addValue(encodeAuth, forHTTPHeaderField: "Authorization")
+        
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        let queryItems: [URLQueryItem] = params.map {
+            if let val = $0.value as? String {
+                return URLQueryItem(name: $0.key, value: val)
+            } else {
+                return URLQueryItem(name: $0.key, value: String(describing: $0.value))
+            }
+        }
+        
+        components?.queryItems = queryItems
+        request.httpBody = components?.percentEncodedQuery?.data(using: String.Encoding.utf8)
+        
         return request
     }
     private func decodeResponse(_ response: URLResponse?, rawOutput: Bool, data: Data?, error: Error?, handler: @escaping (AnyObject?, Error?) -> Void) {

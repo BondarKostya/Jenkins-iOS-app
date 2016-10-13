@@ -12,7 +12,7 @@ enum BuildParameterType {
     case boolean(defaultValue: Bool)
     case string(defaultValue: String)
     case text(defaultValue: String)
-    case choise(choices: [String])
+    case choice(choices: [String])
     
     func booleanValue() -> Bool? {
         switch self {
@@ -41,10 +41,10 @@ enum BuildParameterType {
         }
     }
     
-    func choiseValue() -> [String]? {
+    func choiceValue() -> [String]? {
         switch self {
-        case .choise(let choises):
-            return choises
+        case .choice(let choices):
+            return choices
         default:
             return nil
         }

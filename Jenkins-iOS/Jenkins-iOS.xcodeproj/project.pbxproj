@@ -27,14 +27,16 @@
 		3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36571DA510F300A7925E /* AppDelegate.swift */; };
 		3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F36591DA510FD00A7925E /* LoginVC.swift */; };
 		3D5E5A141DAF7B73006CA241 /* JenkinsXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E5A131DAF7B73006CA241 /* JenkinsXMLParser.swift */; };
+		3D5E5A161DAF9149006CA241 /* BuildWithParametersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E5A151DAF9149006CA241 /* BuildWithParametersVC.swift */; };
 		3D5E685E1DAE766000FBB6D5 /* BuildParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E685D1DAE766000FBB6D5 /* BuildParameter.swift */; };
 		3D5E68611DAE82F800FBB6D5 /* BooleanParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68601DAE82F800FBB6D5 /* BooleanParameterTVC.swift */; };
 		3D5E68631DAE831200FBB6D5 /* StringParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68621DAE831200FBB6D5 /* StringParameterTVC.swift */; };
 		3D5E68651DAE832600FBB6D5 /* TextParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68641DAE832600FBB6D5 /* TextParameterTVC.swift */; };
-		3D5E68671DAE834200FBB6D5 /* ChoiseParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68661DAE834200FBB6D5 /* ChoiseParameterTVC.swift */; };
+		3D5E68671DAE834200FBB6D5 /* ChoiceParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68661DAE834200FBB6D5 /* ChoiceParameterTVC.swift */; };
 		3DC71F9D1DAD061B00190FD5 /* BuildStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71F9C1DAD061B00190FD5 /* BuildStatus.swift */; };
 		3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */; };
 		3DD19D391DA51EF2005EC59A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D371DA51EF2005EC59A /* NetworkClient.swift */; };
+		3DE92A751DAFAC7F00703DA4 /* CellWithSelectedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE92A741DAFAC7F00703DA4 /* CellWithSelectedValue.swift */; };
 		6432C35F7CBED6EBEF5EC8E9 /* Pods_Jenkins_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DD53FC077E92426AA6C9DA /* Pods_Jenkins_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,14 +63,16 @@
 		3D4F36571DA510F300A7925E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AppDelegate/AppDelegate.swift; sourceTree = "<group>"; };
 		3D4F36591DA510FD00A7925E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = Controller/LoginVC.swift; sourceTree = "<group>"; };
 		3D5E5A131DAF7B73006CA241 /* JenkinsXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JenkinsXMLParser.swift; sourceTree = "<group>"; };
+		3D5E5A151DAF9149006CA241 /* BuildWithParametersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildWithParametersVC.swift; path = Controller/BuildWithParametersVC.swift; sourceTree = "<group>"; };
 		3D5E685D1DAE766000FBB6D5 /* BuildParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildParameter.swift; path = Model/BuildParameter.swift; sourceTree = "<group>"; };
 		3D5E68601DAE82F800FBB6D5 /* BooleanParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooleanParameterTVC.swift; path = Cells/BuildParametersTVC/BooleanParameterTVC.swift; sourceTree = "<group>"; };
 		3D5E68621DAE831200FBB6D5 /* StringParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringParameterTVC.swift; path = Cells/BuildParametersTVC/StringParameterTVC.swift; sourceTree = "<group>"; };
 		3D5E68641DAE832600FBB6D5 /* TextParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextParameterTVC.swift; path = Cells/BuildParametersTVC/TextParameterTVC.swift; sourceTree = "<group>"; };
-		3D5E68661DAE834200FBB6D5 /* ChoiseParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoiseParameterTVC.swift; path = Cells/BuildParametersTVC/ChoiseParameterTVC.swift; sourceTree = "<group>"; };
+		3D5E68661DAE834200FBB6D5 /* ChoiceParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoiceParameterTVC.swift; path = Cells/BuildParametersTVC/ChoiceParameterTVC.swift; sourceTree = "<group>"; };
 		3DC71F9C1DAD061B00190FD5 /* BuildStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildStatus.swift; path = Model/BuildStatus.swift; sourceTree = "<group>"; };
 		3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JenkinsAPI.swift; path = API/JenkinsAPI.swift; sourceTree = "<group>"; };
 		3DD19D371DA51EF2005EC59A /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = API/NetworkClient.swift; sourceTree = "<group>"; };
+		3DE92A741DAFAC7F00703DA4 /* CellWithSelectedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellWithSelectedValue.swift; path = Cells/BuildParametersTVC/CellWithSelectedValue.swift; sourceTree = "<group>"; };
 		9456A5CAA964FC0BD6C2FD11 /* Pods-Jenkins-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jenkins-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jenkins-iOS/Pods-Jenkins-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		BF92DE940C5D3A63CC0D15C9 /* Pods-Jenkins-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jenkins-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jenkins-iOS/Pods-Jenkins-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C3DD53FC077E92426AA6C9DA /* Pods_Jenkins_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jenkins_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +159,7 @@
 				3D4B6F5F1DAB99B500019990 /* ProjectsVC.swift */,
 				3D4606A51DAD276D00DBE9B9 /* JobDetailsVC.swift */,
 				3D4BA81C1DAE5140000423A1 /* BuildConsoleVC.swift */,
+				3D5E5A151DAF9149006CA241 /* BuildWithParametersVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -191,7 +196,8 @@
 				3D5E68601DAE82F800FBB6D5 /* BooleanParameterTVC.swift */,
 				3D5E68621DAE831200FBB6D5 /* StringParameterTVC.swift */,
 				3D5E68641DAE832600FBB6D5 /* TextParameterTVC.swift */,
-				3D5E68661DAE834200FBB6D5 /* ChoiseParameterTVC.swift */,
+				3D5E68661DAE834200FBB6D5 /* ChoiceParameterTVC.swift */,
+				3DE92A741DAFAC7F00703DA4 /* CellWithSelectedValue.swift */,
 			);
 			name = BuildParametersTVC;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				3D49EF071DA6503E000CE6DB /* LogButtonTVC.swift in Sources */,
 				3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */,
 				3D49EF091DA6503E000CE6DB /* UserLoginTVC.swift in Sources */,
+				3D5E5A161DAF9149006CA241 /* BuildWithParametersVC.swift in Sources */,
 				3D49EF081DA6503E000CE6DB /* SaveAccountTVC.swift in Sources */,
 				3D4B6F5C1DAB8B1300019990 /* Errors.swift in Sources */,
 				3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */,
@@ -348,7 +355,7 @@
 				3D5E5A141DAF7B73006CA241 /* JenkinsXMLParser.swift in Sources */,
 				3D49EEF21DA634F5000CE6DB /* Build.swift in Sources */,
 				3D4BA81D1DAE5140000423A1 /* BuildConsoleVC.swift in Sources */,
-				3D5E68671DAE834200FBB6D5 /* ChoiseParameterTVC.swift in Sources */,
+				3D5E68671DAE834200FBB6D5 /* ChoiceParameterTVC.swift in Sources */,
 				3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */,
 				3D49EF0B1DA65074000CE6DB /* ProjectWeather.swift in Sources */,
 				3D5E68611DAE82F800FBB6D5 /* BooleanParameterTVC.swift in Sources */,
@@ -359,6 +366,7 @@
 				3D4B6F5E1DAB8DD300019990 /* AlertManager.swift in Sources */,
 				3DC71F9D1DAD061B00190FD5 /* BuildStatus.swift in Sources */,
 				3D49EEEC1DA62A23000CE6DB /* Job.swift in Sources */,
+				3DE92A751DAFAC7F00703DA4 /* CellWithSelectedValue.swift in Sources */,
 				3D4606A41DAD252100DBE9B9 /* BuildDetailTVC.swift in Sources */,
 				3D5E685E1DAE766000FBB6D5 /* BuildParameter.swift in Sources */,
 			);

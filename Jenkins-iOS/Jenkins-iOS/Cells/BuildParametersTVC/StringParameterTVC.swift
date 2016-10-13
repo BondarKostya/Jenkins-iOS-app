@@ -11,17 +11,24 @@ import UIKit
 class StringParameterTVC: UITableViewCell {
 
     @IBOutlet weak var parameterTextField: UITextField!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
+    var name : String?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setupCell(withBooleanParametr parameter: BuildParameter) {
+        self.parameterTextField.text = parameter.type.stringValue() ?? ""
+        self.name = parameter.name
     }
 
+    
+
+}
+
+extension StringParameterTVC: CellWithSelectedValue {
+    
+    func getSelectedValue() -> (name: String, value: String) {
+        return (self.name!, self.parameterTextField.text!)
+    }
 }

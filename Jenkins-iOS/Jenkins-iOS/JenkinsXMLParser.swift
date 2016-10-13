@@ -59,7 +59,7 @@ public class JenkinsXMLParser {
                 choices.append(choice.element!.text ?? "")
             }
             
-            let buildParameter = BuildParameter(name: name, description: description, type: .choise(choices: choices))
+            let buildParameter = BuildParameter(name: name, description: description, type: .choice(choices: choices))
             return buildParameter
         default:
             return nil

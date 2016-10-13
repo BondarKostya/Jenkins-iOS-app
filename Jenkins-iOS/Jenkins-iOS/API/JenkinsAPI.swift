@@ -173,6 +173,7 @@ public class JenkinsAPI {
     
     func build(_ name: String, parameters: [String : String], _ handler: @escaping (_ error: Error?) -> Void) {
         guard let url = URL(string: jenkinsURL!.absoluteString)?
+            .appendingPathComponent("job")
             .appendingPathComponent(name)
             .appendingPathComponent("buildWithParameters") else {
 //                handler(JenkinsError.InvalidJenkinsURL)
