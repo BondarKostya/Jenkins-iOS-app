@@ -25,7 +25,7 @@ public class JenkinsAPI {
     
     private var networkClient:NetworkClient?
     
-    func jenkinsInit(domainName: String!, port: Int!, path:String!, networkClient:NetworkClient!) {
+    func jenkinsInit(domainName: String, port: Int, path:String, networkClient:NetworkClient) {
         self.domainName = domainName
         self.path = path
         self.port = port
@@ -54,8 +54,9 @@ public class JenkinsAPI {
         }
         
         self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, { (response, error) in
-            if (error != nil) {
-                callback([],error)
+            if error != nil {
+                
+                callback([], JenkinsError.generateJenkinsError(httpStatusCode: error.code))
                 return
             }
             
@@ -86,7 +87,7 @@ public class JenkinsAPI {
         }
         self.networkClient?.get(path: url, encodeAuth: encodedAuthorizationHeader, { (responce, error) in
             if (error != nil) {
-                handler(false, error)
+                handler(false, JenkinsError.generateJenkinsError(httpStatusCode: (error as! NSError).code))
             } else {
                 handler(true, nil)
             }
@@ -103,7 +104,7 @@ public class JenkinsAPI {
         }
         self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, { (response, error) in
             if (error != nil) {
-                callback([],error)
+                callback([], JenkinsError.generateJenkinsError(httpStatusCode: (error as! NSError).code))
                 return
             }
             
@@ -130,7 +131,7 @@ public class JenkinsAPI {
         
         self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, rawResponse: true, { (response, error) in
             if (error != nil) {
-                callback("",error)
+                callback("", JenkinsError.generateJenkinsError(httpStatusCode: (error as! NSError).code))
                 return
             }
             
@@ -152,7 +153,7 @@ public class JenkinsAPI {
         
         self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, rawResponse: true, { (response, error) in
             if (error != nil) {
-                callback([],error)
+                callback([], JenkinsError.generateJenkinsError(httpStatusCode: (error as! NSError).code))
                 return
             }
             
@@ -179,7 +180,7 @@ public class JenkinsAPI {
         }
         
         self.networkClient?.post(path: url, encodeAuth:encodedAuthorizationHeader, params: parameters as [String : AnyObject]) { response, error in
-            handler(error)
+            handler(JenkinsError.generateJenkinsError(httpStatusCode: (error as! NSError).code))
         }
     }
     

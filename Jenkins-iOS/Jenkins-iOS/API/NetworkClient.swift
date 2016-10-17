@@ -82,11 +82,7 @@ class NetworkClient:NSObject {
         
         if let response = response as? HTTPURLResponse {
             if response.statusCode >= 400 {
-                let userInfo: [NSObject : String] =
-                [
-                        NSLocalizedDescriptionKey as NSObject : JenkinsError.description(httpStatusCode: response.statusCode)
-                ]
-                let error = NSError(domain: "", code: response.statusCode, userInfo: userInfo)
+                let error = NSError(domain: "", code: response.statusCode, userInfo: nil)
                 handler(nil, error)
             }
         }

@@ -10,6 +10,16 @@ import Foundation
 
 public struct JenkinsError{
     
+    static func generateJenkinsError(httpStatusCode: Int) -> Error {
+        let userInfo: [NSObject : String] =
+        [
+                NSLocalizedDescriptionKey as NSObject : JenkinsError.description(httpStatusCode: error.code)
+        ]
+        let jenkinsError = NSError(domain: "", code: httpStatusCode, userInfo: userInfo)
+        
+        return jenkinsError
+    }
+    
     static func description(httpStatusCode: Int) -> String {
         switch httpStatusCode {
         case 400:
