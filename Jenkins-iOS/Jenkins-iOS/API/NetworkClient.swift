@@ -25,25 +25,25 @@ internal enum RequestMethod {
 
 class NetworkClient:NSObject {
     
-    func get(path: URL, encodeAuth:String!, rawResponse: Bool = false, params: [String : AnyObject] = [:], _ handler: @escaping (AnyObject?, Error?) -> Void) {
+    func get(path: URL, encodeAuth:String!, serializer: ResponseSerializer = ResponseSerializer(), params: [String : AnyObject] = [:], _ handler: @escaping (AnyObject?, Error?) -> Void) {
         let request: URLRequest = requestFor(path, encodeAuth:encodeAuth, method: .GET, params: params)
         
-        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
+        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
         
         let task = session.dataTask(with: request) { data, response, error in
-            self.decodeResponse(response, rawOutput: rawResponse, data: data, error: error, handler: handler)
+            self.decodeResponse(response, serializer: serializer, data: data, error: error, handler: handler)
         }
         
         task.resume()
     }
     
-    func post(path: URL, encodeAuth:String!, rawResponse: Bool = false, params: [String : AnyObject] = [:], _ handler: @escaping (AnyObject?, Error?) -> Void) {
+    func post(path: URL, encodeAuth:String!, serializer: ResponseSerializer = ResponseSerializer(), params: [String : AnyObject] = [:], _ handler: @escaping (AnyObject?, Error?) -> Void) {
         let request: URLRequest = requestFor(path, encodeAuth:encodeAuth, method: .POST, params: params)
 
-        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
+        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
         
         let task = session.dataTask(with: request) { data, response, error in
-            self.decodeResponse(response, rawOutput: rawResponse, data: data, error: error, handler: handler)
+            self.decodeResponse(response, serializer: serializer, data: data, error: error, handler: handler)
         }
         
         task.resume()
@@ -69,7 +69,7 @@ class NetworkClient:NSObject {
         
         return request
     }
-    private func decodeResponse(_ response: URLResponse?, rawOutput: Bool, data: Data?, error: Error?, handler: @escaping (AnyObject?, Error?) -> Void) {
+    private func decodeResponse(_ response: URLResponse?, serializer: ResponseSerializer, data: Data?, error: Error?, handler: @escaping (AnyObject?, Error?) -> Void) {
         guard let data = data else {
             handler(nil, error)
             return
@@ -87,17 +87,6 @@ class NetworkClient:NSObject {
             }
         }
 
-        if rawOutput {
-            handler(String(data: data, encoding: String.Encoding.utf8) as AnyObject?, nil)
-        } else {
-            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-            handler(json as AnyObject?, nil)
-        }
-    }
-}
-
-extension NetworkClient: URLSessionTaskDelegate {
-    func urlSession(_ session: URLSession, task: URLSessionTask, willPerformHTTPRedirection response: HTTPURLResponse, newRequest request: URLRequest, completionHandler: @escaping (URLRequest?) -> Void) {
-        completionHandler(nil)
+        handler(serializer.serialize(data: data), nil)
     }
 }

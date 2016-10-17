@@ -33,6 +33,8 @@
 		3D5E68631DAE831200FBB6D5 /* StringParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68621DAE831200FBB6D5 /* StringParameterTVC.swift */; };
 		3D5E68651DAE832600FBB6D5 /* TextParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68641DAE832600FBB6D5 /* TextParameterTVC.swift */; };
 		3D5E68671DAE834200FBB6D5 /* ChoiceParameterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E68661DAE834200FBB6D5 /* ChoiceParameterTVC.swift */; };
+		3D8D631F1DB5084C0049F8E4 /* ResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8D631E1DB5084C0049F8E4 /* ResponseSerializer.swift */; };
+		3D8D63211DB509020049F8E4 /* JSONResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8D63201DB509020049F8E4 /* JSONResponseSerializer.swift */; };
 		3DC71F9D1DAD061B00190FD5 /* BuildStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71F9C1DAD061B00190FD5 /* BuildStatus.swift */; };
 		3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */; };
 		3DD19D391DA51EF2005EC59A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD19D371DA51EF2005EC59A /* NetworkClient.swift */; };
@@ -69,6 +71,8 @@
 		3D5E68621DAE831200FBB6D5 /* StringParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringParameterTVC.swift; path = Cells/BuildParametersTVC/StringParameterTVC.swift; sourceTree = "<group>"; };
 		3D5E68641DAE832600FBB6D5 /* TextParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextParameterTVC.swift; path = Cells/BuildParametersTVC/TextParameterTVC.swift; sourceTree = "<group>"; };
 		3D5E68661DAE834200FBB6D5 /* ChoiceParameterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoiceParameterTVC.swift; path = Cells/BuildParametersTVC/ChoiceParameterTVC.swift; sourceTree = "<group>"; };
+		3D8D631E1DB5084C0049F8E4 /* ResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseSerializer.swift; path = API/ResponseSerializer.swift; sourceTree = "<group>"; };
+		3D8D63201DB509020049F8E4 /* JSONResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONResponseSerializer.swift; path = API/JSONResponseSerializer.swift; sourceTree = "<group>"; };
 		3DC71F9C1DAD061B00190FD5 /* BuildStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildStatus.swift; path = Model/BuildStatus.swift; sourceTree = "<group>"; };
 		3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JenkinsAPI.swift; path = API/JenkinsAPI.swift; sourceTree = "<group>"; };
 		3DD19D371DA51EF2005EC59A /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = API/NetworkClient.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 				3DD19D361DA51EF2005EC59A /* JenkinsAPI.swift */,
 				3DD19D371DA51EF2005EC59A /* NetworkClient.swift */,
 				3D5E5A131DAF7B73006CA241 /* JenkinsXMLParser.swift */,
+				3D8D631E1DB5084C0049F8E4 /* ResponseSerializer.swift */,
+				3D8D63201DB509020049F8E4 /* JSONResponseSerializer.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 			files = (
 				3D49EF071DA6503E000CE6DB /* LogButtonTVC.swift in Sources */,
 				3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */,
+				3D8D63211DB509020049F8E4 /* JSONResponseSerializer.swift in Sources */,
 				3D49EF091DA6503E000CE6DB /* UserLoginTVC.swift in Sources */,
 				3D5E5A161DAF9149006CA241 /* BuildWithParametersVC.swift in Sources */,
 				3D49EF081DA6503E000CE6DB /* SaveAccountTVC.swift in Sources */,
@@ -359,6 +366,7 @@
 				3DD19D381DA51EF2005EC59A /* JenkinsAPI.swift in Sources */,
 				3D49EF0B1DA65074000CE6DB /* ProjectWeather.swift in Sources */,
 				3D5E68611DAE82F800FBB6D5 /* BooleanParameterTVC.swift in Sources */,
+				3D8D631F1DB5084C0049F8E4 /* ResponseSerializer.swift in Sources */,
 				3D4B6F691DABBEB100019990 /* ProjectTVC.swift in Sources */,
 				3D4B6F601DAB99B500019990 /* ProjectsVC.swift in Sources */,
 				3D4606A61DAD276D00DBE9B9 /* JobDetailsVC.swift in Sources */,

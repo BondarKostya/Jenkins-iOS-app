@@ -13,7 +13,7 @@ public struct JenkinsError{
     static func generateJenkinsError(httpStatusCode: Int) -> Error {
         let userInfo: [NSObject : String] =
         [
-                NSLocalizedDescriptionKey as NSObject : JenkinsError.description(httpStatusCode: error.code)
+                NSLocalizedDescriptionKey as NSObject : JenkinsError.description(httpStatusCode: httpStatusCode)
         ]
         let jenkinsError = NSError(domain: "", code: httpStatusCode, userInfo: userInfo)
         
