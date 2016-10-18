@@ -25,30 +25,17 @@ internal enum RequestMethod {
 
 class NetworkClient:NSObject {
     
-    func get(path: URL, encodeAuth:String!, serializer: ResponseSerializer = ResponseSerializer(), params: [String : AnyObject] = [:], _ handler: @escaping (AnyObject?, Error?) -> Void) {
-        let request: URLRequest = requestFor(path, encodeAuth:encodeAuth, method: .GET, params: params)
-        
-        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
-        
-        let task = session.dataTask(with: request) { data, response, error in
-            self.decodeResponse(response, serializer: serializer, data: data, error: error, handler: handler)
-        }
-        
-        task.resume()
-    }
-    
-    func post(path: URL, encodeAuth:String!, serializer: ResponseSerializer = ResponseSerializer(), params: [String : AnyObject] = [:], _ handler: @escaping (AnyObject?, Error?) -> Void) {
-        let request: URLRequest = requestFor(path, encodeAuth:encodeAuth, method: .POST, params: params)
+    func request(withMethod method: RequestMethod,path: URL, encodeAuth:String!, serializer: ResponseSerializer = ResponseSerializer(), params: [String : AnyObject] = [:], _ handler: @escaping (AnyObject?, NSError?) -> Void) {
 
         let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
         
-        let task = session.dataTask(with: request) { data, response, error in
-            self.decodeResponse(response, serializer: serializer, data: data, error: error, handler: handler)
-        }
+        session.dataTask(with: requestFor(path, encodeAuth:encodeAuth, method: method, params: params)) { data, response, error in
+            self.decodeResponse(response, serializer: serializer, data: data, error: error as? NSError, handler: handler)
+        }.resume()
+
         
-        task.resume()
     }
-    
+
     private func requestFor(_ url: URL,encodeAuth:String!, method: RequestMethod, params: [String : AnyObject] = [:]) -> URLRequest {
         
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: ApiClientTimeout)
@@ -69,7 +56,7 @@ class NetworkClient:NSObject {
         
         return request
     }
-    private func decodeResponse(_ response: URLResponse?, serializer: ResponseSerializer, data: Data?, error: Error?, handler: @escaping (AnyObject?, Error?) -> Void) {
+    private func decodeResponse(_ response: URLResponse?, serializer: ResponseSerializer, data: Data?, error: NSError?, handler: @escaping (AnyObject?, NSError?) -> Void) {
         guard let data = data else {
             handler(nil, error)
             return
@@ -84,9 +71,23 @@ class NetworkClient:NSObject {
             if response.statusCode >= 400 {
                 let error = NSError(domain: "", code: response.statusCode, userInfo: nil)
                 handler(nil, error)
+                return
             }
         }
 
-        handler(serializer.serialize(data: data), nil)
+        let serializedData =  serializer.serialize(data: data)
+        
+        if let serializedData = serializedData {
+            handler(serializedData, nil)
+        }else {
+            let userInfo: [NSObject : String] =
+            [
+                    NSLocalizedDescriptionKey as NSObject : "Serialization failed"
+            ]
+            let error = NSError(domain: "", code: 399 , userInfo: userInfo)
+            
+            handler(nil, error)
+        }
+        
     }
 }

@@ -11,9 +11,6 @@
 		3D4606A61DAD276D00DBE9B9 /* JobDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4606A51DAD276D00DBE9B9 /* JobDetailsVC.swift */; };
 		3D49EEEC1DA62A23000CE6DB /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EEEB1DA62A23000CE6DB /* Job.swift */; };
 		3D49EEF21DA634F5000CE6DB /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EEF11DA634F5000CE6DB /* Build.swift */; };
-		3D49EF071DA6503E000CE6DB /* LogButtonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF041DA6503E000CE6DB /* LogButtonTVC.swift */; };
-		3D49EF081DA6503E000CE6DB /* SaveAccountTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF051DA6503E000CE6DB /* SaveAccountTVC.swift */; };
-		3D49EF091DA6503E000CE6DB /* UserLoginTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF061DA6503E000CE6DB /* UserLoginTVC.swift */; };
 		3D49EF0B1DA65074000CE6DB /* ProjectWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49EF0A1DA65074000CE6DB /* ProjectWeather.swift */; };
 		3D49EF0D1DA66EA2000CE6DB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3D49EF0C1DA66EA1000CE6DB /* Podfile */; };
 		3D4B6F5C1DAB8B1300019990 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B6F5B1DAB8B1300019990 /* Errors.swift */; };
@@ -47,9 +44,6 @@
 		3D4606A51DAD276D00DBE9B9 /* JobDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobDetailsVC.swift; path = Controller/JobDetailsVC.swift; sourceTree = "<group>"; };
 		3D49EEEB1DA62A23000CE6DB /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Job.swift; path = Model/Job.swift; sourceTree = "<group>"; };
 		3D49EEF11DA634F5000CE6DB /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Build.swift; path = Model/Build.swift; sourceTree = "<group>"; };
-		3D49EF041DA6503E000CE6DB /* LogButtonTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogButtonTVC.swift; path = Cells/LogButtonTVC.swift; sourceTree = "<group>"; };
-		3D49EF051DA6503E000CE6DB /* SaveAccountTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveAccountTVC.swift; path = Cells/SaveAccountTVC.swift; sourceTree = "<group>"; };
-		3D49EF061DA6503E000CE6DB /* UserLoginTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserLoginTVC.swift; path = Cells/UserLoginTVC.swift; sourceTree = "<group>"; };
 		3D49EF0A1DA65074000CE6DB /* ProjectWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectWeather.swift; path = Model/ProjectWeather.swift; sourceTree = "<group>"; };
 		3D49EF0C1DA66EA1000CE6DB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3D4B6F5B1DAB8B1300019990 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Model/Errors.swift; sourceTree = "<group>"; };
@@ -98,9 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				3D5E685F1DAE82BE00FBB6D5 /* BuildParametersTVC */,
-				3D49EF041DA6503E000CE6DB /* LogButtonTVC.swift */,
-				3D49EF051DA6503E000CE6DB /* SaveAccountTVC.swift */,
-				3D49EF061DA6503E000CE6DB /* UserLoginTVC.swift */,
 				3D4B6F681DABBEB100019990 /* ProjectTVC.swift */,
 				3D4606A31DAD252100DBE9B9 /* BuildDetailTVC.swift */,
 			);
@@ -349,12 +340,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D49EF071DA6503E000CE6DB /* LogButtonTVC.swift in Sources */,
 				3D4F36581DA510F300A7925E /* AppDelegate.swift in Sources */,
 				3D8D63211DB509020049F8E4 /* JSONResponseSerializer.swift in Sources */,
-				3D49EF091DA6503E000CE6DB /* UserLoginTVC.swift in Sources */,
 				3D5E5A161DAF9149006CA241 /* BuildWithParametersVC.swift in Sources */,
-				3D49EF081DA6503E000CE6DB /* SaveAccountTVC.swift in Sources */,
 				3D4B6F5C1DAB8B1300019990 /* Errors.swift in Sources */,
 				3D4F365A1DA510FD00A7925E /* LoginVC.swift in Sources */,
 				3D5E68651DAE832600FBB6D5 /* TextParameterTVC.swift in Sources */,

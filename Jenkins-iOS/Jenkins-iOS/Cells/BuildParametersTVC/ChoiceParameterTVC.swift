@@ -16,10 +16,6 @@ class ChoiceParameterTVC: UITableViewCell {
     
     var selectedIndex = 0
     var name : String?
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     @IBAction func choiceAction(_ sender: AnyObject) {
         ActionSheetStringPicker.show(withTitle: "", rows: self.choices, initialSelection: self.selectedIndex, doneBlock: {[weak weakSelf = self] (picker, selectedIndex, selectedValue) in
@@ -34,7 +30,7 @@ class ChoiceParameterTVC: UITableViewCell {
             }, origin: self)
     }
 
-    func setupCell(withBooleanParametr parameter: BuildParameter) {
+    func setupCell(withChoiseParameter parameter: BuildParameter) {
         self.choices = parameter.type.choiceValue() ?? []
         self.name = parameter.name
         

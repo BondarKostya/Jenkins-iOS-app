@@ -36,7 +36,6 @@ class ProjectsVC: UIViewController {
                     AlertManager.showError(inVC: strongSelf, error.localizedDescription)
                     return
                 }
-                print(jobs)
                 strongSelf.jobs = jobs
                 strongSelf.tableView.reloadData()
             }

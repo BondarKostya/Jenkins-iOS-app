@@ -14,12 +14,7 @@ class StringParameterTVC: UITableViewCell {
     
     var name : String?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    func setupCell(withBooleanParametr parameter: BuildParameter) {
+    func setupCell(withStringParameter parameter: BuildParameter) {
         self.parameterTextField.text = parameter.type.stringValue() ?? ""
         self.name = parameter.name
     }

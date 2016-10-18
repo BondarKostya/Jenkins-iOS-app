@@ -52,7 +52,10 @@ class BuildWithParametersVC: UIViewController {
                     AlertManager.showError(inVC: strongSelf, error.localizedDescription)
                     return
                 }
-                AlertManager.showAlert(withTitle: "Success", message: "Build started", inVC: self)
+                AlertManager.showAlert(withTitle: "Success", message: "Build started", inVC: self) { (action) in
+                    strongSelf.navigationController!.popViewController(animated: true)
+                }
+                
             }
         }
     }
@@ -109,22 +112,22 @@ extension BuildWithParametersVC: UITableViewDelegate, UITableViewDataSource {
         case .boolean:
             let booleanCell = tableView.dequeueReusableCell(withIdentifier: "BooleanParameterTVC", for: indexPath) as! BooleanParameterTVC
             
-            booleanCell.setupCell(withBooleanParametr: buildParameter)
+            booleanCell.setupCell(withBooleanParameter: buildParameter)
             return booleanCell
         case .string:
             let stringCell = tableView.dequeueReusableCell(withIdentifier: "StringParameterTVC", for: indexPath) as! StringParameterTVC
             stringCell.parameterTextField.delegate = self
-            stringCell.setupCell(withBooleanParametr: buildParameter)
+            stringCell.setupCell(withStringParameter: buildParameter)
             return stringCell
         case .text:
             let textCell = tableView.dequeueReusableCell(withIdentifier: "TextParameterTVC", for: indexPath) as! TextParameterTVC
             
-            textCell.setupCell(withBooleanParametr: buildParameter)
+            textCell.setupCell(withTextParameter: buildParameter)
             return textCell
         case .choice:
             let choiceCell = tableView.dequeueReusableCell(withIdentifier: "ChoiceParameterTVC", for: indexPath) as! ChoiceParameterTVC
             
-            choiceCell.setupCell(withBooleanParametr: buildParameter)
+            choiceCell.setupCell(withChoiseParameter: buildParameter)
             return choiceCell
         }
     }

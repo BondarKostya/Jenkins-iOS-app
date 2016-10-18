@@ -13,13 +13,8 @@ class TextParameterTVC: UITableViewCell {
     @IBOutlet weak var parameterTextView: UITextView!
     
     var name : String?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    func setupCell(withBooleanParametr parameter: BuildParameter) {
+    func setupCell(withTextParameter parameter: BuildParameter) {
         self.parameterTextView.text = parameter.type.textValue() ?? ""
         self.name = parameter.name
     }

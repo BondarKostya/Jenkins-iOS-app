@@ -53,10 +53,10 @@ public class JenkinsAPI {
                 return
         }
         
-        self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, serializer: JSONResponseSerializer(), { (response, error) in
-            if let error = error as? NSError {
-                if  error.code >= 400 {
-                    callback([], JenkinsError.generateJenkinsError(httpStatusCode: error.code))
+        self.networkClient?.request(withMethod: .GET, path: url, encodeAuth:encodedAuthorizationHeader, serializer: JSONResponseSerializer(), { (response, error) in
+            if error != nil {
+                if  error!.code >= 400 {
+                    callback([], JenkinsError.generateJenkinsError(httpStatusCode: error!.code))
                 }else {
                     callback([], error)
                 }
@@ -69,7 +69,7 @@ public class JenkinsAPI {
                 return
             }
             
-            let jobs = jsonJobs.map{ json in
+            let jobs = jsonJobs.flatMap{ json in
                 return Job(json:json)
             }
             
@@ -88,11 +88,12 @@ public class JenkinsAPI {
             .appendingPathComponent("json") else {
                 return
         }
-        self.networkClient?.get(path: url, encodeAuth: encodedAuthorizationHeader, serializer: JSONResponseSerializer(), { (responce, error) in
+        
+        self.networkClient?.request(withMethod: .GET, path: url, encodeAuth: encodedAuthorizationHeader, serializer: JSONResponseSerializer(), { (responce, error) in
  
-            if let error = error as? NSError {
-                if  error.code >= 400 {
-                    handler(false, JenkinsError.generateJenkinsError(httpStatusCode: error.code))
+            if  error != nil  {
+                if  error!.code >= 400 {
+                    handler(false, JenkinsError.generateJenkinsError(httpStatusCode: error!.code))
                 }else {
                     handler(false, error)
                 }
@@ -110,10 +111,10 @@ public class JenkinsAPI {
         guard let url = URL(string: escapedString) else {
             return
         }
-        self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, serializer: JSONResponseSerializer(), { (response, error) in
-            if let error = error as? NSError {
-                if  error.code >= 400 {
-                    callback([], JenkinsError.generateJenkinsError(httpStatusCode: error.code))
+        self.networkClient?.request(withMethod: .GET, path: url, encodeAuth:encodedAuthorizationHeader, serializer: JSONResponseSerializer(), { (response, error) in
+            if error != nil  {
+                if  error!.code >= 400 {
+                    callback([], JenkinsError.generateJenkinsError(httpStatusCode: error!.code))
                 }else {
                     callback([], error)
                 }
@@ -126,7 +127,7 @@ public class JenkinsAPI {
                     return
             }
             
-            let builds = jsonJobs.map{ json in
+            let builds = jsonJobs.flatMap{ json in
                 return Build(json: json)
             }
             callback(builds,nil)
@@ -141,10 +142,10 @@ public class JenkinsAPI {
             return
         }
         
-        self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader,  { (response, error) in
-            if let error = error as? NSError {
-                if  error.code >= 400 {
-                    callback("", JenkinsError.generateJenkinsError(httpStatusCode: error.code))
+        self.networkClient?.request(withMethod: .GET, path: url, encodeAuth:encodedAuthorizationHeader,  { (response, error) in
+            if error != nil  {
+                if  error!.code >= 400 {
+                    callback("", JenkinsError.generateJenkinsError(httpStatusCode: error!.code))
                 }else {
                     callback("", error)
                 }
@@ -167,10 +168,10 @@ public class JenkinsAPI {
             return
         }
         
-        self.networkClient?.get(path: url, encodeAuth:encodedAuthorizationHeader, { (response, error) in
-            if let error = error as? NSError {
-                if  error.code >= 400 {
-                    callback([], JenkinsError.generateJenkinsError(httpStatusCode: error.code))
+        self.networkClient?.request(withMethod: .GET, path: url, encodeAuth:encodedAuthorizationHeader, { (response, error) in
+            if error != nil  {
+                if  error!.code >= 400 {
+                    callback([], JenkinsError.generateJenkinsError(httpStatusCode: error!.code))
                 }else {
                     callback([], error)
                 }
@@ -199,15 +200,16 @@ public class JenkinsAPI {
                 return
         }
         
-        self.networkClient?.post(path: url, encodeAuth:encodedAuthorizationHeader, serializer: JSONResponseSerializer(), params: parameters as [String : AnyObject]) { response, error in
-            if let error = error as? NSError {
-                if  error.code >= 400 {
-                    handler(JenkinsError.generateJenkinsError(httpStatusCode: error.code))
+        self.networkClient?.request(withMethod: .POST ,path: url, encodeAuth:encodedAuthorizationHeader, serializer: JSONResponseSerializer(), params: parameters as [String : AnyObject]) { response, error in
+            if error != nil  {
+                if  error!.code >= 400 {
+                    handler(JenkinsError.generateJenkinsError(httpStatusCode: error!.code))
                 }else {
                     handler(error)
                 }
                 return
             }
+            handler(nil)
         }
     }
     
