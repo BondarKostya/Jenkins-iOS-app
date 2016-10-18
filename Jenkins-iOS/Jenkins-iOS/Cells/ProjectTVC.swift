@@ -17,11 +17,6 @@ class ProjectTVC: UITableViewCell {
     
     var buildState:BuildStatus?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         

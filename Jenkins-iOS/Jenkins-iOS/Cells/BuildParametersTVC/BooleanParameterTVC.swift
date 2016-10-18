@@ -14,12 +14,7 @@ class BooleanParameterTVC: UITableViewCell {
     
     var name:String?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    func setupCell(withBooleanParametr parameter: BuildParameter) {
+    func setupCell(withBooleanParameter parameter: BuildParameter) {
         self.boolSwither.isOn = parameter.type.booleanValue() ?? false
         self.name = parameter.name
     }

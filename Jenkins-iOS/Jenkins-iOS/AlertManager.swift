@@ -10,17 +10,17 @@ import MBProgressHUD
 import  UIKit
 class AlertManager {
     
-    static func showError(inVC viewController: UIViewController,_ errorMessage : String)
+    static func showError(inVC viewController: UIViewController,_ errorMessage : String, handler: ((UIAlertAction) -> Void)? = nil)
     {
         let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: handler))
         viewController.present(alert, animated: true, completion: nil)
     }
     
-    static func showAlert(withTitle title: String ,message : String, inVC viewController: UIViewController)
+    static func showAlert(withTitle title: String ,message : String, inVC viewController: UIViewController, handler: ((UIAlertAction) -> Void)? = nil)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: handler))
         viewController.present(alert, animated: true, completion: nil)
     }
 }

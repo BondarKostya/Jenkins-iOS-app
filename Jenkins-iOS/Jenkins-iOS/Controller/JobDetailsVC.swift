@@ -103,13 +103,15 @@ extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
             buildWithParams.textLabel?.text = "Build with parameters"
             buildWithParams.selectionStyle = .none
             return buildWithParams
+        } else {
+            let buildCell = tableView.dequeueReusableCell(withIdentifier: "BuildDetailTVC", for: indexPath) as! BuildDetailTVC
+            let build = self.job?.builds[indexPath.row]
+            buildCell.setupCell(withBuild: build!)
+            buildCell.setNeedsUpdateConstraints()
+            buildCell.updateConstraintsIfNeeded()
+            return buildCell
         }
         
-        let buildCell = tableView.dequeueReusableCell(withIdentifier: "BuildDetailTVC", for: indexPath) as! BuildDetailTVC
-        let build = self.job?.builds[indexPath.row]
-        buildCell.setupCell(withBuild: build!)
-        buildCell.setNeedsUpdateConstraints()
-        buildCell.updateConstraintsIfNeeded()
-        return buildCell
+        
     }
 }

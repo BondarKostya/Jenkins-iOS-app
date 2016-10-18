@@ -8,29 +8,53 @@
 
 import Foundation
 
-public struct Build {
+public class Build {
     private(set) var name: String = ""
     private(set) var buildStatus: BuildStatus = .aborted
     private(set) var timestamp: Int = 0
     private(set) var url: String = ""
     
-    init(json: JSON) {
+    init() {
         
-        if let name = json["displayName"] as? String {
-            self.name = name
-        }
+    }
+    func setupBuild(name: String, buildStatus: BuildStatus, timestamp: Int, url: String) {
+        self.name = name
+        self.buildStatus = buildStatus
+        self.timestamp = timestamp
+        self.url = url
+    }
+    
+    init(name: String, buildStatus: BuildStatus, timestamp: Int, url: String) {
+        self.setupBuild(name: name, buildStatus: buildStatus, timestamp: timestamp, url: url)
+    }
+}
 
+public struct BuildParser {
+    func constructBuild(json: JSON) -> Build {
+        let build = Build()
+        var name = ""
+        var buildStatus = BuildStatus.aborted
+        var timestamp = 0
+        var url = ""
+        if let displayName = json["displayName"] as? String {
+            name = displayName
+        }
+        
         if let status = json["result"] as? String {
-            self.buildStatus = BuildStatus(withStatus: status)
+            buildStatus = BuildStatus(withStatus: status)
         }
         
-        if let timestamp = json["timestamp"] as? Int {
-            self.timestamp = timestamp
+        if let time = json["timestamp"] as? Int {
+            timestamp = time
         }
         
-        if let url = json["url"] as? String {
-            self.url = url
+        if let jsonUrl = json["url"] as? String {
+            url = jsonUrl
         }
+        
+        build.setupBuild(name: name, buildStatus: buildStatus, timestamp: timestamp, url: url)
+        
+        return build
     }
 }
 

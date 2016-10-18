@@ -14,11 +14,6 @@ class BuildDetailTVC: UITableViewCell {
     @IBOutlet weak var buildName: UILabel!
     @IBOutlet weak var buildDate: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         
