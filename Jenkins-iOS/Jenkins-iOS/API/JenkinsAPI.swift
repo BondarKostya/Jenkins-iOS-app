@@ -69,8 +69,8 @@ public class JenkinsAPI {
                 return
             }
             
-            let jobs = jsonJobs.flatMap{ json in
-                return Job(json:json)
+            let jobs = jsonJobs.map{ json in
+                return JobParser().constructJob(json:json)
             }
             
             callback(jobs,nil)
@@ -127,8 +127,8 @@ public class JenkinsAPI {
                     return
             }
             
-            let builds = jsonJobs.flatMap{ json in
-                return Build(json: json)
+            let builds = jsonJobs.map{ json in
+                return BuildParser().constructBuild(json: json)
             }
             callback(builds,nil)
             

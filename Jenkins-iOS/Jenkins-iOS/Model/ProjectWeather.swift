@@ -30,8 +30,8 @@ enum ProjectWeather {
         
     }
     
-    init(withJSON json: JSON) {
-        let score = json["score"] as? Int ?? 0
+    init(withScore score: Int) {
+        let score = score
         
         switch score {
         case 100:
