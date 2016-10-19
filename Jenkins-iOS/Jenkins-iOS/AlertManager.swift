@@ -8,19 +8,22 @@
 
 import MBProgressHUD
 import  UIKit
-class AlertManager {
+
+extension UIAlertController {
     
-    static func showError(inVC viewController: UIViewController,_ errorMessage : String, handler: ((UIAlertAction) -> Void)? = nil)
-    {
+    class func alert(withError errorMessage : String, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
         let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: handler))
-        viewController.present(alert, animated: true, completion: nil)
+        return alert
     }
     
-    static func showAlert(withTitle title: String ,message : String, inVC viewController: UIViewController, handler: ((UIAlertAction) -> Void)? = nil)
-    {
+    class func alert(withTitle title: String, message :String, handler: ((UIAlertAction) -> Void)? = nil)  -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: handler))
-        viewController.present(alert, animated: true, completion: nil)
+        return alert
+    }
+    
+    func show(inController: UIViewController) {
+        inController.present(self, animated: true, completion: nil)
     }
 }

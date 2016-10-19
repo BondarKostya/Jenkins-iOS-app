@@ -29,7 +29,7 @@ class BuildConsoleVC: UIViewController {
                 }
                 MBProgressHUD.hide(for: strongSelf.view, animated: true)
                 if let error = error {
-                    AlertManager.showError(inVC: strongSelf, error.localizedDescription)
+                    UIAlertController.alert(withError: error.localizedDescription).show(inController: strongSelf)
                     return
                 }
                 strongSelf.consoleTextView.text = consoleOutput

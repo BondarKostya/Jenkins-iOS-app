@@ -44,7 +44,7 @@ class JobDetailsVC: UIViewController {
                 }
                 MBProgressHUD.hide(for: strongSelf.view, animated: true)
                 if let error = error {
-                    AlertManager.showError(inVC: strongSelf, error.localizedDescription)
+                    UIAlertController.alert(withError: error.localizedDescription).show(inController: strongSelf)
                     return
                 }
                 strongSelf.job?.addBuilds(builds)
@@ -74,7 +74,7 @@ extension JobDetailsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (self.job?.lastBuildStatus == .disable) {
-            AlertManager.showAlert(withTitle: "Wrong", message: "The job was disabled", inVC: self)
+            UIAlertController.alert(withTitle: "Wrong", message: "The job was disabled").show(inController: self)
             return
         }
         guard let build = self.job?.builds[indexPath.row] else {

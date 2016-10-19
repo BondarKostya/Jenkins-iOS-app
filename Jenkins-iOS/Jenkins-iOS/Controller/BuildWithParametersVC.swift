@@ -49,12 +49,13 @@ class BuildWithParametersVC: UIViewController {
                 }
                 MBProgressHUD.hide(for: strongSelf.view, animated: true)
                 if let error = error {
-                    AlertManager.showError(inVC: strongSelf, error.localizedDescription)
+                    UIAlertController.alert(withError: error.localizedDescription).show(inController: strongSelf)
+
                     return
                 }
-                AlertManager.showAlert(withTitle: "Success", message: "Build started", inVC: self) { (action) in
+                UIAlertController.alert(withTitle: "Success", message: "Build started", handler: { (action) in
                     strongSelf.navigationController!.popViewController(animated: true)
-                }
+                }).show(inController: strongSelf)
                 
             }
         }
@@ -69,7 +70,7 @@ class BuildWithParametersVC: UIViewController {
                 }
                 MBProgressHUD.hide(for: strongSelf.view, animated: true)
                 if let error = error {
-                    AlertManager.showError(inVC: strongSelf, error.localizedDescription)
+                    UIAlertController.alert(withError: error.localizedDescription).show(inController: strongSelf)
                     return
                 }
                 strongSelf.buildParameters = buildParameters

@@ -92,7 +92,7 @@ class LoginVC: UIViewController {
                     self.logoutButton.setTitleColor(UIColor.red, for: .normal)
                 }else {
                     if let error = error {
-                      AlertManager.showError(inVC: strongSelf, error.localizedDescription)
+                        UIAlertController.alert(withError: error.localizedDescription).show(inController: strongSelf)
                     }
                     strongSelf.loginState = .UserLogout
                     self.logoutButton.setTitleColor(UIColor.lightGray, for: .normal)
