@@ -6,17 +6,13 @@ queue:
     - pack_ipa
     - hockeyapp
 
-
 default: &default
     platform:       ios
     using_pods:     true
-    xcode:
-    	enabled: false
-    	version: v8
     project_dir:    .
-profile:
-       file:       "~/Dropbox/buildProfiles/Jenkins/Jenkins_AdHoc.mobileprovision"
-       identity:   "iPhone Distribution: Postindustria Ltd."
+        profile:
+        file:       ~/Dropbox/buildProfiles/Jenkins/Jenkins_AdHoc.mobileprovision
+        identity:   "iPhone Distribution: Postindustria Ltd."
     build:
         configuration:  AdHoc
         sdk:            iphoneos
