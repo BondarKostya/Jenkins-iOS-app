@@ -1,9 +1,8 @@
 queue:
-    - branch
+    - xcode
     - clean
     - bump_version
     - build
-    - pack_ipa
     - hockeyapp
 
 default: &default
@@ -18,12 +17,18 @@ default: &default
         version: v8
     build:
         configuration:  AdHoc
+	build_with_gym: true
         sdk:            iphoneos
         doclean:        true
         ver_on_icon:    false
         workspace:
             name:       Jenkins-iOS
             scheme:     Jenkins-iOS
+    bump_version:
+        enabled:    true
+        push:       true
+        up_mver:    false
+        simple:     true
     hockeyapp:
         enabled:    true
         token:      b1e08ea12bce40e89490a936af7b94cd
