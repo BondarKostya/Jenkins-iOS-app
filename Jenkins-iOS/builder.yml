@@ -1,0 +1,43 @@
+queue:
+    - branch
+    - clean
+    - bump_version
+    - build
+    - pack_ipa
+    - hockeyapp
+
+
+default: &default
+    platform:       ios
+    using_pods:     true
+    xcode:
+    	enabled: false
+    	version: v8
+    project_dir:    .
+profile:
+       file:       "~/Dropbox/buildProfiles/Jenkins/Jenkins_AdHoc.mobileprovision"
+       identity:   "iPhone Distribution: Postindustria Ltd."
+    build:
+        configuration:  AdHoc
+        sdk:            iphoneos
+        doclean:        true
+        ver_on_icon:    false
+        workspace:
+            name:       Jenkins-iOS
+            scheme:     Jenkins-iOS
+    pack_ipa:
+        enabled:    true
+        naming:
+            prefix:         Jenkins-iOS
+            append_version: true
+    hockeyapp:
+        enabled:    true
+        token:      b1e08ea12bce40e89490a936af7b94cd
+        app_id:     eb698b1f55d84c239df30a6fc8255853
+        notify:     false
+        download:   true
+
+#AdHoc distribution:
+
+adhoc: &adhoc
+    <<: *default

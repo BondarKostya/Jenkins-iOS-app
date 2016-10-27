@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import HockeySDK
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        BITHockeyManager.shared().configure(withIdentifier: "eb698b1f55d84c239df30a6fc8255853")
+        BITHockeyManager.shared().start()
+        BITHockeyManager.shared().authenticator.authenticateInstallation() // This line is obsolete in the crash only builds
         JenkinsAPI.sharedInstance.jenkinsInit(domainName: "buildserver.mobi", port: 8989, path: "/", networkClient: NetworkClient())
+        
         return true
     }
 

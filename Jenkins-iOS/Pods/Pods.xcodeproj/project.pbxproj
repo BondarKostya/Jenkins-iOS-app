@@ -7,133 +7,245 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		098769B5C2FEECE3762BF097029466C6 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BA6AF2F5E1C44D64A96A0DD45F795B /* ActionSheetMultipleStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1CAEEBC4F132DA53C8DB6B4461608D70 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3985DA20E2A44E08E1E4217A3E805919 /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1CC9E081387D99D2B70909751C22AA30 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECF06716058D93E34B55BBE692A2D88 /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		26208D8DA043AB0576CA9244DB8B2380 /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3ECDD56168C05DF13D7177A7D3708D /* SWXMLHash+TypeConversion.swift */; };
+		0656B8C6AF980A9443ADFC07D4B88854 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B18A03E915ABE10F51257B51ED2CFC89 /* nl.lproj */; };
+		098769B5C2FEECE3762BF097029466C6 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F20459E4323CC7E6C0F31786B93BAC /* ActionSheetMultipleStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0B7BEAD1D21DEF9CC47B2C0CEB56E1AD /* buttonRoundedDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = 615415B09F9BCAD8969F7A8D9DFE1435 /* buttonRoundedDelete.png */; };
+		0D46E8C91195AB1FBB98BB776D88A8A8 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D89986C6BEB277FB3970B081E752103A /* it.lproj */; };
+		0DC89621B97FC425A106AFD7C528A4DE /* feedbackActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = A14BAEE4F81C3F180787B4EF84B60EFE /* feedbackActivity.png */; };
+		1721A799FEBC45173EB76FC300F8865D /* buttonRoundedRegular.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD021E0B96A8DBFAA858362D82465B3 /* buttonRoundedRegular.png */; };
+		187E1F18E7BA2DEA5B51535C320F2C57 /* feedbackActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DFAC0B430BC6EDE62E7DDCD4E7626C9 /* feedbackActivity@2x.png */; };
+		1CAEEBC4F132DA53C8DB6B4461608D70 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9844D76BB5F40298AE14CB8D14E09959 /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1CC9E081387D99D2B70909751C22AA30 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DE60512B9CF98EF298C53D106F990 /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1EC0C9D9E282ECA279BF1879982F67C4 /* feedbackActivity@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 31752D57314F1FAFF2B9B2F68DBFB994 /* feedbackActivity@2x~ipad.png */; };
+		1F39BE3130A532A072E5A25F278BC9EF /* FeedbackPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BCBE9CF8488BB66272F1FBF03052D2 /* FeedbackPlaceholder.png */; };
+		22EEA2C3BB5D1E6EF68D9D20CFA3FC47 /* feedbackActivity~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8832AB1E6129660922E186857484892B /* feedbackActivity~ipad.png */; };
 		28765B10E7DCB9D8DF17F0F480743152 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3212D7BC0710FE50E49B5AD2D9C0D0F /* CoreGraphics.framework */; };
-		3605B742811405EB6C273DBF3E60BA65 /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F429E99731BD5E4E3AEED916C8A62ED /* ActionSheetCustomPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		409A1BD79370BB3F3B809ACAB8B14AA8 /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D8FF8EE47D339BE0139CD99330D08C /* ActionSheetPicker-3.0-dummy.m */; };
+		293849223D2624C855DC0AA92C61EAA1 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE9A92C7B5452BA3A9E34DF994FD77E /* Cancel.png */; };
+		2A54B739478792F0C0DBA6BA05E26464 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C13B0416CAD416B9E2F24C89712B7110 /* bg.png */; };
+		2B0AFC57C670F51F72D316DEF21E9EC3 /* buttonRoundedDeleteHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F68BA2BB16CE7D70A3432EC610E02C /* buttonRoundedDeleteHighlighted@2x.png */; };
+		2F7CD0CD94FFC57EB6BB7522B1D762E2 /* Blur@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3146AC73EAB7D0F78F09F3C0F0097F /* Blur@3x.png */; };
+		306FECCE822DEE978567155700E62881 /* AppIconPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = E784CA36C930F117F0526193D0D3EB0F /* AppIconPlaceHolder.png */; };
+		3262B3995B80F06664A57DE7D949CC3A /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C6439A356EB1BEC740ABC0930CD6A7DA /* en.lproj */; };
+		35AEFF53261E509ABC620B3467746E61 /* Ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58642B54A9E68F8932C2F57B132C9CBE /* Ok@2x.png */; };
+		3605B742811405EB6C273DBF3E60BA65 /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F813C1AFD2657D0BD09398F207AA88 /* ActionSheetCustomPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D2A4ECBAB824F06857C015ABA6DB8BC /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC182715848DD02D880BAD22BC101AF /* SWXMLHash+TypeConversion.swift */; };
+		3DF38FF219EDD1852CC2D455A43676C3 /* Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFADB09B03B1979EBD65A43CEDE8C112 /* Arrow@2x.png */; };
+		40775AFA06F99ED93243420622F3FB9D /* Blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 518551E223D1B10EBC827497B78799D7 /* Blur.png */; };
+		409A1BD79370BB3F3B809ACAB8B14AA8 /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0175A965DECECC8061981985A8EEFC2 /* ActionSheetPicker-3.0-dummy.m */; };
 		41637DA371D84C3DD6CE1A2BAD23DFE2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA250D6AAA3D67B08752113FC8DF203 /* QuartzCore.framework */; };
-		53E0825DC621F2555B3FA9A8687CF7B4 /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 654F3ADFFA549D79FAE15AE9C26C33EC /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		451A0348230F7B6A6CB60869E0CA50DC /* Cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3305336B86737C22847CB7D718713D /* Cancel@3x.png */; };
+		47F8DD347F4813E8FD9173F36C0A1949 /* hr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5676A81218C8C4CAA2F9017F818445BE /* hr.lproj */; };
+		486CAA6FBD90A5C10710CF5AAA04F203 /* Ok@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF14FA5C8F9A77A74D967E06484EBD4 /* Ok@3x.png */; };
+		4DE9ABAD32413AACEDC0F92BE3311C32 /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 38FB53895B19F773299AA7F8ABA0CC53 /* hu.lproj */; };
+		53E0825DC621F2555B3FA9A8687CF7B4 /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 749CF1410CF55B069216E373508B8DDD /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5656FA2283C1B00A24716CF7FD406FB2 /* IconGradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0B1FD13416EF26C7FC127A0FE70AE4 /* IconGradient@2x.png */; };
+		5AFD93E5FA3D608E5800839760E34A45 /* SWXMLHash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278AD674C7A11F6F853E2EC35B9F4DB /* SWXMLHash-dummy.m */; };
 		5B32EA8AB19F49234A383200A5135921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */; };
-		5FCA5E9F5E81384B233DF98172A81350 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */; };
-		6058C40D9AFABF7CFB162DA72B192392 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B35D8651707A4F151C056BB7AD977 /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		627A79010BA75672F25EA6B97520FA07 /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8811D926A3D4F150572B7FF60A4F40DD /* ActionSheetDistancePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68FB561B4E31FF535A983D289E8659CA /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C8250B02699D0D625F6E3469F5ED96ED /* SWActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7304CEF32F062516BE4BAC8B7F0E092D /* SWXMLHash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 761E3CE7192810C383056B546036BA0F /* SWXMLHash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75A794C91A2AB93BF38279819BADCD8C /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FF3CA59D716C2339774C041DCBF7F16 /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76E0095FBF335B916D43DC4B0339709C /* Pods-Jenkins-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 381641DD08C8C31A433798716CCA46DF /* Pods-Jenkins-iOS-dummy.m */; };
-		770BEFACCB678FBCD001529D16DC7D97 /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 01872C1C32AEE31D620C3D4B03DDF3ED /* ActionSheetLocalePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81AADA5ADE8535AD6F7678C6F3A06E89 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 50802B384EDA5E952A342390F6873750 /* MBProgressHUD.m */; };
-		848C447B17BB93A8BC6757BB8DD4EC99 /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F088BF42FC389AF0F4C7B9D1D36526 /* ActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8604F9A80F34D21870FCB70BF030722B /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = FA743872342446CCBBE0D771BCA0A8B7 /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CB4DA2B67C050790DA2BE98EDF045CB /* Blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F74EC208DA34DEA30D8A23310B22703 /* Blur@2x.png */; };
+		6058C40D9AFABF7CFB162DA72B192392 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8266DDC2A2F6F9D527B64F183C9EE /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		627A79010BA75672F25EA6B97520FA07 /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DF6116B3D25DB04D5CAA2988F979459 /* ActionSheetDistancePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6374BAB8A21F635893337CA0D59F5BB3 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F830ABC49D59C59D08F11F6447C921 /* SWXMLHash.swift */; };
+		68FB561B4E31FF535A983D289E8659CA /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A6448B19AE662F5F372A7348B7F5DB /* SWActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C5506C4903FBA8CDDA35ED35DF18E17 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 224E5021DB04D195F17B7711D1C01C8E /* pt-PT.lproj */; };
+		6D28CA7B07F8999B8668F314E492004B /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 669B4337CCABA0BFE813FBA8ED8D13AA /* Rectangle.png */; };
+		6E1A5E73F882FC52AA3D60AB4E461A22 /* IconGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2AE56D25FBDCA73F71E6C1A0776BBF /* IconGradient.png */; };
+		6EE5654725B655AB58666319EEA36722 /* Cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CEBED62551E4C99E9D7396BDDFFCFCD /* Cancel@2x.png */; };
+		704CC87B3543BA4B12412BA798CAFF06 /* buttonRoundedDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 671689D2E0B9E93B87A6312C8B957AAD /* buttonRoundedDelete@2x.png */; };
+		739E8750167C55BE676086FE0D94DAB0 /* SWXMLHash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 290A17911966E196F2A723FE417F5C0F /* SWXMLHash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73D8FB8EF5C83F7F03FFE31B8973ADF8 /* iconCamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95E210DC63A77357651FFB1B3CD04B08 /* iconCamera@2x.png */; };
+		75A794C91A2AB93BF38279819BADCD8C /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3520861B2B9615FAD349157E31DCD48F /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		770BEFACCB678FBCD001529D16DC7D97 /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4719B521372F2F05F40A41F32F9F4850 /* ActionSheetLocalePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B41FCC8E9B8D34A2898646DC853728B /* Pods-Jenkins-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 381641DD08C8C31A433798716CCA46DF /* Pods-Jenkins-iOS-dummy.m */; };
+		7B674A791C97F8B4FF81CB61D9402511 /* Rectangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4D740004050F8E4721C331B2870B04 /* Rectangle@2x.png */; };
+		81AADA5ADE8535AD6F7678C6F3A06E89 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D593D050D7E53F7538088DCC0442927 /* MBProgressHUD.m */; };
+		848C447B17BB93A8BC6757BB8DD4EC99 /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFEF5DCE8B39536DB38E31C241BC688 /* ActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8604F9A80F34D21870FCB70BF030722B /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = D06F0E4D06BB9CCA15D7A42068A22432 /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87CAD4A438574C9344D829B61D00D0F1 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 52AEB82AF448FF9E641F1A8163901045 /* ru.lproj */; };
+		8DB83FC2EA6B588CD0E756AB5153F697 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2AE64B7E5E64184DCB7C65C9DAB3A711 /* fr.lproj */; };
+		8E1CA9BAC480BDD99EB6EAFEBD14C0F2 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 05979F6A51BA2B8DA354D48B797788A7 /* Arrow.png */; };
+		8E95992AE522EB139B77DEB681511F09 /* buttonRoundedDeleteHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A914D3EC737FFC6B882829F529293E5 /* buttonRoundedDeleteHighlighted.png */; };
+		91A791FC65E8369C3CD3059CC93E5176 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9C84BE287DA5B2E4E371B0EB4AE26F03 /* zh-Hans.lproj */; };
+		93FE09C2A3EA5C59EF25EF328AEDED36 /* buttonRoundedRegular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33324B7FF03A70525FA7DB673C67DEBC /* buttonRoundedRegular@2x.png */; };
+		95C044EEE6FFE3BC176350E7646407D6 /* authorize_denied.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BECA83A1BCE5E236BA16FBC7910B79D /* authorize_denied.png */; };
+		97B6A1686A65932D36ACA09EEC226271 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D4C058E03019B01ECC9F265AB14E5131 /* es.lproj */; };
 		99234DCFC61DD8C380E414B2478FA9C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BFCC5FCF20BECEF409508768C21E64 /* UIKit.framework */; };
-		99E979B18913E7600997B0378B9B3FE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */; };
 		9B5BAA5F29A08F5338602898EA110C9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */; };
-		9CA21846EB596294EEA9166C5123102E /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BC47AD3DCFE9BABD2B7D2A6627D4B0 /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9D35A78E05E56CA2D298C6524C353D8F /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 714F1B4C39C34F836EC02E8FCE187D74 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA77D807A88D405E8EE2914F5D4E7299 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D101CE4919D151A66E53281F743190 /* SWXMLHash.swift */; };
-		ABBF380D4804467E4D7CB1604E701515 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E9728CF1EE10499894B36CE6FEFF6DA8 /* ActionSheetLocalePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B0BB57516C3CEC4EE42E3FE727292187 /* ActionSheetPicker-3.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60D311CB23358BC372895472D0BCE0BC /* ActionSheetPicker-3.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B640015FD6F6684CB649C15A87933AF6 /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 66E15A6FFFFC842DB063CB75C0193EF2 /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CEA3240572C6DC666437DBDD3415ABDD /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C7D4F1C3D387711A72EC12339ED6DD /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D3F26F54B9333EC0DE81CA192E83875B /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9630D05B64107DB6B83E32C787C5F3 /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D4447FF472FB1BB8EEC77B7694DA3C7F /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4819B2366622F522A48954ADE03C854B /* ActionSheetStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6ABDFF81E566FFECF367E42C6333D79 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB94640DF8113349115F65536693BD7 /* MBProgressHUD-dummy.m */; };
-		D711EBBB664A6ED7779B62B8710FB875 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1AA50A1DCCCCF1F044396910FC4296 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E09845A60354B906065AA7339230D773 /* Pods-Jenkins-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CDA98DEB25E447AD2C4AC47E78A25BA /* Pods-Jenkins-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E9F339DE75CB68B1AC97BB659A4A25CF /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C23792962E04D5377D7EF177BCEC1BF1 /* SWActionSheet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EAF4063C5D3C8C1AE3C7513759BA9D0B /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 04108E5FADB3D4F8FD42655432901DC9 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8485D8373124C5581B8EC40787929EA /* SWXMLHash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB82A2D0AB486B155BDABDEC8A2C3D /* SWXMLHash-dummy.m */; };
+		9C45113718BB2C552DCFAA1C30C0D612 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 14F93A12BC512A2DFDC2CA6DA4D279F5 /* pt.lproj */; };
+		9CA21846EB596294EEA9166C5123102E /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440B798A4F5040C7EAAAD7D6B68327D /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9D35A78E05E56CA2D298C6524C353D8F /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB7FB2F12BFBB8C29F54E49042072DA /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9B0E7A1221D85C851224600DB1E5984 /* iconCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = C0742EAC9F4C897D0C92E0FA21492504 /* iconCamera.png */; };
+		ABBF380D4804467E4D7CB1604E701515 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 922B6E296687530EA4C5B57AFBDA7BFD /* ActionSheetLocalePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AE2085A2F5C62CB8F4870E49A3D3F42E /* Ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FE97FADBAA4E828CFC6FB77510954CC /* Ok.png */; };
+		AFC579271019F4B6DCF46E2E4EA96AA0 /* buttonRoundedRegularHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 537CD76A7DF1FCC19F1C17AAED9F1FDA /* buttonRoundedRegularHighlighted.png */; };
+		B0BB57516C3CEC4EE42E3FE727292187 /* ActionSheetPicker-3.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D3A2D4D22C5C9B91830CF6E7EF5862 /* ActionSheetPicker-3.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0DCAF2675E94F73B72692C083390C72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */; };
+		B134ACB9EB2315306BAE028786C737B9 /* Arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE0CF5AC2502963B22ADEA1ACDF70BA /* Arrow@3x.png */; };
+		B18264BE1F5BA3413F3658F79F83DF8D /* Rectangle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A8FB78A245BF05CEA7E35032179E7D /* Rectangle@3x.png */; };
+		B640015FD6F6684CB649C15A87933AF6 /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EF93DD80F33D4523DC5D1CBFB495DC /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7E04DEE2F1602DD708A6D7DE752D90D /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8BBC0B80BBA423236373B0BF02390C7F /* ja.lproj */; };
+		BA35CDC62B3821F3D83186F94899966E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */; };
+		BAF0EF12BA2F22F9966FB2AE26412E94 /* authorize_denied@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E30FF0E084DCEA1B50260B1D4FFA1DB /* authorize_denied@3x.png */; };
+		C5287B0AAA1C9FF816E6899C83A31B3E /* feedbackActivity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D019B1529D97D1A8C0EAE76F9F32A4 /* feedbackActivity@3x.png */; };
+		CEA3240572C6DC666437DBDD3415ABDD /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA157A27FEFC3C7E7065DD83146CD3F /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D3F26F54B9333EC0DE81CA192E83875B /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D55E25F2958F4F852ED1D32EBACD14 /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D4447FF472FB1BB8EEC77B7694DA3C7F /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 32325C864999A2A86D54CDCDABD32C36 /* ActionSheetStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6ABDFF81E566FFECF367E42C6333D79 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA8953384FCC62D9A5A503AD6B0F930 /* MBProgressHUD-dummy.m */; };
+		D711EBBB664A6ED7779B62B8710FB875 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E15A3FE636E1626628C73A2AFFF2C6 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC67BB332D1454AC3A1B0C301FD29337 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1DBC32938956FFEAD16FB6D677F866A2 /* de.lproj */; };
+		E423DB6BEADF850B863164D4A3D693D4 /* authorize_denied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55007F039C820C7D95DFE3013A811B5 /* authorize_denied@2x.png */; };
+		E9F339DE75CB68B1AC97BB659A4A25CF /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BC5611463BDAF6020BF6A1A008890E /* SWActionSheet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EAF4063C5D3C8C1AE3C7513759BA9D0B /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DBBAB91F0AD18C295060F87D241763F /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F14078DA40F9441AF93D4D726833432D /* buttonRoundedRegularHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD9686D5A931CA3ECB880FBD25F7A5CC /* buttonRoundedRegularHighlighted@2x.png */; };
+		F8308375C7B5EC932B9CA0659E8A6B9C /* Pods-Jenkins-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CDA98DEB25E447AD2C4AC47E78A25BA /* Pods-Jenkins-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4596D308A21EA2ECA0A074BC94FBC100 /* PBXContainerItemProxy */ = {
+		46E57E5C55478430FFAF498368137C06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 053617A05C5A952CF2888B88D119FE01;
 			remoteInfo = "ActionSheetPicker-3.0";
 		};
-		867C86486FB3AA75157DEE5E5B7C05DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C8E15C421FD4E9E142AEA3A21D17E698;
-			remoteInfo = SWXMLHash;
-		};
-		F8F0126CF03478AB01570D9C87692F33 /* PBXContainerItemProxy */ = {
+		4D5283EE2E8060B21E522AF122C1650F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DBA6001481CEA0EBA031CC5C94508FAA;
 			remoteInfo = MBProgressHUD;
 		};
+		779B069274D22BF7EE34627FC079514B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F47E204843B206B22CBF7404AB229AF;
+			remoteInfo = "HockeySDK-HockeySDKResources";
+		};
+		83F0FA464283CED857A8BB52705D8B4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CC24D88058477E12773B982FE4673F8;
+			remoteInfo = SWXMLHash;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01872C1C32AEE31D620C3D4B03DDF3ED /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
-		04108E5FADB3D4F8FD42655432901DC9 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		01DCCE2904F820E20E0880615F235997 /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
+		04A8FB78A245BF05CEA7E35032179E7D /* Rectangle@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Rectangle@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle@3x.png"; sourceTree = "<group>"; };
+		05979F6A51BA2B8DA354D48B797788A7 /* Arrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Arrow.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow.png"; sourceTree = "<group>"; };
+		07D019B1529D97D1A8C0EAE76F9F32A4 /* feedbackActivity@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@3x.png"; sourceTree = "<group>"; };
+		080362335681969F4C41BA191C3B8D5C /* HockeySDKResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HockeySDKResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		09D3A2D4D22C5C9B91830CF6E7EF5862 /* ActionSheetPicker-3.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-umbrella.h"; sourceTree = "<group>"; };
+		0D593D050D7E53F7538088DCC0442927 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		0F5DF1C2C9347722B6D4CC5DB0A4E921 /* Pods-Jenkins-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Jenkins-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		0F75C439194A0FB95647684BE248ED7C /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
-		0FF3CA59D716C2339774C041DCBF7F16 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
-		10BC47AD3DCFE9BABD2B7D2A6627D4B0 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
-		13B7B59CCDBA2C57C61F35F8CD6AC055 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		26B483C400075A0FFC80E8AB4A968E71 /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14F93A12BC512A2DFDC2CA6DA4D279F5 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pt.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/pt.lproj"; sourceTree = "<group>"; };
+		1BECA83A1BCE5E236BA16FBC7910B79D /* authorize_denied.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = authorize_denied.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied.png"; sourceTree = "<group>"; };
+		1CEBED62551E4C99E9D7396BDDFFCFCD /* Cancel@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Cancel@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel@2x.png"; sourceTree = "<group>"; };
+		1DBC32938956FFEAD16FB6D677F866A2 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/de.lproj"; sourceTree = "<group>"; };
+		1EB8266DDC2A2F6F9D527B64F183C9EE /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		1F6DE60512B9CF98EF298C53D106F990 /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		224E5021DB04D195F17B7711D1C01C8E /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "pt-PT.lproj"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/pt-PT.lproj"; sourceTree = "<group>"; };
+		23285F2F6DF6198FB1873C0DA79653C4 /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2440B798A4F5040C7EAAAD7D6B68327D /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		24F813C1AFD2657D0BD09398F207AA88 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		274808568ADDC3EDFC1FB1E08C421432 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		28BCBE9CF8488BB66272F1FBF03052D2 /* FeedbackPlaceholder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = FeedbackPlaceholder.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/FeedbackPlaceholder.png"; sourceTree = "<group>"; };
+		290A17911966E196F2A723FE417F5C0F /* SWXMLHash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-umbrella.h"; sourceTree = "<group>"; };
 		2923707C04F4A9906CAD9A30C416E9E4 /* Pods-Jenkins-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jenkins-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2A0B1FD13416EF26C7FC127A0FE70AE4 /* IconGradient@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "IconGradient@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/IconGradient@2x.png"; sourceTree = "<group>"; };
+		2A914D3EC737FFC6B882829F529293E5 /* buttonRoundedDeleteHighlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedDeleteHighlighted.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted.png"; sourceTree = "<group>"; };
+		2AE64B7E5E64184DCB7C65C9DAB3A711 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/fr.lproj"; sourceTree = "<group>"; };
 		2F30F127DF6D6B7EFA9C77E3A47DB4BA /* Pods-Jenkins-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jenkins-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		2F429E99731BD5E4E3AEED916C8A62ED /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
-		30242735B35B35FFC97783A4616754DE /* Pods_Jenkins_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jenkins_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31752D57314F1FAFF2B9B2F68DBFB994 /* feedbackActivity@2x~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@2x~ipad.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@2x~ipad.png"; sourceTree = "<group>"; };
+		32325C864999A2A86D54CDCDABD32C36 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		3278AD674C7A11F6F853E2EC35B9F4DB /* SWXMLHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-dummy.m"; sourceTree = "<group>"; };
 		32BFCC5FCF20BECEF409508768C21E64 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		3630C4BAB2973CE9BB6F72A020C73933 /* SWXMLHash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-prefix.pch"; sourceTree = "<group>"; };
+		33324B7FF03A70525FA7DB673C67DEBC /* buttonRoundedRegular@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedRegular@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegular@2x.png"; sourceTree = "<group>"; };
+		3520861B2B9615FAD349157E31DCD48F /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		3607A83FD2CE0A71D03F2F4E1BA2247B /* ResourceBundle-HockeySDKResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-HockeySDKResources-Info.plist"; sourceTree = "<group>"; };
 		381641DD08C8C31A433798716CCA46DF /* Pods-Jenkins-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jenkins-iOS-dummy.m"; sourceTree = "<group>"; };
-		3985DA20E2A44E08E1E4217A3E805919 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
-		3B4258C96B2429D5F95DC9BD7C806315 /* ActionSheetPicker-3.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.xcconfig"; sourceTree = "<group>"; };
-		3DEB82A2D0AB486B155BDABDEC8A2C3D /* SWXMLHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-dummy.m"; sourceTree = "<group>"; };
-		46F088BF42FC389AF0F4C7B9D1D36526 /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
-		4819B2366622F522A48954ADE03C854B /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
-		4A1B35D8651707A4F151C056BB7AD977 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
-		50802B384EDA5E952A342390F6873750 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		38FB53895B19F773299AA7F8ABA0CC53 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = hu.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/hu.lproj"; sourceTree = "<group>"; };
+		3CA399E2DDF3714D763CE05AC8FBA72D /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		3D53334B77D37BAD324CAC210DDE5CA8 /* SWXMLHash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWXMLHash.xcconfig; sourceTree = "<group>"; };
+		3D75B6E3821A85555757678D90CD1C36 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4117B2A7108CC242E678C43EBE5F6102 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D55E25F2958F4F852ED1D32EBACD14 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		4719B521372F2F05F40A41F32F9F4850 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		518551E223D1B10EBC827497B78799D7 /* Blur.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Blur.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur.png"; sourceTree = "<group>"; };
+		52AEB82AF448FF9E641F1A8163901045 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/ru.lproj"; sourceTree = "<group>"; };
+		537CD76A7DF1FCC19F1C17AAED9F1FDA /* buttonRoundedRegularHighlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedRegularHighlighted.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegularHighlighted.png"; sourceTree = "<group>"; };
+		5676A81218C8C4CAA2F9017F818445BE /* hr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = hr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/hr.lproj"; sourceTree = "<group>"; };
+		58642B54A9E68F8932C2F57B132C9CBE /* Ok@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Ok@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok@2x.png"; sourceTree = "<group>"; };
+		5B3305336B86737C22847CB7D718713D /* Cancel@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Cancel@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel@3x.png"; sourceTree = "<group>"; };
 		5CDA98DEB25E447AD2C4AC47E78A25BA /* Pods-Jenkins-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Jenkins-iOS-umbrella.h"; sourceTree = "<group>"; };
-		60D311CB23358BC372895472D0BCE0BC /* ActionSheetPicker-3.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-umbrella.h"; sourceTree = "<group>"; };
-		654F3ADFFA549D79FAE15AE9C26C33EC /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
-		66E15A6FFFFC842DB063CB75C0193EF2 /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
-		68BBC5BA1E5696D0DE678F167EAF7317 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		714F1B4C39C34F836EC02E8FCE187D74 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
-		761E3CE7192810C383056B546036BA0F /* SWXMLHash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-umbrella.h"; sourceTree = "<group>"; };
+		5DBBAB91F0AD18C295060F87D241763F /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		5FE97FADBAA4E828CFC6FB77510954CC /* Ok.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Ok.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok.png"; sourceTree = "<group>"; };
+		5FEF20ED23810AC68762A8442C564855 /* ActionSheetPicker_3_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionSheetPicker_3_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		615415B09F9BCAD8969F7A8D9DFE1435 /* buttonRoundedDelete.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedDelete.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDelete.png"; sourceTree = "<group>"; };
+		63A6448B19AE662F5F372A7348B7F5DB /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = Pickers/SWActionSheet.h; sourceTree = "<group>"; };
+		63F68BA2BB16CE7D70A3432EC610E02C /* buttonRoundedDeleteHighlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedDeleteHighlighted@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted@2x.png"; sourceTree = "<group>"; };
+		669B4337CCABA0BFE813FBA8ED8D13AA /* Rectangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Rectangle.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle.png"; sourceTree = "<group>"; };
+		671689D2E0B9E93B87A6312C8B957AAD /* buttonRoundedDelete@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedDelete@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDelete@2x.png"; sourceTree = "<group>"; };
+		6B2AE56D25FBDCA73F71E6C1A0776BBF /* IconGradient.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = IconGradient.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/IconGradient.png"; sourceTree = "<group>"; };
+		6D6754DED15B91F0A57A4A6D9E99F4CB /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HockeySDK.framework; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework"; sourceTree = "<group>"; };
+		6DFAC0B430BC6EDE62E7DDCD4E7626C9 /* feedbackActivity@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@2x.png"; sourceTree = "<group>"; };
+		6EA8CD7C50C44F2B80A07280FE812C49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		749CF1410CF55B069216E373508B8DDD /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		74E15A3FE636E1626628C73A2AFFF2C6 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		77947A9BC93DE4158DC1A8AED8421182 /* Pods-Jenkins-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jenkins-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		872662009B5D8FC0FEAF78476BAE3F30 /* ActionSheetPicker-3.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "ActionSheetPicker-3.0.modulemap"; sourceTree = "<group>"; };
-		8811D926A3D4F150572B7FF60A4F40DD /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
-		88D8FF8EE47D339BE0139CD99330D08C /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
+		7D370FC1F99CD2CE7943196C19B7901F /* SWXMLHash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-prefix.pch"; sourceTree = "<group>"; };
+		7F74EC208DA34DEA30D8A23310B22703 /* Blur@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Blur@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur@2x.png"; sourceTree = "<group>"; };
+		7FA157A27FEFC3C7E7065DD83146CD3F /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		8832AB1E6129660922E186857484892B /* feedbackActivity~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity~ipad.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity~ipad.png"; sourceTree = "<group>"; };
 		8AD8ACF1409E66AAF822072499F994DC /* Pods-Jenkins-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jenkins-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		8CF2E519D70D9326E5E8517F054F5AFF /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		8BB7FB2F12BFBB8C29F54E49042072DA /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		8BBC0B80BBA423236373B0BF02390C7F /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/ja.lproj"; sourceTree = "<group>"; };
 		8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8DF6116B3D25DB04D5CAA2988F979459 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		8E30FF0E084DCEA1B50260B1D4FFA1DB /* authorize_denied@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "authorize_denied@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied@3x.png"; sourceTree = "<group>"; };
+		8EA8953384FCC62D9A5A503AD6B0F930 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		922B6E296687530EA4C5B57AFBDA7BFD /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99C7D4F1C3D387711A72EC12339ED6DD /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		95E210DC63A77357651FFB1B3CD04B08 /* iconCamera@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "iconCamera@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/iconCamera@2x.png"; sourceTree = "<group>"; };
+		96BC5611463BDAF6020BF6A1A008890E /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		9844D76BB5F40298AE14CB8D14E09959 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		9BB006E948FCA9E178C0295D9CD93377 /* Pods_Jenkins_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jenkins_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C84BE287DA5B2E4E371B0EB4AE26F03 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/zh-Hans.lproj"; sourceTree = "<group>"; };
+		A14BAEE4F81C3F180787B4EF84B60EFE /* feedbackActivity.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = feedbackActivity.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity.png"; sourceTree = "<group>"; };
+		A5F20459E4323CC7E6C0F31786B93BAC /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
 		A6FAA142056AAEAFFB047639C5CBD814 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA1AA50A1DCCCCF1F044396910FC4296 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		ABD953366B245EF4EB0F737A42B261B1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6D101CE4919D151A66E53281F743190 /* SWXMLHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SWXMLHash.swift; path = Source/SWXMLHash.swift; sourceTree = "<group>"; };
-		B941E00E139097CAE3F351BB4730B051 /* ActionSheetPicker_3_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionSheetPicker_3_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCB94640DF8113349115F65536693BD7 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		BED007B2FD6A808591656ADFC64E5635 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF3ECDD56168C05DF13D7177A7D3708D /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SWXMLHash+TypeConversion.swift"; path = "Source/SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
+		ABF14FA5C8F9A77A74D967E06484EBD4 /* Ok@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Ok@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok@3x.png"; sourceTree = "<group>"; };
+		ACE0CF5AC2502963B22ADEA1ACDF70BA /* Arrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Arrow@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow@3x.png"; sourceTree = "<group>"; };
+		B0175A965DECECC8061981985A8EEFC2 /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
+		B18A03E915ABE10F51257B51ED2CFC89 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/nl.lproj"; sourceTree = "<group>"; };
+		B7F830ABC49D59C59D08F11F6447C921 /* SWXMLHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SWXMLHash.swift; path = Source/SWXMLHash.swift; sourceTree = "<group>"; };
+		BD9686D5A931CA3ECB880FBD25F7A5CC /* buttonRoundedRegularHighlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedRegularHighlighted@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegularHighlighted@2x.png"; sourceTree = "<group>"; };
+		BDFEF5DCE8B39536DB38E31C241BC688 /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
 		BF4001E291F443ED83BE9D148FA8D2D7 /* Pods-Jenkins-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Jenkins-iOS-resources.sh"; sourceTree = "<group>"; };
-		BFAA7D32B73FD3A06B40094A2F5E2690 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		C23792962E04D5377D7EF177BCEC1BF1 /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = Pickers/SWActionSheet.m; sourceTree = "<group>"; };
-		C7BA6AF2F5E1C44D64A96A0DD45F795B /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
-		C8250B02699D0D625F6E3469F5ED96ED /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = Pickers/SWActionSheet.h; sourceTree = "<group>"; };
+		C0742EAC9F4C897D0C92E0FA21492504 /* iconCamera.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = iconCamera.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/iconCamera.png"; sourceTree = "<group>"; };
+		C13B0416CAD416B9E2F24C89712B7110 /* bg.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = bg.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/bg.png"; sourceTree = "<group>"; };
+		C6439A356EB1BEC740ABC0930CD6A7DA /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/en.lproj"; sourceTree = "<group>"; };
+		C719918BBCE9F569E78C29EDA0F7979A /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		C8A3B1DBCC40BD1A2E7C6485092328DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9826B37301C0CA36EF5B5907775BFC0 /* ActionSheetPicker-3.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.xcconfig"; sourceTree = "<group>"; };
 		CAA250D6AAA3D67B08752113FC8DF203 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		CF6B39E0E688177EC6E898168178CE50 /* Pods-Jenkins-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Jenkins-iOS.modulemap"; sourceTree = "<group>"; };
-		CF9630D05B64107DB6B83E32C787C5F3 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
-		DECF06716058D93E34B55BBE692A2D88 /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		D06F0E4D06BB9CCA15D7A42068A22432 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		D0EF93DD80F33D4523DC5D1CBFB495DC /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
+		D4C058E03019B01ECC9F265AB14E5131 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/es.lproj"; sourceTree = "<group>"; };
+		D89986C6BEB277FB3970B081E752103A /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/it.lproj"; sourceTree = "<group>"; };
+		DE3146AC73EAB7D0F78F09F3C0F0097F /* Blur@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Blur@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur@3x.png"; sourceTree = "<group>"; };
+		DF70222848DA808E7561532DDF0CC33A /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
+		DFADB09B03B1979EBD65A43CEDE8C112 /* Arrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Arrow@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow@2x.png"; sourceTree = "<group>"; };
 		E3212D7BC0710FE50E49B5AD2D9C0D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		E9728CF1EE10499894B36CE6FEFF6DA8 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
-		E9E7622F68FF34567A9B11136A6A3D5C /* SWXMLHash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWXMLHash.xcconfig; sourceTree = "<group>"; };
-		EA93C0B0F77EC070C42D4675D9B79A73 /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
-		F631C3294E341BAA393ED424769A76A4 /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
-		FA743872342446CCBBE0D771BCA0A8B7 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		E784CA36C930F117F0526193D0D3EB0F /* AppIconPlaceHolder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = AppIconPlaceHolder.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/AppIconPlaceHolder.png"; sourceTree = "<group>"; };
+		EB4D740004050F8E4721C331B2870B04 /* Rectangle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Rectangle@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle@2x.png"; sourceTree = "<group>"; };
+		EFE9A92C7B5452BA3A9E34DF994FD77E /* Cancel.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Cancel.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel.png"; sourceTree = "<group>"; };
+		F55007F039C820C7D95DFE3013A811B5 /* authorize_denied@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "authorize_denied@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied@2x.png"; sourceTree = "<group>"; };
+		FBD021E0B96A8DBFAA858362D82465B3 /* buttonRoundedRegular.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedRegular.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegular.png"; sourceTree = "<group>"; };
+		FE6F81DE12AB63A34811124C0FC3A1ED /* ActionSheetPicker-3.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "ActionSheetPicker-3.0.modulemap"; sourceTree = "<group>"; };
+		FEC182715848DD02D880BAD22BC101AF /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SWXMLHash+TypeConversion.swift"; path = "Source/SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,11 +258,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A74C0012FC3BD9FE7306EDBAD2C56F9 /* Frameworks */ = {
+		311F63D3F118AE773FF4D355271D146B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99E979B18913E7600997B0378B9B3FE5 /* Foundation.framework in Frameworks */,
+				BA35CDC62B3821F3D83186F94899966E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,17 +276,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3E8DB009DFADA414FCC440ABA8A7783 /* Frameworks */ = {
+		5746F15CA2CA3194B5D4624C26670C5F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FCA5E9F5E81384B233DF98172A81350 /* Foundation.framework in Frameworks */,
+				B0DCAF2675E94F73B72692C083390C72 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC002B92278EEF196D928F4D6F9C0EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06B306090796E5DB0837988B9402F285 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB3DB4850C9DE452F3B0BE36288F8591 /* ActionSheetPicker-3.0 */,
+				8CE283D15C69F2E84C856559AD37C633 /* HockeySDK */,
+				4EB09A0A46C713E653B2503CB8E067F4 /* MBProgressHUD */,
+				B1C44F1E55E1C8265817A3A72AB1B966 /* SWXMLHash */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		07ADFFAB9966F369698EE6B868AA2754 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D75B6E3821A85555757678D90CD1C36 /* Info.plist */,
+				274808568ADDC3EDFC1FB1E08C421432 /* MBProgressHUD.modulemap */,
+				C719918BBCE9F569E78C29EDA0F7979A /* MBProgressHUD.xcconfig */,
+				8EA8953384FCC62D9A5A503AD6B0F930 /* MBProgressHUD-dummy.m */,
+				3CA399E2DDF3714D763CE05AC8FBA72D /* MBProgressHUD-prefix.pch */,
+				74E15A3FE636E1626628C73A2AFFF2C6 /* MBProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,32 +327,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		53EF5F358E3D16F1854FAAB93902321D /* ActionSheetPicker-3.0 */ = {
+		155D0CF2DCF7BCB186BF4BF6704E939F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				714F1B4C39C34F836EC02E8FCE187D74 /* AbstractActionSheetPicker.h */,
-				10BC47AD3DCFE9BABD2B7D2A6627D4B0 /* AbstractActionSheetPicker.m */,
-				2F429E99731BD5E4E3AEED916C8A62ED /* ActionSheetCustomPicker.h */,
-				CF9630D05B64107DB6B83E32C787C5F3 /* ActionSheetCustomPicker.m */,
-				0FF3CA59D716C2339774C041DCBF7F16 /* ActionSheetCustomPickerDelegate.h */,
-				FA743872342446CCBBE0D771BCA0A8B7 /* ActionSheetDatePicker.h */,
-				4A1B35D8651707A4F151C056BB7AD977 /* ActionSheetDatePicker.m */,
-				8811D926A3D4F150572B7FF60A4F40DD /* ActionSheetDistancePicker.h */,
-				3985DA20E2A44E08E1E4217A3E805919 /* ActionSheetDistancePicker.m */,
-				01872C1C32AEE31D620C3D4B03DDF3ED /* ActionSheetLocalePicker.h */,
-				E9728CF1EE10499894B36CE6FEFF6DA8 /* ActionSheetLocalePicker.m */,
-				66E15A6FFFFC842DB063CB75C0193EF2 /* ActionSheetMultipleStringPicker.h */,
-				C7BA6AF2F5E1C44D64A96A0DD45F795B /* ActionSheetMultipleStringPicker.m */,
-				46F088BF42FC389AF0F4C7B9D1D36526 /* ActionSheetPicker.h */,
-				4819B2366622F522A48954ADE03C854B /* ActionSheetStringPicker.h */,
-				99C7D4F1C3D387711A72EC12339ED6DD /* ActionSheetStringPicker.m */,
-				654F3ADFFA549D79FAE15AE9C26C33EC /* DistancePickerView.h */,
-				DECF06716058D93E34B55BBE692A2D88 /* DistancePickerView.m */,
-				C8250B02699D0D625F6E3469F5ED96ED /* SWActionSheet.h */,
-				C23792962E04D5377D7EF177BCEC1BF1 /* SWActionSheet.m */,
-				D26082A0E38A150F0F803F4529D33237 /* Support Files */,
+				5FEF20ED23810AC68762A8442C564855 /* ActionSheetPicker_3_0.framework */,
+				080362335681969F4C41BA191C3B8D5C /* HockeySDKResources.bundle */,
+				4117B2A7108CC242E678C43EBE5F6102 /* MBProgressHUD.framework */,
+				9BB006E948FCA9E178C0295D9CD93377 /* Pods_Jenkins_iOS.framework */,
+				23285F2F6DF6198FB1873C0DA79653C4 /* SWXMLHash.framework */,
 			);
-			path = "ActionSheetPicker-3.0";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EB09A0A46C713E653B2503CB8E067F4 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				5DBBAB91F0AD18C295060F87D241763F /* MBProgressHUD.h */,
+				0D593D050D7E53F7538088DCC0442927 /* MBProgressHUD.m */,
+				07ADFFAB9966F369698EE6B868AA2754 /* Support Files */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		5AD706BABF4C96A15B52BDCDD508D051 /* Targets Support Files */ = {
@@ -219,39 +357,76 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		678BB9A4B51573455DAE372E823D4669 /* Pods */ = {
+		6A922608DDF387ED8FAE1D5316792A41 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				53EF5F358E3D16F1854FAAB93902321D /* ActionSheetPicker-3.0 */,
-				89C8A4D9A92150C719D3785BA319F7FE /* MBProgressHUD */,
-				ABC3671CD5B01EE53E9E5978EB51A1AD /* SWXMLHash */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		798A9DD1D3A95D25901A21287FE31346 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B941E00E139097CAE3F351BB4730B051 /* ActionSheetPicker_3_0.framework */,
-				13B7B59CCDBA2C57C61F35F8CD6AC055 /* MBProgressHUD.framework */,
-				30242735B35B35FFC97783A4616754DE /* Pods_Jenkins_iOS.framework */,
-				26B483C400075A0FFC80E8AB4A968E71 /* SWXMLHash.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7A10B823552230F10153435E44B6315F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				68BBC5BA1E5696D0DE678F167EAF7317 /* Info.plist */,
-				0F75C439194A0FB95647684BE248ED7C /* MBProgressHUD.modulemap */,
-				BFAA7D32B73FD3A06B40094A2F5E2690 /* MBProgressHUD.xcconfig */,
-				BCB94640DF8113349115F65536693BD7 /* MBProgressHUD-dummy.m */,
-				8CF2E519D70D9326E5E8517F054F5AFF /* MBProgressHUD-prefix.pch */,
-				AA1AA50A1DCCCCF1F044396910FC4296 /* MBProgressHUD-umbrella.h */,
+				FE6F81DE12AB63A34811124C0FC3A1ED /* ActionSheetPicker-3.0.modulemap */,
+				C9826B37301C0CA36EF5B5907775BFC0 /* ActionSheetPicker-3.0.xcconfig */,
+				B0175A965DECECC8061981985A8EEFC2 /* ActionSheetPicker-3.0-dummy.m */,
+				DF70222848DA808E7561532DDF0CC33A /* ActionSheetPicker-3.0-prefix.pch */,
+				09D3A2D4D22C5C9B91830CF6E7EF5862 /* ActionSheetPicker-3.0-umbrella.h */,
+				6EA8CD7C50C44F2B80A07280FE812C49 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MBProgressHUD";
+			path = "../Target Support Files/ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		76C213E6425CBF6EDF5ED869099C0D12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E784CA36C930F117F0526193D0D3EB0F /* AppIconPlaceHolder.png */,
+				05979F6A51BA2B8DA354D48B797788A7 /* Arrow.png */,
+				DFADB09B03B1979EBD65A43CEDE8C112 /* Arrow@2x.png */,
+				ACE0CF5AC2502963B22ADEA1ACDF70BA /* Arrow@3x.png */,
+				1BECA83A1BCE5E236BA16FBC7910B79D /* authorize_denied.png */,
+				F55007F039C820C7D95DFE3013A811B5 /* authorize_denied@2x.png */,
+				8E30FF0E084DCEA1B50260B1D4FFA1DB /* authorize_denied@3x.png */,
+				C13B0416CAD416B9E2F24C89712B7110 /* bg.png */,
+				518551E223D1B10EBC827497B78799D7 /* Blur.png */,
+				7F74EC208DA34DEA30D8A23310B22703 /* Blur@2x.png */,
+				DE3146AC73EAB7D0F78F09F3C0F0097F /* Blur@3x.png */,
+				615415B09F9BCAD8969F7A8D9DFE1435 /* buttonRoundedDelete.png */,
+				671689D2E0B9E93B87A6312C8B957AAD /* buttonRoundedDelete@2x.png */,
+				2A914D3EC737FFC6B882829F529293E5 /* buttonRoundedDeleteHighlighted.png */,
+				63F68BA2BB16CE7D70A3432EC610E02C /* buttonRoundedDeleteHighlighted@2x.png */,
+				FBD021E0B96A8DBFAA858362D82465B3 /* buttonRoundedRegular.png */,
+				33324B7FF03A70525FA7DB673C67DEBC /* buttonRoundedRegular@2x.png */,
+				537CD76A7DF1FCC19F1C17AAED9F1FDA /* buttonRoundedRegularHighlighted.png */,
+				BD9686D5A931CA3ECB880FBD25F7A5CC /* buttonRoundedRegularHighlighted@2x.png */,
+				EFE9A92C7B5452BA3A9E34DF994FD77E /* Cancel.png */,
+				1CEBED62551E4C99E9D7396BDDFFCFCD /* Cancel@2x.png */,
+				5B3305336B86737C22847CB7D718713D /* Cancel@3x.png */,
+				1DBC32938956FFEAD16FB6D677F866A2 /* de.lproj */,
+				C6439A356EB1BEC740ABC0930CD6A7DA /* en.lproj */,
+				D4C058E03019B01ECC9F265AB14E5131 /* es.lproj */,
+				A14BAEE4F81C3F180787B4EF84B60EFE /* feedbackActivity.png */,
+				6DFAC0B430BC6EDE62E7DDCD4E7626C9 /* feedbackActivity@2x.png */,
+				31752D57314F1FAFF2B9B2F68DBFB994 /* feedbackActivity@2x~ipad.png */,
+				07D019B1529D97D1A8C0EAE76F9F32A4 /* feedbackActivity@3x.png */,
+				8832AB1E6129660922E186857484892B /* feedbackActivity~ipad.png */,
+				28BCBE9CF8488BB66272F1FBF03052D2 /* FeedbackPlaceholder.png */,
+				2AE64B7E5E64184DCB7C65C9DAB3A711 /* fr.lproj */,
+				5676A81218C8C4CAA2F9017F818445BE /* hr.lproj */,
+				38FB53895B19F773299AA7F8ABA0CC53 /* hu.lproj */,
+				C0742EAC9F4C897D0C92E0FA21492504 /* iconCamera.png */,
+				95E210DC63A77357651FFB1B3CD04B08 /* iconCamera@2x.png */,
+				6B2AE56D25FBDCA73F71E6C1A0776BBF /* IconGradient.png */,
+				2A0B1FD13416EF26C7FC127A0FE70AE4 /* IconGradient@2x.png */,
+				D89986C6BEB277FB3970B081E752103A /* it.lproj */,
+				8BBC0B80BBA423236373B0BF02390C7F /* ja.lproj */,
+				B18A03E915ABE10F51257B51ED2CFC89 /* nl.lproj */,
+				5FE97FADBAA4E828CFC6FB77510954CC /* Ok.png */,
+				58642B54A9E68F8932C2F57B132C9CBE /* Ok@2x.png */,
+				ABF14FA5C8F9A77A74D967E06484EBD4 /* Ok@3x.png */,
+				14F93A12BC512A2DFDC2CA6DA4D279F5 /* pt.lproj */,
+				224E5021DB04D195F17B7711D1C01C8E /* pt-PT.lproj */,
+				669B4337CCABA0BFE813FBA8ED8D13AA /* Rectangle.png */,
+				EB4D740004050F8E4721C331B2870B04 /* Rectangle@2x.png */,
+				04A8FB78A245BF05CEA7E35032179E7D /* Rectangle@3x.png */,
+				52AEB82AF448FF9E641F1A8163901045 /* ru.lproj */,
+				9C84BE287DA5B2E4E371B0EB4AE26F03 /* zh-Hans.lproj */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -259,42 +434,27 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				678BB9A4B51573455DAE372E823D4669 /* Pods */,
-				798A9DD1D3A95D25901A21287FE31346 /* Products */,
+				06B306090796E5DB0837988B9402F285 /* Pods */,
+				155D0CF2DCF7BCB186BF4BF6704E939F /* Products */,
 				5AD706BABF4C96A15B52BDCDD508D051 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		89C8A4D9A92150C719D3785BA319F7FE /* MBProgressHUD */ = {
+		8CE283D15C69F2E84C856559AD37C633 /* HockeySDK */ = {
 			isa = PBXGroup;
 			children = (
-				04108E5FADB3D4F8FD42655432901DC9 /* MBProgressHUD.h */,
-				50802B384EDA5E952A342390F6873750 /* MBProgressHUD.m */,
-				7A10B823552230F10153435E44B6315F /* Support Files */,
+				CA5B2D7F582DBA7316F1EA7DFC7EF308 /* DefaultLib */,
+				C24CBF042C7730137110DB20F95499DC /* Support Files */,
 			);
-			path = MBProgressHUD;
+			path = HockeySDK;
 			sourceTree = "<group>";
 		};
-		A447ED1861143C3430F364517539F724 /* Support Files */ = {
+		B1C44F1E55E1C8265817A3A72AB1B966 /* SWXMLHash */ = {
 			isa = PBXGroup;
 			children = (
-				BED007B2FD6A808591656ADFC64E5635 /* Info.plist */,
-				EA93C0B0F77EC070C42D4675D9B79A73 /* SWXMLHash.modulemap */,
-				E9E7622F68FF34567A9B11136A6A3D5C /* SWXMLHash.xcconfig */,
-				3DEB82A2D0AB486B155BDABDEC8A2C3D /* SWXMLHash-dummy.m */,
-				3630C4BAB2973CE9BB6F72A020C73933 /* SWXMLHash-prefix.pch */,
-				761E3CE7192810C383056B546036BA0F /* SWXMLHash-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SWXMLHash";
-			sourceTree = "<group>";
-		};
-		ABC3671CD5B01EE53E9E5978EB51A1AD /* SWXMLHash */ = {
-			isa = PBXGroup;
-			children = (
-				B6D101CE4919D151A66E53281F743190 /* SWXMLHash.swift */,
-				BF3ECDD56168C05DF13D7177A7D3708D /* SWXMLHash+TypeConversion.swift */,
-				A447ED1861143C3430F364517539F724 /* Support Files */,
+				B7F830ABC49D59C59D08F11F6447C921 /* SWXMLHash.swift */,
+				FEC182715848DD02D880BAD22BC101AF /* SWXMLHash+TypeConversion.swift */,
+				ED7BDCD6B68B6D141308B02F63CB6F74 /* Support Files */,
 			);
 			path = SWXMLHash;
 			sourceTree = "<group>";
@@ -328,18 +488,72 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D26082A0E38A150F0F803F4529D33237 /* Support Files */ = {
+		C24CBF042C7730137110DB20F95499DC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				872662009B5D8FC0FEAF78476BAE3F30 /* ActionSheetPicker-3.0.modulemap */,
-				3B4258C96B2429D5F95DC9BD7C806315 /* ActionSheetPicker-3.0.xcconfig */,
-				88D8FF8EE47D339BE0139CD99330D08C /* ActionSheetPicker-3.0-dummy.m */,
-				F631C3294E341BAA393ED424769A76A4 /* ActionSheetPicker-3.0-prefix.pch */,
-				60D311CB23358BC372895472D0BCE0BC /* ActionSheetPicker-3.0-umbrella.h */,
-				ABD953366B245EF4EB0F737A42B261B1 /* Info.plist */,
+				3607A83FD2CE0A71D03F2F4E1BA2247B /* ResourceBundle-HockeySDKResources-Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/ActionSheetPicker-3.0";
+			path = "../Target Support Files/HockeySDK";
+			sourceTree = "<group>";
+		};
+		CA5B2D7F582DBA7316F1EA7DFC7EF308 /* DefaultLib */ = {
+			isa = PBXGroup;
+			children = (
+				FB0A317C23A805422EE00EF40D757112 /* Frameworks */,
+				76C213E6425CBF6EDF5ED869099C0D12 /* Resources */,
+			);
+			name = DefaultLib;
+			sourceTree = "<group>";
+		};
+		EB3DB4850C9DE452F3B0BE36288F8591 /* ActionSheetPicker-3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				8BB7FB2F12BFBB8C29F54E49042072DA /* AbstractActionSheetPicker.h */,
+				2440B798A4F5040C7EAAAD7D6B68327D /* AbstractActionSheetPicker.m */,
+				24F813C1AFD2657D0BD09398F207AA88 /* ActionSheetCustomPicker.h */,
+				41D55E25F2958F4F852ED1D32EBACD14 /* ActionSheetCustomPicker.m */,
+				3520861B2B9615FAD349157E31DCD48F /* ActionSheetCustomPickerDelegate.h */,
+				D06F0E4D06BB9CCA15D7A42068A22432 /* ActionSheetDatePicker.h */,
+				1EB8266DDC2A2F6F9D527B64F183C9EE /* ActionSheetDatePicker.m */,
+				8DF6116B3D25DB04D5CAA2988F979459 /* ActionSheetDistancePicker.h */,
+				9844D76BB5F40298AE14CB8D14E09959 /* ActionSheetDistancePicker.m */,
+				4719B521372F2F05F40A41F32F9F4850 /* ActionSheetLocalePicker.h */,
+				922B6E296687530EA4C5B57AFBDA7BFD /* ActionSheetLocalePicker.m */,
+				D0EF93DD80F33D4523DC5D1CBFB495DC /* ActionSheetMultipleStringPicker.h */,
+				A5F20459E4323CC7E6C0F31786B93BAC /* ActionSheetMultipleStringPicker.m */,
+				BDFEF5DCE8B39536DB38E31C241BC688 /* ActionSheetPicker.h */,
+				32325C864999A2A86D54CDCDABD32C36 /* ActionSheetStringPicker.h */,
+				7FA157A27FEFC3C7E7065DD83146CD3F /* ActionSheetStringPicker.m */,
+				749CF1410CF55B069216E373508B8DDD /* DistancePickerView.h */,
+				1F6DE60512B9CF98EF298C53D106F990 /* DistancePickerView.m */,
+				63A6448B19AE662F5F372A7348B7F5DB /* SWActionSheet.h */,
+				96BC5611463BDAF6020BF6A1A008890E /* SWActionSheet.m */,
+				6A922608DDF387ED8FAE1D5316792A41 /* Support Files */,
+			);
+			path = "ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		ED7BDCD6B68B6D141308B02F63CB6F74 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8A3B1DBCC40BD1A2E7C6485092328DF /* Info.plist */,
+				01DCCE2904F820E20E0880615F235997 /* SWXMLHash.modulemap */,
+				3D53334B77D37BAD324CAC210DDE5CA8 /* SWXMLHash.xcconfig */,
+				3278AD674C7A11F6F853E2EC35B9F4DB /* SWXMLHash-dummy.m */,
+				7D370FC1F99CD2CE7943196C19B7901F /* SWXMLHash-prefix.pch */,
+				290A17911966E196F2A723FE417F5C0F /* SWXMLHash-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SWXMLHash";
+			sourceTree = "<group>";
+		};
+		FB0A317C23A805422EE00EF40D757112 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D6754DED15B91F0A57A4A6D9E99F4CB /* HockeySDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,19 +587,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59B8BFB6828E20C6ED88438AA53C48E1 /* Headers */ = {
+		532A0E66244381CB54E3C76E632CDD75 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7304CEF32F062516BE4BAC8B7F0E092D /* SWXMLHash-umbrella.h in Headers */,
+				F8308375C7B5EC932B9CA0659E8A6B9C /* Pods-Jenkins-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5AE6C4BA083FCD98155C9D9F099E2BC0 /* Headers */ = {
+		70854FE917E4CCFF5B357CD3F02ADAA9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E09845A60354B906065AA7339230D773 /* Pods-Jenkins-iOS-umbrella.h in Headers */,
+				739E8750167C55BE676086FE0D94DAB0 /* SWXMLHash-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,36 +620,54 @@
 			);
 			name = "ActionSheetPicker-3.0";
 			productName = "ActionSheetPicker-3.0";
-			productReference = B941E00E139097CAE3F351BB4730B051 /* ActionSheetPicker_3_0.framework */;
+			productReference = 5FEF20ED23810AC68762A8442C564855 /* ActionSheetPicker_3_0.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		77BC0AB1497DCC3C6CC5A726B4DC4EB5 /* Pods-Jenkins-iOS */ = {
+		291DAB39B219511F39E41CD07ECA167F /* Pods-Jenkins-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B5019E59777A679E6B138D1236DC3AA /* Build configuration list for PBXNativeTarget "Pods-Jenkins-iOS" */;
+			buildConfigurationList = 87EA47589B0F4A301CB5ADC355881A6B /* Build configuration list for PBXNativeTarget "Pods-Jenkins-iOS" */;
 			buildPhases = (
-				5293BA3CF476B4B82BAF478E1D26C85A /* Sources */,
-				3A74C0012FC3BD9FE7306EDBAD2C56F9 /* Frameworks */,
-				5AE6C4BA083FCD98155C9D9F099E2BC0 /* Headers */,
+				A477CB87D647AE7F373427774B3EDC1B /* Sources */,
+				5746F15CA2CA3194B5D4624C26670C5F /* Frameworks */,
+				532A0E66244381CB54E3C76E632CDD75 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D767356B312958E5D1E75D8BAF38FF8B /* PBXTargetDependency */,
-				9A4A5D2A03DB43CFC588734EFA0FB90E /* PBXTargetDependency */,
-				4F0184810868CB40D64C31BA8EEC54C8 /* PBXTargetDependency */,
+				A7E01520877860C3C6BDB4BFE8871602 /* PBXTargetDependency */,
+				64E828BF52FB20BBC9FDF15C3904AE65 /* PBXTargetDependency */,
+				7AF21E4D2A0674A0602825CD910AC856 /* PBXTargetDependency */,
+				D425E32627B453C4912A7A3338D8982B /* PBXTargetDependency */,
 			);
 			name = "Pods-Jenkins-iOS";
 			productName = "Pods-Jenkins-iOS";
-			productReference = 30242735B35B35FFC97783A4616754DE /* Pods_Jenkins_iOS.framework */;
+			productReference = 9BB006E948FCA9E178C0295D9CD93377 /* Pods_Jenkins_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C8E15C421FD4E9E142AEA3A21D17E698 /* SWXMLHash */ = {
+		6F47E204843B206B22CBF7404AB229AF /* HockeySDK-HockeySDKResources */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A4CD1FD31616ED36CEBFB5C3950BA675 /* Build configuration list for PBXNativeTarget "SWXMLHash" */;
+			buildConfigurationList = 115BEFF35244ECE90E83309A51E07DBD /* Build configuration list for PBXNativeTarget "HockeySDK-HockeySDKResources" */;
 			buildPhases = (
-				29F5EF152D150871DBC0DE447F5EB786 /* Sources */,
-				B3E8DB009DFADA414FCC440ABA8A7783 /* Frameworks */,
-				59B8BFB6828E20C6ED88438AA53C48E1 /* Headers */,
+				6697B0BF85A2ED12D51FEF922B7F3F0C /* Sources */,
+				DCC002B92278EEF196D928F4D6F9C0EB /* Frameworks */,
+				2429F7840881EC8A8869B3C929A0B620 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HockeySDK-HockeySDKResources";
+			productName = "HockeySDK-HockeySDKResources";
+			productReference = 080362335681969F4C41BA191C3B8D5C /* HockeySDKResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8CC24D88058477E12773B982FE4673F8 /* SWXMLHash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7841AACF17DEBD5920121A9F2C38C87 /* Build configuration list for PBXNativeTarget "SWXMLHash" */;
+			buildPhases = (
+				A8E260E3774EB21705F83BD0928F2B3D /* Sources */,
+				311F63D3F118AE773FF4D355271D146B /* Frameworks */,
+				70854FE917E4CCFF5B357CD3F02ADAA9 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -443,7 +675,7 @@
 			);
 			name = SWXMLHash;
 			productName = SWXMLHash;
-			productReference = 26B483C400075A0FFC80E8AB4A968E71 /* SWXMLHash.framework */;
+			productReference = 23285F2F6DF6198FB1873C0DA79653C4 /* SWXMLHash.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DBA6001481CEA0EBA031CC5C94508FAA /* MBProgressHUD */ = {
@@ -460,7 +692,7 @@
 			);
 			name = MBProgressHUD;
 			productName = MBProgressHUD;
-			productReference = 13B7B59CCDBA2C57C61F35F8CD6AC055 /* MBProgressHUD.framework */;
+			productReference = 4117B2A7108CC242E678C43EBE5F6102 /* MBProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -480,17 +712,79 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 798A9DD1D3A95D25901A21287FE31346 /* Products */;
+			productRefGroup = 155D0CF2DCF7BCB186BF4BF6704E939F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				053617A05C5A952CF2888B88D119FE01 /* ActionSheetPicker-3.0 */,
+				6F47E204843B206B22CBF7404AB229AF /* HockeySDK-HockeySDKResources */,
 				DBA6001481CEA0EBA031CC5C94508FAA /* MBProgressHUD */,
-				77BC0AB1497DCC3C6CC5A726B4DC4EB5 /* Pods-Jenkins-iOS */,
-				C8E15C421FD4E9E142AEA3A21D17E698 /* SWXMLHash */,
+				291DAB39B219511F39E41CD07ECA167F /* Pods-Jenkins-iOS */,
+				8CC24D88058477E12773B982FE4673F8 /* SWXMLHash */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2429F7840881EC8A8869B3C929A0B620 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				306FECCE822DEE978567155700E62881 /* AppIconPlaceHolder.png in Resources */,
+				8E1CA9BAC480BDD99EB6EAFEBD14C0F2 /* Arrow.png in Resources */,
+				3DF38FF219EDD1852CC2D455A43676C3 /* Arrow@2x.png in Resources */,
+				B134ACB9EB2315306BAE028786C737B9 /* Arrow@3x.png in Resources */,
+				95C044EEE6FFE3BC176350E7646407D6 /* authorize_denied.png in Resources */,
+				E423DB6BEADF850B863164D4A3D693D4 /* authorize_denied@2x.png in Resources */,
+				BAF0EF12BA2F22F9966FB2AE26412E94 /* authorize_denied@3x.png in Resources */,
+				2A54B739478792F0C0DBA6BA05E26464 /* bg.png in Resources */,
+				40775AFA06F99ED93243420622F3FB9D /* Blur.png in Resources */,
+				5CB4DA2B67C050790DA2BE98EDF045CB /* Blur@2x.png in Resources */,
+				2F7CD0CD94FFC57EB6BB7522B1D762E2 /* Blur@3x.png in Resources */,
+				0B7BEAD1D21DEF9CC47B2C0CEB56E1AD /* buttonRoundedDelete.png in Resources */,
+				704CC87B3543BA4B12412BA798CAFF06 /* buttonRoundedDelete@2x.png in Resources */,
+				8E95992AE522EB139B77DEB681511F09 /* buttonRoundedDeleteHighlighted.png in Resources */,
+				2B0AFC57C670F51F72D316DEF21E9EC3 /* buttonRoundedDeleteHighlighted@2x.png in Resources */,
+				1721A799FEBC45173EB76FC300F8865D /* buttonRoundedRegular.png in Resources */,
+				93FE09C2A3EA5C59EF25EF328AEDED36 /* buttonRoundedRegular@2x.png in Resources */,
+				AFC579271019F4B6DCF46E2E4EA96AA0 /* buttonRoundedRegularHighlighted.png in Resources */,
+				F14078DA40F9441AF93D4D726833432D /* buttonRoundedRegularHighlighted@2x.png in Resources */,
+				293849223D2624C855DC0AA92C61EAA1 /* Cancel.png in Resources */,
+				6EE5654725B655AB58666319EEA36722 /* Cancel@2x.png in Resources */,
+				451A0348230F7B6A6CB60869E0CA50DC /* Cancel@3x.png in Resources */,
+				DC67BB332D1454AC3A1B0C301FD29337 /* de.lproj in Resources */,
+				3262B3995B80F06664A57DE7D949CC3A /* en.lproj in Resources */,
+				97B6A1686A65932D36ACA09EEC226271 /* es.lproj in Resources */,
+				0DC89621B97FC425A106AFD7C528A4DE /* feedbackActivity.png in Resources */,
+				187E1F18E7BA2DEA5B51535C320F2C57 /* feedbackActivity@2x.png in Resources */,
+				1EC0C9D9E282ECA279BF1879982F67C4 /* feedbackActivity@2x~ipad.png in Resources */,
+				C5287B0AAA1C9FF816E6899C83A31B3E /* feedbackActivity@3x.png in Resources */,
+				22EEA2C3BB5D1E6EF68D9D20CFA3FC47 /* feedbackActivity~ipad.png in Resources */,
+				1F39BE3130A532A072E5A25F278BC9EF /* FeedbackPlaceholder.png in Resources */,
+				8DB83FC2EA6B588CD0E756AB5153F697 /* fr.lproj in Resources */,
+				47F8DD347F4813E8FD9173F36C0A1949 /* hr.lproj in Resources */,
+				4DE9ABAD32413AACEDC0F92BE3311C32 /* hu.lproj in Resources */,
+				A9B0E7A1221D85C851224600DB1E5984 /* iconCamera.png in Resources */,
+				73D8FB8EF5C83F7F03FFE31B8973ADF8 /* iconCamera@2x.png in Resources */,
+				6E1A5E73F882FC52AA3D60AB4E461A22 /* IconGradient.png in Resources */,
+				5656FA2283C1B00A24716CF7FD406FB2 /* IconGradient@2x.png in Resources */,
+				0D46E8C91195AB1FBB98BB776D88A8A8 /* it.lproj in Resources */,
+				B7E04DEE2F1602DD708A6D7DE752D90D /* ja.lproj in Resources */,
+				0656B8C6AF980A9443ADFC07D4B88854 /* nl.lproj in Resources */,
+				AE2085A2F5C62CB8F4870E49A3D3F42E /* Ok.png in Resources */,
+				35AEFF53261E509ABC620B3467746E61 /* Ok@2x.png in Resources */,
+				486CAA6FBD90A5C10710CF5AAA04F203 /* Ok@3x.png in Resources */,
+				6C5506C4903FBA8CDDA35ED35DF18E17 /* pt-PT.lproj in Resources */,
+				9C45113718BB2C552DCFAA1C30C0D612 /* pt.lproj in Resources */,
+				6D28CA7B07F8999B8668F314E492004B /* Rectangle.png in Resources */,
+				7B674A791C97F8B4FF81CB61D9402511 /* Rectangle@2x.png in Resources */,
+				B18264BE1F5BA3413F3658F79F83DF8D /* Rectangle@3x.png in Resources */,
+				87CAD4A438574C9344D829B61D00D0F1 /* ru.lproj in Resources */,
+				91A791FC65E8369C3CD3059CC93E5176 /* zh-Hans.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18E2532E62644868123A50D7CA3BA192 /* Sources */ = {
@@ -502,21 +796,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29F5EF152D150871DBC0DE447F5EB786 /* Sources */ = {
+		6697B0BF85A2ED12D51FEF922B7F3F0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26208D8DA043AB0576CA9244DB8B2380 /* SWXMLHash+TypeConversion.swift in Sources */,
-				F8485D8373124C5581B8EC40787929EA /* SWXMLHash-dummy.m in Sources */,
-				AA77D807A88D405E8EE2914F5D4E7299 /* SWXMLHash.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5293BA3CF476B4B82BAF478E1D26C85A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				76E0095FBF335B916D43DC4B0339709C /* Pods-Jenkins-iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,30 +820,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A477CB87D647AE7F373427774B3EDC1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B41FCC8E9B8D34A2898646DC853728B /* Pods-Jenkins-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8E260E3774EB21705F83BD0928F2B3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2A4ECBAB824F06857C015ABA6DB8BC /* SWXMLHash+TypeConversion.swift in Sources */,
+				5AFD93E5FA3D608E5800839760E34A45 /* SWXMLHash-dummy.m in Sources */,
+				6374BAB8A21F635893337CA0D59F5BB3 /* SWXMLHash.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4F0184810868CB40D64C31BA8EEC54C8 /* PBXTargetDependency */ = {
+		64E828BF52FB20BBC9FDF15C3904AE65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SWXMLHash;
-			target = C8E15C421FD4E9E142AEA3A21D17E698 /* SWXMLHash */;
-			targetProxy = 867C86486FB3AA75157DEE5E5B7C05DA /* PBXContainerItemProxy */;
+			name = "HockeySDK-HockeySDKResources";
+			target = 6F47E204843B206B22CBF7404AB229AF /* HockeySDK-HockeySDKResources */;
+			targetProxy = 779B069274D22BF7EE34627FC079514B /* PBXContainerItemProxy */;
 		};
-		9A4A5D2A03DB43CFC588734EFA0FB90E /* PBXTargetDependency */ = {
+		7AF21E4D2A0674A0602825CD910AC856 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = DBA6001481CEA0EBA031CC5C94508FAA /* MBProgressHUD */;
-			targetProxy = F8F0126CF03478AB01570D9C87692F33 /* PBXContainerItemProxy */;
+			targetProxy = 4D5283EE2E8060B21E522AF122C1650F /* PBXContainerItemProxy */;
 		};
-		D767356B312958E5D1E75D8BAF38FF8B /* PBXTargetDependency */ = {
+		A7E01520877860C3C6BDB4BFE8871602 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ActionSheetPicker-3.0";
 			target = 053617A05C5A952CF2888B88D119FE01 /* ActionSheetPicker-3.0 */;
-			targetProxy = 4596D308A21EA2ECA0A074BC94FBC100 /* PBXContainerItemProxy */;
+			targetProxy = 46E57E5C55478430FFAF498368137C06 /* PBXContainerItemProxy */;
+		};
+		D425E32627B453C4912A7A3338D8982B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SWXMLHash;
+			target = 8CC24D88058477E12773B982FE4673F8 /* SWXMLHash */;
+			targetProxy = 83F0FA464283CED857A8BB52705D8B4E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0CBF2CA7329EF5CCB89CA717E565FF54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HockeySDK";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/HockeySDK/ResourceBundle-HockeySDKResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = HockeySDKResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -605,41 +928,9 @@
 			};
 			name = Debug;
 		};
-		142EBAE0A739629414A17BBB0A87DFC3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9E7622F68FF34567A9B11136A6A3D5C /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		35BC520334002D7298DC87B7400B7BA2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFAA7D32B73FD3A06B40094A2F5E2690 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = C719918BBCE9F569E78C29EDA0F7979A /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -663,74 +954,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		43F85CEE2B74CEE04FC0820A0C4DA7B4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9E7622F68FF34567A9B11136A6A3D5C /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		55CD614988DB75643E7004FFED9F9177 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F30F127DF6D6B7EFA9C77E3A47DB4BA /* Pods-Jenkins-iOS.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Jenkins-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Jenkins-iOS/Pods-Jenkins-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Jenkins_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -739,7 +962,7 @@
 		};
 		56DB07182F3BBC763189F2A1DEFC62D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFAA7D32B73FD3A06B40094A2F5E2690 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = C719918BBCE9F569E78C29EDA0F7979A /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -769,7 +992,39 @@
 			};
 			name = Debug;
 		};
-		631534F8897260C12AEF061C838A250D /* Debug */ = {
+		80BA186F6DE3DCFF1DDCE9D42E082A3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9826B37301C0CA36EF5B5907775BFC0 /* ActionSheetPicker-3.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionSheetPicker-3.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB15B7429F7051BDD09F395CDC208744 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AD8ACF1409E66AAF822072499F994DC /* Pods-Jenkins-iOS.debug.xcconfig */;
 			buildSettings = {
@@ -805,41 +1060,44 @@
 			};
 			name = Debug;
 		};
-		80BA186F6DE3DCFF1DDCE9D42E082A3B /* Debug */ = {
+		D29D1E4C273BE69690581D0C499DF65E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4258C96B2429D5F95DC9BD7C806315 /* ActionSheetPicker-3.0.xcconfig */;
+			baseConfigurationReference = 2F30F127DF6D6B7EFA9C77E3A47DB4BA /* Pods-Jenkins-iOS.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ActionSheetPicker-3.0/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Jenkins-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ActionSheetPicker_3_0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Jenkins-iOS/Pods-Jenkins-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Jenkins_iOS;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		D2BB3120AB15C3283D64A530B772BC0B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4258C96B2429D5F95DC9BD7C806315 /* ActionSheetPicker-3.0.xcconfig */;
+			baseConfigurationReference = C9826B37301C0CA36EF5B5907775BFC0 /* ActionSheetPicker-3.0.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -860,6 +1118,38 @@
 				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DF1C794C7D735849DC1A41BEC5F7E3F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D53334B77D37BAD324CAC210DDE5CA8 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SWXMLHash;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -909,9 +1199,67 @@
 			};
 			name = Release;
 		};
+		E9D0E497C43953F0FD7034AB9DED8476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HockeySDK";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/HockeySDK/ResourceBundle-HockeySDKResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = HockeySDKResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		FE9022E107C25C018160F8431C6B168B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D53334B77D37BAD324CAC210DDE5CA8 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SWXMLHash;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		115BEFF35244ECE90E83309A51E07DBD /* Build configuration list for PBXNativeTarget "HockeySDK-HockeySDKResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9D0E497C43953F0FD7034AB9DED8476 /* Debug */,
+				0CBF2CA7329EF5CCB89CA717E565FF54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E2C012DEECFAAEF8B8A9CE1E8AAA03C /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -939,20 +1287,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B5019E59777A679E6B138D1236DC3AA /* Build configuration list for PBXNativeTarget "Pods-Jenkins-iOS" */ = {
+		87EA47589B0F4A301CB5ADC355881A6B /* Build configuration list for PBXNativeTarget "Pods-Jenkins-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				631534F8897260C12AEF061C838A250D /* Debug */,
-				55CD614988DB75643E7004FFED9F9177 /* Release */,
+				AB15B7429F7051BDD09F395CDC208744 /* Debug */,
+				D29D1E4C273BE69690581D0C499DF65E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4CD1FD31616ED36CEBFB5C3950BA675 /* Build configuration list for PBXNativeTarget "SWXMLHash" */ = {
+		C7841AACF17DEBD5920121A9F2C38C87 /* Build configuration list for PBXNativeTarget "SWXMLHash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				43F85CEE2B74CEE04FC0820A0C4DA7B4 /* Debug */,
-				142EBAE0A739629414A17BBB0A87DFC3 /* Release */,
+				FE9022E107C25C018160F8431C6B168B /* Debug */,
+				DF1C794C7D735849DC1A41BEC5F7E3F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
