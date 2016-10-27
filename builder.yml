@@ -17,7 +17,7 @@ default: &default
         enabled: true
         version: v8
     build:
-        configuration:  adhoc
+        configuration:  release
         sdk:            iphoneos
         doclean:        true
         ver_on_icon:    false
