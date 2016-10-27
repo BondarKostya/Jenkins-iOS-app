@@ -10,7 +10,7 @@ default: &default
     platform:       ios
     using_pods:     true
     project_dir:    .
-        profile:
+    profile:
         file:       ~/Dropbox/buildProfiles/Jenkins/Jenkins_AdHoc.mobileprovision
         identity:   "iPhone Distribution: Postindustria Ltd."
     build:
