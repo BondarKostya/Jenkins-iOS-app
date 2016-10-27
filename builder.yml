@@ -13,8 +13,11 @@ default: &default
     profile:
         file:       ~/Dropbox/buildProfiles/Jenkins/Jenkins_AdHoc.mobileprovision
         identity:   "iPhone Distribution: Postindustria Ltd."
+    xcode:
+        enabled: true
+        version: v8
     build:
-        configuration:  AdHoc
+        configuration:  adhoc
         sdk:            iphoneos
         doclean:        true
         ver_on_icon:    false
