@@ -17,7 +17,7 @@ default: &default
         version: v8
     build:
         configuration:  AdHoc
-    build_with_gym: true
+        build_with_gym: true
         sdk:            iphoneos
         doclean:        true
         ver_on_icon:    false
