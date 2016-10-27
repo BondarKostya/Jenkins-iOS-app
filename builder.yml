@@ -24,11 +24,6 @@ default: &default
         workspace:
             name:       Jenkins-iOS
             scheme:     Jenkins-iOS
-    pack_ipa:
-        enabled:    true
-        naming:
-            prefix:         Jenkins-iOS
-            append_version: true
     hockeyapp:
         enabled:    true
         token:      b1e08ea12bce40e89490a936af7b94cd
